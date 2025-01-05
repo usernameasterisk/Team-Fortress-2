@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/roguetown/shirt/robe
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "robe"
+	name = "мантия"
 	desc = ""
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "white_robe"
@@ -30,8 +30,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/noc
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "moon robe"
-	desc = "Robes worn by those in service to Noc."
+	name = "одеяние луны"
+	desc = "Одеяния, которые носят те, кто поклоняется богине ночи - Нок."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "nocrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -72,8 +72,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/necra
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "mourning robe"
-	desc = "Black robes which cover the body not unlike those in depictions of the Carriageman himself."
+	name = "траурное одеяние"
+	desc = "Черные одежды, покрывающие тело, напоминают те, что изображены на картинах самого Возчего."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "necrarobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -175,8 +175,8 @@
 	
 /obj/item/clothing/suit/roguetown/shirt/robe/eora
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "eoran robe"
-	desc = "Holy robes, intended for use by followers of Eora."
+	name = "одеяние Эоры"
+	desc = "Священное одеяние, предназначенное для использования последователями Эоры."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "eorarobes"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -190,8 +190,8 @@
 	var/fanatic_wear = FALSE
 
 /obj/item/clothing/suit/roguetown/shirt/robe/eora/alt
-	name = "raised eoran robe"
-	desc = "A raised robe that exposes legs and makes getting around the terrain more comfortable."
+	name = "приподнятое одеяние Эоры"
+	desc = "Приподнятое одеяние, открывающее ноги и делающая передвижение по местности более комфортным."
 	body_parts_covered = null
 	icon_state = "eorastraps"
 	fanatic_wear = TRUE

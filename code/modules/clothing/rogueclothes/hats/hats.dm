@@ -131,8 +131,8 @@
 			ResetAdjust(user)
 
 /obj/item/clothing/head/roguetown/eoramask
-	name = "eoran mask"
-	desc = "A silver opera mask worn by the faithful of Eora, usually during their rituals."
+	name = "маска Эоры"
+	desc = "Серебряная оперная маска, которую носят верующие Эоры, как правило, во время своих ритуалов."
 	icon_state = "eoramask"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	worn_x_dimension = 64

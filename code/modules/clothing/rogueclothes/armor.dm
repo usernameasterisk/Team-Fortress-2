@@ -384,8 +384,8 @@
 	return ..()
 
 /obj/item/clothing/suit/roguetown/armor/silkcoat
-	name = "silk coat"
-	desc = "A padded dressing made from the finest silks."
+	name = "шелковое пальто"
+	desc = "Стеганное одеяние сшитое из тончайшего, но прочного шелка."
 	icon_state = "bliaut"
 	color = null
 	armor = list("blunt" = 70, "slash" = 35, "stab" = 60, "bullet" = 7, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
@@ -477,8 +477,8 @@
 	body_parts_covered = CHEST|GROIN|VITALS
 
 /obj/item/clothing/suit/roguetown/armor/leather/newmoon_jacket
-	name = "New Moon coat"
-	desc = "Light, fancy yet still fairly protective, this teal coat is a signature of the New Moon Holy Order with a noc amulet on in the middle of the chestpiece."
+	name = "Пальто Новой Луны"
+	desc = "Этот легкое, нарядное, но при этом достаточно защищенное пальто цвета бирюзы является отличительным знаком Священного Ордена Новолуния с амулетом Нок в центре нагрудника. "
 	icon_state = "newmoon_jacket"
 	item_state = "newmoon_jacket"
 	blocksound = SOFTHIT

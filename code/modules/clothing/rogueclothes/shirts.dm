@@ -250,8 +250,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/velvetdress
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "velvet dress"
-	desc = "A dress made with the finest velvet, befitting a person of high standing"
+	name = "бархатное платье"
+	desc = "Платье сшитое из тончайшего бархата, достойное особы высокого положения."
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon = 'icons/roguetown/clothing/nobledresses/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/nobledresses/onmob/shirts.dmi'
