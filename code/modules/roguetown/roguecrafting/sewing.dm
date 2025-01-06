@@ -17,44 +17,44 @@
 	skill_level = 0
 
 /datum/crafting_recipe/roguetown/sewing/headband
-	name = "повязка на голову (ткань; NONE)"
+	name = "повязка на голову (ткань)"
 	result = list(/obj/item/clothing/head/roguetown/headband)
 	reqs = list(/obj/item/natural/cloth = 1)
 	skill_level = 0
 
 /datum/crafting_recipe/roguetown/sewing/loincloth
-	name = "набедренная повязка (ткань; NONE)"
+	name = "набедренная повязка (ткань)"
 	result = list(/obj/item/clothing/under/roguetown/loincloth)
 	reqs = list(/obj/item/natural/cloth = 1)
 	skill_level = 0
 
 /datum/crafting_recipe/roguetown/sewing/rags
-	name = "тряпье (2 ткань; NONE)"
+	name = "тряпье (2 ткань)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/rags)
 	reqs = list(/obj/item/natural/cloth = 2)
 	skill_level = 0
 
 /datum/crafting_recipe/roguetown/sewing/ragmask
-	name = "маска из тряпки (тряпка) - (ткань; NONE)"
+	name = "маска из тряпки - (ткань)"
 	result = list(/obj/item/clothing/mask/rogue/rag)
 	reqs = list(/obj/item/natural/cloth = 1)
 	skill_level = 0
 
 /datum/crafting_recipe/roguetown/sewing/ragglove
-	name = "hand wrappings - (cloth; NONE)"
+	name = "обмотки для рук - (ткань)"
 	result = list(/obj/item/clothing/gloves/roguetown/wrap)
 	reqs = list(/obj/item/natural/cloth = 1)
 	skill_level = 0
 
 /datum/crafting_recipe/roguetown/sewing/bag
-	name = "sack (cloth, fiber; NONE)"
+	name = "мешок (ткань, волокно)"
 	result = /obj/item/storage/roguebag/crafted
 	reqs = list(/obj/item/natural/fibers = 1,
 				/obj/item/natural/cloth = 1)
 	skill_level = 0
 	
 /datum/crafting_recipe/roguetown/sewing/leash
-	name = "rope leash (rope) - (1 rope; NONE)"
+	name = "поводок из веревки - (1 веревка; NONE)"
 	result = list(/obj/item/leash = 1)
 	reqs = list(/obj/item/rope = 1)
 	skill_level = 0
@@ -62,75 +62,75 @@
 /* craftdif of 1 = NOVICE */
 
 /datum/crafting_recipe/roguetown/sewing/knitcap
-	name = "cap (knit) - (2 cloths, fiber; NOVICE)"
+	name = "кепка (вязанная) - (2 ткань, волокно; NOVICE)"
 	result = list(/obj/item/clothing/head/roguetown/knitcap)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/Leyepatch
-	name = "eye patch (left) - (cloth, fiber; NOVICE)"
+	name = "глазная повязка (левый) - (ткань, волокно; NOVICE)"
 	result = list(/obj/item/clothing/mask/rogue/eyepatch/left)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/fibers = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/Reyepatch
-	name = "eye patch (right) - (cloth, fiber; NOVICE)"
+	name = "глазная повязка (правый) - (ткань, волокно; NOVICE)"
 	result = list(/obj/item/clothing/mask/rogue/eyepatch)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/fibers = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/clothgloves
-	name = "gloves (fingerless) - (cloth, fiber; NOVICE)"
+	name = "перчатки (беспальцевые) - (ткань, волокно; NOVICE)"
 	result = list(/obj/item/clothing/gloves/roguetown/fingerless)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/fibers = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/strawhat
-	name = "hat (straw) - (5 fibers; NOVICE)"
+	name = "шляпа (соломенная) - (5 волокно; NOVICE)"
 	result = list(/obj/item/clothing/head/roguetown/strawhat)
 	reqs = list(/obj/item/natural/fibers = 3)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/basichood
-	name = "hood (2 cloths, fiber; NOVICE)"
+	name = "капюшон (2 ткань, волокно; NOVICE)"
 	result = list(/obj/item/clothing/head/roguetown/roguehood)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/sack
-	name = "hood (sack) - (2 cloths; NOVICE)"
+	name = "капюшон (мешок) - (2 ткань; NOVICE)"
 	result = list(/obj/item/clothing/head/roguetown/menacing)
 	reqs = list(/obj/item/natural/cloth = 2,)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/clothtrou
-	name = "trousers (2 cloths, fiber; NOVICE)"
+	name = "брюки (2 cloths, fiber; NOVICE)"
 	result = list(/obj/item/clothing/under/roguetown/trou)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/tights
-	name = "tights (2 cloths, fiber; NOVICE)"
+	name = "колготки (2 ткань, волокно; NOVICE)"
 	result = list(/obj/item/clothing/under/roguetown/tights)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/workervest
-	name = "tunic (striped) - (2 cloths, 2 fibers; NOVICE)"
+	name = "туника (в полоску) - (2 ткань, 2 волокно; NOVICE)"
 	result = list(/obj/item/clothing/suit/roguetown/armor/workervest)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 2)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/clothshirt
-	name = "shirt (cloth) - (2 cloths, fiber; NOVICE)"
+	name = "рубаха (ткань) - (2 ткань, волокно; NOVICE)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/undershirt)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
@@ -208,14 +208,14 @@
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/bedsheet
-	name = "bedsheet (2 cloths; fiber; JOURNEYMAN)"
+	name = "простыня (2 ткань; волокно; JOURNEYMAN)"
 	result = list(/obj/item/bedsheet/rogue/cloth)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/bedsheetpelt
-	name = "bedsheet (leather) - (2 leather, fiber; JOURNEYMAN)"
+	name = "простыня (кожа) - (2 кожа, волокно; JOURNEYMAN)"
 	result = list(/obj/item/bedsheet/rogue/pelt)
 	reqs = list(/obj/item/natural/hide/cured = 2,
             	/obj/item/natural/fibers = 1)
@@ -242,7 +242,7 @@
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/strapless_dress
-	name = "dress (strapless) - (2 cloths, fiber; JOURNEYMAN)"
+	name = "платье (без бретелек) - (2 cloths, fiber; JOURNEYMAN)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/gen/strapless)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
@@ -284,14 +284,14 @@
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/stockings_white
-	name = "stockings (cloth, fiber; JOURNEYMAN)"
+	name = "чулки (ткань, волокно; JOURNEYMAN)"
 	result = list(/obj/item/clothing/under/roguetown/tights/stockings/white)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/fibers = 1)
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/stockings_white_fishnet
-	name = "stockings (fishnet) - (2 fibers; JOURNEYMAN)"
+	name = "чулки (в сетку) - (2 fibers; JOURNEYMAN)"
 	result = list(/obj/item/clothing/under/roguetown/tights/stockings/fishnet/white)
 	reqs = list(/obj/item/natural/fibers = 2)
 	skill_level = 3
@@ -697,7 +697,7 @@
 /// MASTERWORK
 
 /datum/crafting_recipe/roguetown/sewing/leather/boots/masterwork
-	name = "masterwork leather boots"
+	name = "кожаные ботинки сделанные мастером"
 	result = /obj/item/clothing/shoes/roguetown/armor/leather/masterwork
 	reqs = list(/obj/item/clothing/shoes/roguetown/armor/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -705,7 +705,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/gloves/masterwork
-	name = "masterwork leather gloves"
+	name = "кожаные перчатки сделанные мастером (обработанная кожа, эссенция, волокно)"
 	result = /obj/item/clothing/gloves/roguetown/leather/masterwork
 	reqs = list(/obj/item/clothing/gloves/roguetown/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -713,7 +713,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/bracers/masterwork
-	name = "masterwork leather bracers"
+	name = "кожаные наручи сделанные мастером (наручи из кожи, эссенция, волокно)"
 	result = /obj/item/clothing/wrists/roguetown/bracers/leather/masterwork
 	reqs = list(/obj/item/clothing/wrists/roguetown/bracers/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -721,7 +721,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/coat/masterwork
-	name = "masterwork leather coat"
+	name = "кожаное пальто сделанное мастером (обработанная кожа, эссенция, волокно)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/masterwork
 	reqs = list(/obj/item/clothing/suit/roguetown/armor/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -729,7 +729,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/helmet/masterwork
-	name = "masterwork leather helmet"
+	name = "кожаный шлем сделанный мастером (кожаный шлем, эссенция, волокно)"
 	result = /obj/item/clothing/head/roguetown/helmet/leather/masterwork
 	reqs = list(/obj/item/clothing/head/roguetown/helmet/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -737,7 +737,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/chausses/masterwork
-	name = "masterwork leather chausses"
+	name = "кожаные шоссы сделанные мастером (обработанная кожа, эссенция, волокно)"
 	result = /obj/item/clothing/under/roguetown/trou/leather/masterwork
 	reqs = list(/obj/item/clothing/under/roguetown/trou/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -749,26 +749,26 @@
 /* craftdif of 1 = NOVICE */
 
 /datum/crafting_recipe/roguetown/sewing/shepardmask
-	name = "half-mask (cloth, silk; LOOM, NOVICE)"
+	name = "полумаска (ткань, шелк; LOOM, NOVICE)"
 	result = list(/obj/item/clothing/mask/rogue/shepherd)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/rags
-	name = "shirt (webbed) - (silk; LOOM, NOVICE)"
+	name = "рубашка паутинка - (silk; LOOM, NOVICE)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/undershirt/webs)
 	reqs = list(/obj/item/natural/silk = 1)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/webbing
-	name = "trousers (webbed) - (2 silks; LOOM, NOVICE)"
+	name = "перепончатые штаны из шелка - (2 шелк; LOOM, NOVICE)"
 	result = list(/obj/item/clothing/under/roguetown/webs)
 	reqs = list(/obj/item/natural/silk = 2)
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/shadowgloves
-	name = "gloves (silk) - (cloth, silk; LOOM, NOVICE)"
+	name = "перчатки из шелка - (ткань, шелк; LOOM, NOVICE)"
 	result = list(/obj/item/clothing/gloves/roguetown/shadow)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 1)
@@ -779,49 +779,49 @@
 /* craftdif of 3 = JOURNEYMAN */
 
 /datum/crafting_recipe/roguetown/sewing/cloak
-	name = "cloak (half, silk) - (cloth, silk; LOOM, JOURNEYMAN)"
+	name = "полуплащ из шелка - (ткань, шелк; LOOM, JOURNEYMAN)"
 	result = list(/obj/item/clothing/cloak/half)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 1)
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/shadowcloak
-	name = "vanguard cloak - (cloth, 3 silk; LOOM, JOURNEYMAN)"
+	name = "плащ авангарда - (ткань, 3 шелк; LOOM, JOURNEYMAN)"
 	result = list(/obj/item/clothing/cloak/shadow)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 3)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/shadowrobe
-	name = "vanguard uniform - (2 cloths, 3 silk; LOOM, JOURNEYMAN)"
+	name = "униформа авангарда - (2 ткань, 3 шелк; LOOM, JOURNEYMAN)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/shadow)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 3)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/nochood
-	name = "hood (moon/Noc) - (2 cloths, silk; LOOM, JOURNEYMAN)"
+	name = "капюшон луны - (2 ткань, шелк; LOOM, JOURNEYMAN)"
 	result = list(/obj/item/clothing/head/roguetown/roguehood/nochood)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/necrahood
-	name = "hood (Necra) - (2 cloths, silk; LOOM, JOURNEYMAN)"
+	name = "капюшон (Некра) - (2 cloths, silk; LOOM, JOURNEYMAN)"
 	result = list(/obj/item/clothing/head/roguetown/necrahood)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/astratahood
-	name = "hood (solar/Astrata) - (2 cloths, silk; LOOM, JOURNEYMAN)"
+	name = "капюшон (солнца/Астарты) - (2 ткань, шелк; LOOM, JOURNEYMAN)"
 	result = list(/obj/item/clothing/head/roguetown/roguehood/astrata)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/shirt
-	name = "shirt (formal silks) - (5 silks; LOOM, JOURNEYMAN)"
+	name = "рубаха (формальная, шелк) - (5 шелк; LOOM, JOURNEYMAN)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/grenzelhoft)
 	reqs = list(/obj/item/natural/silk = 5)
 	skill_level = 3
@@ -829,21 +829,21 @@
 /* craftdif of 4 = EXPERT */
 
 /datum/crafting_recipe/roguetown/sewing/shadowpant
-	name = "pants (silk) - (cloth, 3 silk; LOOM, EXPERT)"
+	name = "брюки (шелк) - (ткань, 3 шелк; LOOM, EXPERT)"
 	result = list(/obj/item/clothing/under/roguetown/shadow)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 3)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/astratarobe
-	name = "robes (Astrata) - (3 cloths, silk; LOOM, EXPERT)"
+	name = "одеяние (Астарта) - (3 ткань, шелк; LOOM, EXPERT)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/astrata)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/dendorrobe
-	name = "robes (Dendor) - (3 cloths, silk; LOOM, EXPERT)"
+	name = "одеяние (Дендор) - (3 ткань, шелк; LOOM, EXPERT)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/dendor)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)

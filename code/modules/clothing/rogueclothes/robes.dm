@@ -16,8 +16,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "sun robe"
-	desc = "Robes worn by those in service to Astrata."
+	name = "одеяние солнца"
+	desc = "Одежда, которую носили те, кто служил Астрате."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "astratarobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -31,7 +31,7 @@
 /obj/item/clothing/suit/roguetown/shirt/robe/noc
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "одеяние луны"
-	desc = "Одеяния, которые носят те, кто поклоняется богине ночи - Нок."
+	desc = "Одежда, которую носят те, кто поклоняется богине ночи - Нок."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "nocrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -58,8 +58,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "briar robe"
-	desc = "Robes worn by Druid's in service to Dendor."
+	name = "одеяние из вереска"
+	desc = "Одежда, которую носили друиды, служившие Дендору."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "dendorrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'

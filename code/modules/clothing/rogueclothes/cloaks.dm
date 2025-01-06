@@ -929,8 +929,8 @@
 	nodismemsleeves = TRUE
 
 /obj/item/clothing/cloak/half
-	name = "halfcloak"
-	desc = "A cloak designed to cover one half of the body predominantly over the other."
+	name = "полуплащ"
+	desc = "Плащ, закрывающий преимущественно одну половину тела."
 	color = null
 	icon_state = "halfcloak"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER

@@ -52,8 +52,8 @@
 	max_integrity = 250
 
 /obj/item/clothing/wrists/roguetown/bracers/leather/masterwork
-	name = "masterwork leather bracers"
-	desc = "These bracers are a craftsmanship marvel. Made with the finest leather. Strong, nimible, reliable."
+	name = "кожаные наручи сделанные мастером"
+	desc = "Эти наручи — чудо мастерства. Сделано из лучшей кожи. Прочные, маневренные, надежные!."
 	armor = list("blunt" = 80, "slash" = 60, "stab" = 40, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST) //We're getting chop here
 	max_integrity = 300

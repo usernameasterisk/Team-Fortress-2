@@ -27,8 +27,8 @@
 	armor = list("blunt" = 50, "slash" = 40, "stab" = 20, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/gloves/roguetown/leather/masterwork
-	name = "masterwork leather gloves"
-	desc = "These gloves are a craftsmanship marvel. Made with the finest leather. Strong, nimible, reliable."
+	name = "кожаные перчатски сделанные мастером"
+	desc = "Эти перчатки — чудо мастерства. Сделано из лучшей кожи. Прочные, маневренные, надежные."
 	icon_state = "leathergloves_masterwork"
 	max_integrity = 300
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP) //we're adding chop here!

@@ -1,6 +1,6 @@
 /obj/item/clothing/under/roguetown/tights/stockings
-	name = "stockings"
-	desc = "A legwear made just for the pure aesthetics. Popular in courts and brothels alike."
+	name = "чулки"
+	desc = "Чулки, созданные исключительно для эстетики. Популярны как во дворцах, так и в публичных домах."
 	icon = 'modular/icons/obj/items/clothes/stockings.dmi'
 	mob_overlay_icon = 'modular/icons/obj/items/clothes/on_mob/stockings.dmi'
 	icon_state = "stockings"
@@ -58,8 +58,8 @@
 //Fishnets
 
 /obj/item/clothing/under/roguetown/tights/stockings/fishnet
-	name = "fishnet stockings"
-	desc = "A legwear popular among wenches."
+	name = "чулки в сетку"
+	desc = "Чулочно-носочные изделия, популярные среди девиц легкого поведения."
 	icon_state = "fishnet"
 
 /obj/item/clothing/under/roguetown/tights/stockings/fishnet/random/Initialize()

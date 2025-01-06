@@ -312,8 +312,8 @@
 	color = CLOTHING_BLACK
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/webs
-	name = "webbed shirt"
-	desc = "Exotic silk finely woven into.. this? Might as well be wearing a spiderweb"
+	name = "рубаха паунтинка"
+	desc = "Экзотический шелк, тонко вплетенный в... это? С таким же успехом можно носить паутину. Должно быть она очень легкая и удобная?"
 	icon_state = "webs"
 	item_state = "webs"
 	r_sleeve_status = SLEEVE_NORMAL
@@ -340,8 +340,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "grenzelhoftian hip-shirt"
-	desc = ""
+	name = "модная рубашка из Грензельхофта"
+	desc = "Любимая рубашка жителей Грензельхофта. Сделана из тончайшего шелка. Очень приятная на ощупь, мягкая и прочная."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "grenzelshirt"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'

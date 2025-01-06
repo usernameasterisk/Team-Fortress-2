@@ -364,8 +364,8 @@
 	allowed_race = NON_DWARVEN_RACE_TYPES
 
 /obj/item/clothing/suit/roguetown/armor/workervest
-	name = "striped tunic"
-	desc = "This cheap tunic is often used by sturdy laborous men and women."
+	name = "полосатая туника"
+	desc = "Эту дешевую тунику часто носят крепкие трудолюбивые мужчины и женщины."
 	icon_state = "workervest"
 	armor = null
 	blocksound = SOFTHIT

@@ -31,8 +31,8 @@
 	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "bullet" = 10, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/suit/roguetown/armor/leather/masterwork
-	name = "masterwork leather coat"
-	desc = "This coat is a craftsmanship marvel. Made with the finest leather. Strong, nimible, reliable."
+	name = "кожаное пальто сделанное мастером"
+	desc = "Это пальто – чудо мастерства. Сделано из лучшей кожи. Прочное, маневренное, надежное"
 	icon_state = "leather_masterwork"
 	max_integrity = 400
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP) //we're adding chop here!
