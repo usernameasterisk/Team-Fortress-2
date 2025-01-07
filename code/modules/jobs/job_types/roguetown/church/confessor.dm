@@ -5,8 +5,7 @@ Please do not confuse the two.
 /datum/job/roguetown/shepherd
 	title = "Confessor"
 	flag = CONFESSOR
-	department_flag = INQUISITION
-	selection_color = JCOLOR_INQUISITION
+	department_flag = CHURCHMEN
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2

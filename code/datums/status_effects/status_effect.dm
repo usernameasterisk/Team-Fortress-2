@@ -43,7 +43,6 @@
 		LAZYREMOVE(owner.status_effects, src)
 		on_remove()
 		owner = null
-	effectedstats = list()
 	return ..()
 
 /datum/status_effect/process()

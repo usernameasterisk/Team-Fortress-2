@@ -75,7 +75,7 @@
 		handle_liver()
 		update_rogfat()
 		update_rogstam()
-		handle_environment()
+		handle_environment() // Environment: Temperature. Heat and Cold; Fire Loss.
 		if(charflaw && !charflaw.ephemeral)
 			charflaw.flaw_on_life(src)
 		if(health <= 0)

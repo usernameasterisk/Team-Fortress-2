@@ -47,8 +47,8 @@
 	name = "капюшон"
 	body_parts_covered = HEAD|HAIR|EARS|NOSE
 	armor = list("blunt" = 47, "slash" = 27, "stab" = 37, "bullet" = 20, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
-	max_integrity = 150
+	prevent_crits = list(BCLASS_BLUNT, BCLASS_TWIST)
+	max_integrity = 200
 	blocksound = SOFTHIT
 	sewrepair = TRUE
 

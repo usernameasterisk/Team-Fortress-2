@@ -15,11 +15,6 @@
 	var/content = ""
 	var/no_close_movement = FALSE
 
-/datum/browser/Destroy(force, ...)
-	. = ..()
-	ref = null
-	user = null
-
 /datum/browser/noclose
 	no_close_movement = TRUE
 
@@ -27,7 +22,6 @@
 	if(!nuser)
 		return
 	user = nuser
-	RegisterSignal(user, COMSIG_PARENT_QDELETING, PROC_REF(user_deleted))
 	window_id = nwindow_id
 	if(!no_close_movement)
 		if(ismob(nuser))
@@ -44,16 +38,7 @@
 		height = nheight
 	if (nref)
 		ref = nref
-		RegisterSignal(ref, COMSIG_PARENT_QDELETING, PROC_REF(ref_deleted))
 	add_stylesheet("common", 'html/browser/common.css') // this CSS sheet is common to all UIs
-
-/datum/browser/proc/user_deleted(datum/source)
-	SIGNAL_HANDLER
-	user = null
-
-/datum/browser/proc/ref_deleted(datum/source)
-	SIGNAL_HANDLER
-	ref = null
 
 /datum/browser/proc/add_head_content(nhead_content)
 	head_content = nhead_content
