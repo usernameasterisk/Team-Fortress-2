@@ -301,10 +301,10 @@
 	icon2step = 6
 
 /obj/item/natural/bundle/cloth
-	name = "bundle of cloth"
+	name = "рулон ткани"
 	icon_state = "clothroll1"
 	possible_item_intents = list(/datum/intent/use)
-	desc = "A cloth roll of several pieces of fabric."
+	desc = "Целый рулон из нескольких кусков ткани."
 	force = 0
 	throwforce = 0
 	maxamount = 10
