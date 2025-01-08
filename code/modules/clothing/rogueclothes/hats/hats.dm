@@ -304,7 +304,8 @@
 	color = CLOTHING_BLACK
 
 /obj/item/clothing/head/roguetown/bardhat
-	name = "hat"
+	name = "головной убор барда"
+	desc = "Этой шляпке будет рад каждый бард."
 	icon_state = "bardhat"
 
 /obj/item/clothing/head/roguetown/fancyhat

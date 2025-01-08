@@ -32,8 +32,8 @@
 //Silk variants
 
 /obj/item/clothing/under/roguetown/tights/stockings/silk
-	name = "silk stockings"
-	desc = "A legwear made just for the pure aesthetics. Made out of thin silk. Popular among nobles."
+	name = "шелковые чулки"
+	desc = "Чулки, созданные только для чистой эстетики. Изготовлены из тончайшего шелка. Популярны среди богатых и влиятельных женщин."
 	icon_state = "silk"
 
 /obj/item/clothing/under/roguetown/tights/stockings/silk/random/Initialize()

@@ -783,8 +783,8 @@
 	user.update_fov_angles()
 
 /obj/item/clothing/cloak/raincloak/furcloak
-	name = "fur cloak"
-	desc = "This glorious cloak is made of animal fur. Very soft and warm."
+	name = "меховой плащ"
+	desc = "Этот великолепный плащ сделан из меха животных и качественной кожи. Очень мягкий и теплый."
 	icon_state = "furgrey"
 	inhand_mod = FALSE
 	hoodtype = /obj/item/clothing/head/hooded/rainhood/furhood

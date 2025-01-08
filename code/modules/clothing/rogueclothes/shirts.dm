@@ -274,8 +274,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/nobledress
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "noble dress"
-	desc = "a noble dress, fit for a person of high standing"
+	name = "благородное платье"
+	desc = "Отличное платье, подходящее для человека высокого положения"
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon = 'icons/roguetown/clothing/nobledresses/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/nobledresses/onmob/shirts.dmi'
@@ -295,8 +295,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "dress"
-	desc = ""
+	name = "вызывающее платье"
+	desc = "Очень вызывающее платье из мягкой и дышащей ткани. Искусная и очень кропотливая работа опытной швеи. Стоп, а оно вообще хоть что-нибудь прикрывает?"
 	body_parts_covered = null
 	icon_state = "sexydress"
 	sleevetype = null
@@ -312,7 +312,7 @@
 	color = CLOTHING_BLACK
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/webs
-	name = "рубаха паунтинка"
+	name = "рубаха паутинка"
 	desc = "Экзотический шелк, тонко вплетенный в... это? С таким же успехом можно носить паутину. Должно быть она очень легкая и удобная?"
 	icon_state = "webs"
 	item_state = "webs"

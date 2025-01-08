@@ -256,10 +256,10 @@
 			L.consider_ambush()
 
 /obj/item/natural/bundle/fibers
-	name = "fiber bundle"
+	name = "моток волокна"
 	icon_state = "fibersroll1"
 	possible_item_intents = list(/datum/intent/use)
-	desc = "Fibers, bundled together."
+	desc = "Волокна, связанные вместе."
 	force = 0
 	throwforce = 0
 	maxamount = 6
@@ -281,10 +281,10 @@
 	firefuel = 30 MINUTES
 
 /obj/item/natural/bundle/silk
-	name = "silken weave"
+	name = "моток шелка"
 	icon_state = "fibersroll1"
 	possible_item_intents = list(/datum/intent/use)
-	desc = "Silk neatly woven together."
+	desc = "Пучок нежного шелка. Он аккурастно соткан и смотан. Кропотливая работа."
 	force = 0
 	throwforce = 0
 	maxamount = 6
