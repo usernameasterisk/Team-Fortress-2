@@ -385,9 +385,9 @@
 
 /obj/item/clothing/suit/roguetown/armor/silkcoat
 	name = "шелковое пальто"
-	desc = "Стеганное одеяние сшитое из тончайшего, но прочного шелка."
+	desc = "Стеганое одеяние сшитое из тончайшего, но прочного шелка."
 	icon_state = "bliaut"
-	color = null
+	color = nul
 	armor = list("blunt" = 70, "slash" = 35, "stab" = 60, "bullet" = 7, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_TWIST)
 	blocksound = SOFTHIT
