@@ -7,10 +7,10 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/clothing/neck/roguetown/coif
-	name = "coif"
+	name = "койф"
 	icon_state = "coif"
 	item_state = "coif"
-	desc = "A coif made either of leather or cloth that is comfortable enough to sleep in that protects the head, ears and neck, while providing no protection from arrows and bolts and sadly enough, too soft to prevent chops from decapitating."
+	desc = "Капюшон из ткани, достаточно удобный для сна, защищающий голову, уши и шею, но не обеспечивающий защиты от стрел и болтов, и, как ни прискорбно, слишком мягкий, чтобы предотвратить обезглавливание."
 	flags_inv = HIDEHAIR
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HEAD
 	blocksound = SOFTHIT

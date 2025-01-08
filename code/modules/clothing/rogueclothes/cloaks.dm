@@ -19,8 +19,8 @@
 ////////////////////////
 
 /obj/item/clothing/cloak/tabard
-	name = "tabard"
-	desc = "A long vest meant for knights."
+	name = "тобард"
+	desc = "Длинный жилет, предназначенный для рыцарей."
 	color = null
 	icon_state = "tabard"
 	item_state = "tabard"
@@ -311,8 +311,8 @@
 ////////////////////////
 
 /obj/item/clothing/cloak/stabard
-	name = "surcoat"
-	desc = "A medieval overcoat meant to be used over the armor."
+	name = "сюрко"
+	desc = "Средневековое пальто, которое надевают поверх доспехов. Оно похоже по покрою на пончо и часто украшается гербом владельца."
 	icon_state = "stabard"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1195,7 +1195,7 @@
 
 /obj/item/clothing/cloak/fauld
 	name = "fauld"
-	desc = "A piece of cloth usually worn to cover the hips and part of the legs."
+	desc = "Кусок ткани, обычно его носят что бы частично прикрыть ноги или бедра."
 	color = null
 	icon_state = "faulds"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -1214,8 +1214,8 @@
 		add_overlay(pic)
 
 /obj/item/clothing/cloak/fauld/battleskirt
-	name = "battle skirt"
-	desc = "A skirt usually worn on battle with the colors of the wearer."
+	name = "боевая юбка"
+	desc = "Юбка, которую обычно носят в бою, окрашивая в цвет ее владельца."
 	icon_state = "battleskirt"
 
 /obj/item/clothing/cloak/fauld/battleskirt/update_icon()

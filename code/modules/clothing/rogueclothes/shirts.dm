@@ -155,8 +155,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/tunic
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "tunic"
-	desc = ""
+	name = "туника"
+	desc = "Длинная рубаха для мужчин и женщин."
 	body_parts_covered = CHEST|GROIN|VITALS
 	boobed = FALSE
 	icon_state = "tunic"
@@ -193,8 +193,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "dress"
-	desc = ""
+	name = "платье"
+	desc = "Женский наряд Средневековья – платье по щиколотку с длинными рукавами"
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon_state = "dress"
 	item_state = "dress"
@@ -205,8 +205,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/gen
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "dress"
-	desc = ""
+	name = "платье"
+	desc = "Женский наряд Средневековья – платье по щиколотку с длинными рукавами"
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon_state = "dressgen"
 	item_state = "dressgen"

@@ -324,8 +324,8 @@
 
 /obj/item/clothing/suit/roguetown/armor/gambeson
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "gambeson"
-	desc = "A large padded defense jacket designed to be cheap, resewable and worn as its own armor or go beneath armor that protects the torso, arms and legs."
+	name = "гамбезон"
+	desc = "Большая защитная куртка с утеплителем, которая отличается низкой стоимостью, ее можно шить повторно и носить как самостоятельную броню или под броней. Она защищает туловище, руки и ноги."
 	icon_state = "gambeson"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|VITALS
 	armor = list("blunt" = 45, "slash" = 30, "stab" = 35, "bullet" = 15, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
@@ -340,24 +340,24 @@
 	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/light
-	name = "light gambeson"
-	desc = "A barely padded gambeson, typically worn by the peasantry as cheap yet fashionable armor for the whole body."
+	name = "облегченный гамбезон"
+	desc = "Гамбезон с едва заметной подкладкой, который обычно носили крестьяне в качестве дешевой, но хоть какой-то брони."
 	icon_state = "gambesonl"
 	armor = list("blunt" = 30, "slash" = 15, "stab" = 20, "bullet" = 10, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	prevent_crits = null // It won't help, like, at all.
 	sellprice = 10
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
-	name = "padded gambeson"
-	desc = "A gambeson with additional padding layers, hardened to make it more durable. It still cannot compare to proper armor."
+	name = "обитый гамбезон"
+	desc = "Гамбезон с дополнительными слоями набивки, укрепленный для большей прочности. Он все равно не может сравниться с настоящей броней."
 	icon_state = "gambesonp"
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_SMASH)
 	armor = list("blunt" = 60, "slash" = 40, "stab" = 50, "bullet" = 20, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	sellprice = 30
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/lord
-	name = "arming jacket"
-	desc = "Similar to a gambeson, it is meant to be used under heavier armor."
+	name = "гамбезон рыцаря"
+	desc = "Подобно гамбезону, он предназначен для использования под более тяжелыми доспехами и выступает в роли хорошего поддоспешника."
 	icon_state = "dgamb"
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_SMASH)
 	allowed_sex = list(MALE, FEMALE)
