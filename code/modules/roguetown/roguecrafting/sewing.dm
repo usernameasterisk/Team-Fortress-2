@@ -370,7 +370,7 @@
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/fancyhat
-	name = "hat (fancy) - (2 cloths, fiber; EXPERT)"
+	name = "изысканная шляпа - (2 ткань, волокно; EXPERT)"
 	result = list(/obj/item/clothing/head/roguetown/fancyhat)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
@@ -384,7 +384,7 @@
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/chaperon
-	name = "hat (chaperon) - (2 cloths, fiber; EXPERT)"
+	name = "шаперон - (2 ткань, волокно; EXPERT)"
 	result = list(/obj/item/clothing/head/roguetown/chaperon)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
@@ -632,42 +632,42 @@
 /// ADVANCED LEATHER
 
 /datum/crafting_recipe/roguetown/sewing/leather/boots
-	name = "hardened leather boots (leather, fiber; MASTER)"
+	name = "укрепленные кожаные ботинки (leather, fiber; MASTER)"
 	result = /obj/item/clothing/shoes/roguetown/armor/leather/advanced
 	reqs = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/leather/gloves
-	name = "hardened leather gloves (leather, fiber; MASTER)"
+	name = "укрепленные кожаные перчатки (обработанная кожа, волокно; MASTER)"
 	result = /obj/item/clothing/gloves/roguetown/leather/advanced
 	reqs = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/leather/braces
-	name = "hardened leather braces (leather, fiber; MASTER)"
+	name = "укрепленные кожаные наручи (обработанная кожа, волокно; MASTER)"
 	result = /obj/item/clothing/wrists/roguetown/bracers/leather/advanced
 	reqs = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/leather/coat
-	name = "hardened leather coat (2 leather, fiber; MASTER)"
+	name = "укрепленная кожаная куртка (2 обработанная кожа, волокно; MASTER)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/advanced
 	reqs = list(/obj/item/natural/hide/cured = 2,
 				/obj/item/natural/fibers = 1)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/leather/helmet
-	name = "hardened leather helmet (leather, fiber; MASTER)"
+	name = "укрепленный кожаный капюшон (обработанная кожа, волокно; MASTER)"
 	result = /obj/item/clothing/head/roguetown/helmet/leather/advanced
 	reqs = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/leather/neck
-	name = "hardened leather gorget (leather, fiber; MASTER)"
+	name = "укрепленный кожаный горжет (обработанная кожа, волокно; MASTER)"
 	result = /obj/item/clothing/neck/roguetown/leather
 	reqs = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)

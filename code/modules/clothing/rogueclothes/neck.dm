@@ -150,8 +150,8 @@
 	icon_state = "steelcollargorget"
 
 /obj/item/clothing/neck/roguetown/leather
-	name = "hardened leather gorget"
-	desc = "Sturdy, durable, flexible. Will protect your neck from some good lumbering."
+	name = "укрепленный кожаный горжет"
+	desc = "Прочный, долговечный, гибкий. Представляет собой кожаный воротник для защиты шеи и горла от мечей и других видов холодного оружия."
 	icon_state = "lgorget"
 	armor = list("blunt" = 70, "slash" = 60, "stab" = 30, "bullet" = 20, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	max_integrity = 150

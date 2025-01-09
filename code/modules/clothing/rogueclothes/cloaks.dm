@@ -807,8 +807,8 @@
 	block2add = FOV_BEHIND
 
 /obj/item/clothing/cloak/cape
-	name = "cape"
-	desc = "A beautiful, flowing cape. Too bad it tangles too much on the vegetation."
+	name = "накидка"
+	desc = "Красивая, развивающаяся накидка. Жаль, что она слишком сильно цепляется за растительность."
 	color = null
 	icon_state = "cape"
 	item_state = "cape"

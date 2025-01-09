@@ -309,8 +309,8 @@
 	icon_state = "bardhat"
 
 /obj/item/clothing/head/roguetown/fancyhat
-	name = "fancy hat"
-	desc = "A fancy looking hat with colorful feathers sticking out of it."
+	name = "изысканная шляпа"
+	desc = "Необычная шляпка с торчащими из нее разноцветными перьями."
 	icon_state = "fancy_hat"
 	item_state = "fancyhat"
 
@@ -336,8 +336,8 @@
 	item_state = "flathat"
 
 /obj/item/clothing/head/roguetown/chaperon
-	name = "chaperon hat"
-	desc = "A fancy hat worn by nobles."
+	name = "шаперон"
+	desc = "Изысканный головной убор, который иногда носили дворяне."
 	icon_state = "chaperon"
 	item_state = "chaperon"
 
@@ -1044,8 +1044,8 @@
 	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/head/roguetown/helmet/leather/advanced
-	name = "hardened leather helmet"
-	desc = "Sturdy, durable, flexible. A confortable and reliable hood made of hardened leather."
+	name = "укрепленный кожаный капюшон"
+	desc = "Прочный, долговечный, гибкий. Удобный и надежный капюшон из прочной кожи."
 	icon_state = "alhelmet"
 	max_integrity = 250
 	body_parts_covered = HEAD|EARS|HAIR|NOSE|EYES|MOUTH

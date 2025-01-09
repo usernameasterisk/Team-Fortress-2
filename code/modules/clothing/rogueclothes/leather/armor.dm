@@ -22,8 +22,8 @@
 	AddComponent(/datum/component/storage/concrete/roguetown/cloak)
 
 /obj/item/clothing/suit/roguetown/armor/leather/advanced
-	name = "hardened leather coat"
-	desc = "Sturdy, durable, flexible. Will keep you alive in style."
+	name = "укрепленная кожаная куртка"
+	desc = "Прочная, долговечная, гибкая. Поможет сохранить ваш стиль."
 	icon_state = "leather_advanced"
 	max_integrity = 200
 	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS

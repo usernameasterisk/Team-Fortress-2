@@ -1,15 +1,15 @@
 
 /obj/item/clothing/shoes/roguetown/armor/leather
-	name = "leather boots"
-	desc = "Boots made of leather."
+	name = "кожаные ботинки"
+	desc = "Ботинки сделанные из кожи."
 	max_integrity = 150
 	icon_state = "leatherboots"
 	salvage_amount = 1
 	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/shoes/roguetown/armor/leather/advanced
-	name = "hardened leather boots"
-	desc = "Sturdy, durable, flexible. A marvel of the dark ages that exists solely to protect your toes."
+	name = "укрепленные кожаные ботинки"
+	desc = "Прочные, долговечные, гибкие. Чудо темных веков, существующее исключительно для защиты ваших пальцев ног."
 	max_integrity = 200
 	icon_state = "leatherboots" //replace with advanced sprite
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
