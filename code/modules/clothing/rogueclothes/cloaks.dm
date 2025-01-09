@@ -19,7 +19,7 @@
 ////////////////////////
 
 /obj/item/clothing/cloak/tabard
-	name = "тобард"
+	name = "табард"
 	desc = "Длинный жилет, предназначенный для рыцарей."
 	color = null
 	icon_state = "tabard"

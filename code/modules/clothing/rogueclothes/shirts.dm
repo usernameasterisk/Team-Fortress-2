@@ -274,7 +274,7 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/nobledress
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "благородное платье"
+	name = "дворянское платье"
 	desc = "Отличное платье, подходящее для человека высокого положения"
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon = 'icons/roguetown/clothing/nobledresses/shirts.dmi'
@@ -295,8 +295,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "вызывающее платье"
-	desc = "Очень вызывающее платье из мягкой и дышащей ткани. Искусная и очень кропотливая работа опытной швеи. Стоп, а оно вообще хоть что-нибудь прикрывает?"
+	name = "откровенное платье"
+	desc = "Очень откровенное платье из мягкой и дышащей ткани. Искусная и очень кропотливая работа опытной швеи. Стоп, а оно вообще хоть что-нибудь прикрывает?"
 	body_parts_covered = null
 	icon_state = "sexydress"
 	sleevetype = null
@@ -340,7 +340,7 @@
 
 /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "модная рубашка из Грензельхофта"
+	name = "грензельхофтская рубашка"
 	desc = "Любимая рубашка жителей Грензельхофта. Сделана из тончайшего шелка. Очень приятная на ощупь, мягкая и прочная."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "grenzelshirt"

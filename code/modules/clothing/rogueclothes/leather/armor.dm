@@ -31,7 +31,7 @@
 	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "bullet" = 10, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/suit/roguetown/armor/leather/masterwork
-	name = "кожаное пальто сделанное мастером"
+	name = "шедевральное кожаное пальто"
 	desc = "Это пальто – чудо мастерства. Сделано из лучшей кожи. Прочное, маневренное, надежное"
 	icon_state = "leather_masterwork"
 	max_integrity = 300

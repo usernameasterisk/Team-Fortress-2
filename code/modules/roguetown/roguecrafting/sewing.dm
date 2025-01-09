@@ -294,14 +294,14 @@
 	result = list(/obj/item/clothing/cloak/stabard/guard)
 
 /datum/crafting_recipe/roguetown/sewing/tabard
-	name = "тобард (2 ткань, волокно; JOURNEYMAN)"
+	name = "табард (2 ткань, волокно; JOURNEYMAN)"
 	result = list(/obj/item/clothing/cloak/tabard)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	skill_level = 3
 
 /datum/crafting_recipe/roguetown/sewing/tabard/crusader
-	name = "тобард рыцаря - (2 cloths, fiber; JOURNEYMAN)"
+	name = "табард рыцаря - (2 cloths, fiber; JOURNEYMAN)"
 	result = list(/obj/item/clothing/cloak/tabard/crusader)
 
 /datum/crafting_recipe/roguetown/sewing/templar/astratan
@@ -437,7 +437,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/nobledress
-	name = "благородное платье (4 ткань, 2 шелк, 3 волокно; MASTER)"
+	name = "дворянское платье (4 ткань, 2 шелк, 3 волокно; MASTER)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/nobledress)
 	reqs = list(/obj/item/natural/cloth = 4,
 				/obj/item/natural/fibers = 3,
@@ -447,7 +447,7 @@
 /* craftdif of 6 = LEGENDARY */
 
 /datum/crafting_recipe/roguetown/sewing/sexydress
-	name = "легендарное сексуальное платье (6 ткань, 3 волокно; LEGENDARY)"
+	name = "откровенное платье (6 ткань, 3 волокно; LEGENDARY)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy)
 	reqs = list(/obj/item/natural/cloth = 6,
 				/obj/item/natural/fibers = 3)
@@ -592,7 +592,7 @@
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/sandals
-	name = "sandals (leather, fiber; NOVICE)"
+	name = "сандалии (обработанная кожа, волокно; NOVICE)"
 	result = /obj/item/clothing/shoes/roguetown/sandals
 	reqs = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)
@@ -699,7 +699,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/bracers/masterwork
-	name = "кожаные наручи сделанные мастером (наручи из кожи, эссенция, волокно)"
+	name = "шедевральные кожаные наручи (наручи из кожи, эссенция, волокно)"
 	result = /obj/item/clothing/wrists/roguetown/bracers/leather/masterwork
 	reqs = list(/obj/item/clothing/wrists/roguetown/bracers/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -707,7 +707,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/coat/masterwork
-	name = "кожаное пальто сделанное мастером (обработанная кожа, эссенция, волокно)"
+	name = "шедевральное кожаное пальто (обработанная кожа, эссенция, волокно)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/masterwork
 	reqs = list(/obj/item/clothing/suit/roguetown/armor/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -715,7 +715,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/helmet/masterwork
-	name = "кожаный шлем сделанный мастером (кожаный шлем, эссенция, волокно)"
+	name = "шедевральный кожаный шлем (кожаный шлем, эссенция, волокно)"
 	result = /obj/item/clothing/head/roguetown/helmet/leather/masterwork
 	reqs = list(/obj/item/clothing/head/roguetown/helmet/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -875,7 +875,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/nmjacket
-	name = "пальто новой луны - (2 кожа, 2 ткань, 2 шелк, amulet of noc, LOOM, EXPERT)"
+	name = "куртка Новолуния - (2 кожа, 2 ткань, 2 шелк, amulet of noc, LOOM, EXPERT)"
 	result = list (/obj/item/clothing/suit/roguetown/armor/leather/newmoon_jacket)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 2,
@@ -884,7 +884,7 @@
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/eoramask
-	name = "маска Эоры - (3 шелк, серебрянный слиток; EXPERT)"
+	name = "эоранская маска - (3 шелк, серебрянный слиток; EXPERT)"
 	result = list(/obj/item/clothing/head/roguetown/eoramask)
 	reqs = list(/obj/item/ingot/silver = 1,
 				/obj/item/natural/silk = 3)

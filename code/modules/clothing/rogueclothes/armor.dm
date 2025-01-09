@@ -477,7 +477,7 @@
 	body_parts_covered = CHEST|GROIN|VITALS
 
 /obj/item/clothing/suit/roguetown/armor/leather/newmoon_jacket
-	name = "Пальто Новой Луны"
+	name = "куртка Новолуния"
 	desc = "Это легкое, нарядное, но при этом достаточно защищенное пальто цвета бирюзы является отличительным знаком Священного Ордена Новолуния с амулетом Нок в центре нагрудника. "
 	icon_state = "newmoon_jacket"
 	item_state = "newmoon_jacket"

@@ -131,7 +131,7 @@
 			ResetAdjust(user)
 
 /obj/item/clothing/head/roguetown/eoramask
-	name = "маска Эоры"
+	name = "эоранская маска"
 	desc = "Серебряная оперная маска, которую носят верующие Эоры, как правило, во время своих ритуалов."
 	icon_state = "eoramask"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
@@ -259,7 +259,7 @@
 
 
 /obj/item/clothing/head/roguetown/menacing
-	name = "мешок капюшон"
+	name = "мешок-капюшон"
 	desc = "Капюшон, который обычно носят палачи. Скрывает лицо, клеймо, связанное с нажатием на этот рычаг, делает многих палачей изгоями сами по себе."
 	icon_state = "menacing"
 	item_state = "menacing"
@@ -1053,7 +1053,7 @@
 	armor = list("blunt" = 70, "slash" = 60, "stab" = 30, "bullet" = 20, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/head/roguetown/helmet/leather/masterwork
-	name = "кожаный шлем сделанный мастером"
+	name = "шедевральный кожаный шлем"
 	desc = "Этот шлем – чудо мастерства. Сделано из лучшей кожи. Прочный, маневренный, надежный!"
 	max_integrity = 300
 	body_parts_covered = HEAD|EARS|HAIR|NOSE|EYES|MOUTH

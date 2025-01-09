@@ -190,8 +190,8 @@
 	var/fanatic_wear = FALSE
 
 /obj/item/clothing/suit/roguetown/shirt/robe/eora/alt
-	name = "приподнятое одеяние Эоры"
-	desc = "Приподнятое одеяние, открывающее ноги и делающая передвижение по местности более комфортным."
+	name = "приподнятая эоранская ряса"
+	desc = "Приподнятая ряса, открывающая ноги и делающая передвижение по местности более комфортным."
 	body_parts_covered = null
 	icon_state = "eorastraps"
 	fanatic_wear = TRUE
