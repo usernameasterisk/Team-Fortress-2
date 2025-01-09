@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/roguetown/shirt/robe
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "мантия"
+	name = "ряса"
 	desc = ""
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "white_robe"
@@ -16,7 +16,7 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "одеяние солнца"
+	name = "ряса солнца"
 	desc = "Одежда, которую носили те, кто служил Астрате."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "astratarobe"
@@ -30,7 +30,7 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/noc
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "одеяние луны"
+	name = "ряса луны"
 	desc = "Одежда, которую носят те, кто поклоняется богине ночи - Нок."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "nocrobe"
@@ -175,7 +175,7 @@
 	
 /obj/item/clothing/suit/roguetown/shirt/robe/eora
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "одеяние Эоры"
+	name = "ряса Эоры"
 	desc = "Священное одеяние, предназначенное для использования последователями Эоры."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "eorarobes"

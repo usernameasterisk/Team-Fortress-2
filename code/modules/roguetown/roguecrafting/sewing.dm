@@ -116,7 +116,7 @@
 	skill_level = 1
 
 /datum/crafting_recipe/roguetown/sewing/tights
-	name = "колготки (2 ткань, волокно; NOVICE)"
+	name = "трико (2 ткань, волокно; NOVICE)"
 	result = list(/obj/item/clothing/under/roguetown/tights)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
@@ -683,7 +683,7 @@
 /// MASTERWORK
 
 /datum/crafting_recipe/roguetown/sewing/leather/boots/masterwork
-	name = "кожаные ботинки сделанные мастером"
+	name = "шедевральные кожаные ботинки"
 	result = /obj/item/clothing/shoes/roguetown/armor/leather/masterwork
 	reqs = list(/obj/item/clothing/shoes/roguetown/armor/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -691,7 +691,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/gloves/masterwork
-	name = "кожаные перчатки сделанные мастером (обработанная кожа, эссенция, волокно)"
+	name = "шедевральные кожаные перчатки(обработанная кожа, эссенция, волокно)"
 	result = /obj/item/clothing/gloves/roguetown/leather/masterwork
 	reqs = list(/obj/item/clothing/gloves/roguetown/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -723,7 +723,7 @@
 	skill_level = 5
 
 /datum/crafting_recipe/roguetown/sewing/leather/chausses/masterwork
-	name = "кожаные шоссы сделанные мастером (обработанная кожа, эссенция, волокно)"
+	name = "шедевральные кожаные шоссы (обработанная кожа, эссенция, волокно)"
 	result = /obj/item/clothing/under/roguetown/trou/leather/masterwork
 	reqs = list(/obj/item/clothing/under/roguetown/trou/leather = 1,
 				/obj/item/natural/cured/essence = 1,
@@ -892,7 +892,7 @@
 	sellprice = 75
 
 /datum/crafting_recipe/roguetown/sewing/eorarobes
-	name = "одеяние Эоры - (3 ткань, шелк; EXPERT)"
+	name = "ряса Эоры - (3 ткань, шелк; EXPERT)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/eora)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)

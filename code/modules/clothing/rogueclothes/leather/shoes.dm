@@ -16,7 +16,7 @@
 	armor = list("blunt" = 50, "slash" = 40, "stab" = 20, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/shoes/roguetown/armor/leather/masterwork
-	name = "кожаные ботинки сделанные мастером"
+	name = "шедевральные кожаные ботинки"
 	desc = "Эти ботинки – чудо мастерства. Сделано из лучшей кожи. Прочные, маневренные, надежные."
 	icon_state = "leatherboots" //replace with masterwork sprite
 	max_integrity = 300

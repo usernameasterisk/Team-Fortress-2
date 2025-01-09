@@ -42,8 +42,8 @@
 #endif
 
 /obj/item/clothing/under/roguetown/tights
-	name = "колготки"
-	desc = "Пара облегающих колготок."
+	name = "трико"
+	desc = "Пара облегающих штанов."
 	gender = PLURAL
 	icon_state = "tights"
 	item_state = "tights"

@@ -16,7 +16,7 @@
 	armor = list("blunt" = 70, "slash" = 60, "stab" = 30, "bullet" = 20, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/under/roguetown/trou/leather/masterwork
-	name = "кожаные шоссы сделанные мастером"
+	name = "шедевральные кожаные шоссы"
 	desc = "Эти шоссы – чудо мастерства. Сделано из лучшей кожи. Крепкие, маневренные, надежные!"
 	max_integrity = 250
 	icon_state = "leatherpants_masterwork"

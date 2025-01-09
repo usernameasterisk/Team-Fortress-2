@@ -27,7 +27,7 @@
 	armor = list("blunt" = 50, "slash" = 40, "stab" = 20, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/gloves/roguetown/leather/masterwork
-	name = "кожаные перчатски сделанные мастером"
+	name = "шедевральные кожаные перчатки"
 	desc = "Эти перчатки — чудо мастерства. Сделано из лучшей кожи. Прочные, маневренные, надежные."
 	icon_state = "leathergloves_masterwork"
 	max_integrity = 300
