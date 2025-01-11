@@ -660,7 +660,7 @@
 	skill_level = 4
 
 /datum/crafting_recipe/roguetown/sewing/leather/helmet
-	name = "укрепленный кожаный капюшон (обработанная кожа, волокно; MASTER)"
+	name = "укрепленный кожаный шлем (обработанная кожа, волокно; MASTER)"
 	result = /obj/item/clothing/head/roguetown/helmet/leather/advanced
 	reqs = list(/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 1)

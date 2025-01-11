@@ -1044,8 +1044,8 @@
 	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/head/roguetown/helmet/leather/advanced
-	name = "укрепленный кожаный капюшон"
-	desc = "Прочный, долговечный, гибкий. Удобный и надежный капюшон из прочной кожи."
+	name = "укрепленный кожаный шлем"
+	desc = "Прочный, долговечный, гибкий. Удобный и надежный шлем из прочной кожи."
 	icon_state = "alhelmet"
 	max_integrity = 250
 	body_parts_covered = HEAD|EARS|HAIR|NOSE|EYES|MOUTH
