@@ -2,9 +2,9 @@
 	race = /datum/species/elf/dark
 
 /datum/species/elf/dark
-	name = "Темный эльф"
+	name = "Тёмный эльф"
 	id = "elfd"
-	desc = "<b>Темный эльф</b><br>\
+	desc = "<b>Тёмный эльф</b><br>\
 	Эльфы — это общее название для высоких гуманоидов с заострёнными ушами, происхождение которых уходит корнями к древним таинственным снежным эльфам. \
 	Тёмные эльфы имеют тёмный оттенок кожи и в основном происходят из подземелий. Их культура и жизнь обычно связаны со служением злым богам презренного пантеона. \
 	Ранее они были редкостью, но в последнее время всё больше тёмных эльфов можно встретить на поверхности. Те из них, \
@@ -100,13 +100,15 @@
 		/datum/customizer/organ/vagina/human,
 		)
 	body_markings = list(
+		/datum/body_marking/flushed_cheeks,
+		/datum/body_marking/eyeliner,
+		/datum/body_marking/tonage,
 	)
 	
 	languages = list(
 		/datum/language/common,
 		/datum/language/elvish
 	)
-
 
 	gender_swapping = TRUE
 	stress_examine = TRUE

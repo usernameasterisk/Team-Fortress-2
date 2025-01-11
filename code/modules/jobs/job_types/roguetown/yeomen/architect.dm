@@ -1,6 +1,7 @@
 /datum/job/roguetown/architect
 	title = "Architect"
-	tutorial = "There are ancient secrets within stone, something your creed has known since man built upon dirt. You've pride in your work, youre the only reason this place doesn't fall apart."
+	tutorial = "В камне заключены древние тайны, о которых ваше кредо знало с тех пор, как человек стал строить на земле. \
+	Вы гордитесь своей работой, и только благодаря вам это место не разваливается."
 	flag = ARCHITECT
 	department_flag = COURTIERS
 	faction = "Station"
@@ -16,19 +17,19 @@
 
 /datum/outfit/job/roguetown/architect/pre_equip(mob/living/carbon/human/H)         ///////////// fuck being a dumb virgin
 	..()
-	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
-	armor = /obj/item/clothing/suit/roguetown/armor/workervest
-	pants = /obj/item/clothing/under/roguetown/tights/black
 	head = /obj/item/clothing/head/roguetown/helmet/kettle
-	shoes = /obj/item/clothing/shoes/roguetown/armor
-	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
-	backr = /obj/item/gun/ballistic/blunderbuss
-	backl = /obj/item/rogueweapon/pick/drill
-	wrists = /obj/item/storage/keyring/architect
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
-	beltl = /obj/item/ammo_holder/bullet/grapeshot
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
 	neck = /obj/item/powderflask
+	armor = /obj/item/clothing/suit/roguetown/armor/workervest
+	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
+	wrists = /obj/item/storage/keyring/architect
+	backr = /obj/item/gun/ballistic/blunderbuss
+	backl = /obj/item/rogueweapon/pick/drill
+	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
+	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
+	beltl = /obj/item/ammo_holder/bullet/grapeshot
+	pants = /obj/item/clothing/under/roguetown/tights/black
+	shoes = /obj/item/clothing/shoes/roguetown/armor
 
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/labor/mining, 1, TRUE)

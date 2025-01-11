@@ -80,6 +80,7 @@
 			C.mob.playsound_local(C.mob, 'sound/music/credits.ogg', 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
+	
 			
 //	if(key_list.len)
 //		add_roundplayed(key_list)
