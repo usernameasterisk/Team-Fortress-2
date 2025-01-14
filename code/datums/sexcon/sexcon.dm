@@ -217,16 +217,16 @@
 	after_ejaculation()
 
 /datum/sex_controller/proc/after_ejaculation()
-	user.add_stress(/datum/stressevent/cumok)
 	set_arousal(40)
-	adjust_charge(-CHARGE_FOR_CLIMAX)
-	user.emote("sexmoanhvy", forced = TRUE)
+	if(user.has_flaw(/datum/charflaw/addiction/lovefiend))
+		user.sate_addiction()
+	if(!user.rogue_sneaking && user.alpha > 100) //stealth sex, keep your voice down.
+		user.emote("sexmoanhvy", forced = TRUE)
 	user.playsound_local(user, 'sound/misc/mat/end.ogg', 100)
 	last_ejaculation_time = world.time
 	if(HAS_TRAIT(user, TRAIT_BAOTHA_CURSE))
 		user.apply_status_effect(/datum/status_effect/debuff/cumbrained)
 	SSticker.cums++
-	cuckold_check()
 
 
 /datum/sex_controller/proc/after_milking()

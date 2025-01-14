@@ -141,6 +141,10 @@
 		qdel(src)
 		return
 
+	for(var/mob/living/carbon/human/H in view(2, src))
+		if(H.has_flaw(/datum/charflaw/addiction/pyromaniac))
+			H.sate_addiction()
+
 	perform_exposure()
 	return
 
