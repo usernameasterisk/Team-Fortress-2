@@ -348,7 +348,7 @@
 	sellprice = 10
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
-	name = "обитый гамбезон"
+	name = "стёганый гамбезон"
 	desc = "Гамбезон с дополнительными слоями набивки, укрепленный для большей прочности. Он все равно не может сравниться с настоящей броней."
 	icon_state = "gambesonp"
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_SMASH)
