@@ -5,6 +5,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	"Nymphomaniac"=/datum/charflaw/addiction/lovefiend,
 	"Sadist"=/datum/charflaw/addiction/sadist,
 	"Isolationist"=/datum/charflaw/isolationist,
+	"Colorblind"=/datum/charflaw/colorblind,
 	"Bad Sight"=/datum/charflaw/badsight,
 	"Clingy"=/datum/charflaw/clingy,
 	"Fire Servant"=/datum/charflaw/addiction/pyromaniac,
@@ -528,3 +529,11 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	var/mob/living/carbon/P = user
 	if(cnt < 2)
 		P.add_stress(/datum/stressevent/nopeople)
+
+/datum/charflaw/colorblind
+	name = "Colorblind"
+	desc = "I was cursed with flawed eyesight from birth, and can't discern things others can."
+
+/datum/charflaw/colorblind/on_mob_creation(mob/user)
+	..()
+	user.add_client_colour(/datum/client_colour/monochrome)
