@@ -692,7 +692,7 @@
 /datum/status_effect/buff/berserkium_buff
 	id = "berserkiumbuff"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/berserkium_buff
-	effectedstats = list("strength" = 2, "constitution" = 5, "speed" = -10, "perception" = -5, "intelligence" = -10)
+	effectedstats = list("strength" = 5, "constitution" = 5, "speed" = -10, "perception" = -5, "intelligence" = -10)
 	duration = 1
 
 /atom/movable/screen/alert/status_effect/buff/berserkium_buff
@@ -757,7 +757,8 @@
 	..()
 
 /datum/reagent/medicine/berserkium/on_mob_life(mob/living/carbon/M)
-	M.overlay_fullscreen("wakeup", /atom/movable/screen/fullscreen/dreaming/waking_up)
+	shake_camera(M, 10, 1)
+	M.overlay_fullscreen("rage", /atom/movable/screen/fullscreen/color_vision/red)
 	if(M.has_status_effect(/datum/status_effect/debuff/sleepytime))
 		M.remove_status_effect(/datum/status_effect/debuff/sleepytime)
 		M.remove_stress(/datum/stressevent/sleepytime)
