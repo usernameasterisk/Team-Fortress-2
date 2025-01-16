@@ -45,22 +45,13 @@
 		)
 	specstats = list(
 		"strength" = 0,
-		"perception" = 1,
+		"perception" = -1,
 		"intelligence" = -1,
-		"constitution" = 1,
-		"endurance" = 1,
+		"constitution" = 2,
+		"endurance" = 2,
 		"speed" = -2,
 		"fortune" = 0
 		)
-	specstats_f = list(
-		"strength" = -1,
-		"perception" = 1,
-		"intelligence" = 0,
-		"constitution" = -1,
-		"endurance" = 0,
-		"speed" = 1,
-		"fortune" = 0
-	)
 	enflamed_icon = "widefire"
 	bodypart_features = list(
 		/datum/bodypart_feature/hair/head,
