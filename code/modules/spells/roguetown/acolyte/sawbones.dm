@@ -692,7 +692,7 @@
 /datum/status_effect/buff/berserkium_buff
 	id = "berserkiumbuff"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/berserkium_buff
-	effectedstats = list("strength" = 2, "constitution" = 5, "speed" = -5, "perception" = -5, "intelligence" = -10)
+	effectedstats = list("strength" = 2, "constitution" = 5, "speed" = -10, "perception" = -5, "intelligence" = -10)
 	duration = 1
 
 /atom/movable/screen/alert/status_effect/buff/berserkium_buff
