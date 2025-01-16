@@ -757,6 +757,7 @@
 	..()
 
 /datum/reagent/medicine/berserkium/on_mob_life(mob/living/carbon/M)
+	M.overlay_fullscreen("wakeup", /atom/movable/screen/fullscreen/dreaming/waking_up)
 	if(M.has_status_effect(/datum/status_effect/debuff/sleepytime))
 		M.remove_status_effect(/datum/status_effect/debuff/sleepytime)
 		M.remove_stress(/datum/stressevent/sleepytime)
