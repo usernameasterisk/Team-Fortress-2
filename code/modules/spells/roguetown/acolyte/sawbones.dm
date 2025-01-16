@@ -730,6 +730,7 @@
 	ADD_TRAIT(M, TRAIT_SCHIZO_AMBIENCE, TRAIT_GENERIC)
 	ADD_TRAIT(M, TRAIT_NOFLASH, TRAIT_GENERIC)
 	M.apply_status_effect(/datum/status_effect/buff/berserkium_buff)
+	M.overlay_fullscreen("rage", /atom/movable/screen/fullscreen/color_vision/red)
 
 /datum/reagent/medicine/berserkium/on_mob_end_metabolize(mob/living/carbon/M)
 	REMOVE_TRAIT(M, TRAIT_NOSOFTCRIT, TRAIT_GENERIC)
@@ -754,11 +755,12 @@
 	M.adjustOxyLoss(100)
 	M.apply_status_effect(/datum/status_effect/buff/berserkium_crash)
 	M.updatehealth()
+	M.clear_fullscreen("rage")
 	..()
 
 /datum/reagent/medicine/berserkium/on_mob_life(mob/living/carbon/M)
-	shake_camera(M, 10, 1)
-	M.overlay_fullscreen("rage", /atom/movable/screen/fullscreen/color_vision/red)
+	M.Dizzy(10)
+	M.Jitter(10)
 	if(M.has_status_effect(/datum/status_effect/debuff/sleepytime))
 		M.remove_status_effect(/datum/status_effect/debuff/sleepytime)
 		M.remove_stress(/datum/stressevent/sleepytime)
