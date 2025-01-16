@@ -13,7 +13,6 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	allowed_races = RACES_TOLERATED_UP
 	allowed_patrons = ALL_DIVINE_PATRONS
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	tutorial = "Божественное - это все, что имеет значение в мире безнравственных. \
 	Плачущий Бог оставил своих детей править нами, смертными, и вы будете проповедовать их мудрость всем, кто еще прислушивается к их воле. \
 	Безбожников становится все больше, и именно вам предстоит направить их в богобоязненное будущее."
@@ -24,7 +23,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
 	display_order = JDO_PRIEST
 	give_bank_account = 115
-	min_pq = 8
+	min_pq = 3
 	max_pq = null
 	required = TRUE
 
