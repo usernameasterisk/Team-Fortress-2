@@ -43,6 +43,7 @@
 	new_patron.on_gain(src)
 	return TRUE
 
+/datum/species
 	// Associative list of stat (STAT_STRENGTH, etc) bonuses used to differentiate each race. They should ALWAYS be positive.
 	var/list/race_bonus = list()
 
