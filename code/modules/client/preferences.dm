@@ -328,7 +328,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			dat += "<BR>"
 			dat += "<b>Раса:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (!)"]<BR>"
 			// LETHALSTONE EDIT BEGIN: add statpack selection
-			dat += "<b>Statpack:</b> <a href='?_src_=prefs;preference=statpack;task=input'>[statpack.name]</a><BR>"
+			dat += "<b>Раскачка:</b> <a href='?_src_=prefs;preference=statpack;task=input'>[statpack.name]</a><BR>"
 //			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
 
