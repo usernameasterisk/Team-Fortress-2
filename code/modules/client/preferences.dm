@@ -328,7 +328,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			dat += "<BR>"
 			dat += "<b>Раса:</b> <a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a>[spec_check(user) ? "" : " (!)"]<BR>"
 			// LETHALSTONE EDIT BEGIN: add statpack selection
-			dat += "<b>Раскачка:</b> <a href='?_src_=prefs;preference=statpack;task=input'>[statpack.name]</a><BR>"
+			dat += "<b>Навыки:</b> <a href='?_src_=prefs;preference=statpack;task=input'>[statpack.name]</a><BR>"
 //			dat += "<a href='?_src_=prefs;preference=species;task=random'>Random Species</A> "
 //			dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SPECIES]'>Always Random Species: [(randomise[RANDOM_SPECIES]) ? "Yes" : "No"]</A><br>"
 
@@ -1436,7 +1436,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						statpacks_available[statpack.name] = statpack
 
-					var/statpack_input = input(user, "Выбери раскачку для своего персонажа:", "Раскачка") as null|anything in statpacks_available
+					var/statpack_input = input(user, "Выберите навыки для своего персонажа:", "Навыки") as null|anything in statpacks_available
 					if (statpack_input)
 						var/datum/statpack/statpack_chosen = statpacks_available[statpack_input]
 						statpack = statpack_chosen
