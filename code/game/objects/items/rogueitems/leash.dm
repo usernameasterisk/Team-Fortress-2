@@ -49,8 +49,8 @@
 //The component variables are used for hooks, used later.
 
 /obj/item/leash
-	name = "rope leash"
-	desc = "A simple rope with a knot at the end for easy attachment onto bindings."
+	name = "поводок из веревки"
+	desc = "Простая веревка с узлом на конце для удобного крепления."
 	icon = 'modular/icons/obj/items/leashes_collars.dmi'
 	icon_state = "leash"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -58,7 +58,7 @@
 	equip_sound = 'sound/foley/equip/rummaging-01.ogg'
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	throw_range = 4
-	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_BELT
 	force = 1
 	throwforce = 1
 	w_class = WEIGHT_CLASS_SMALL
@@ -313,7 +313,7 @@
 /obj/item/leash/proc/drop_effects(mob/user, silent)
 	SIGNAL_HANDLER
 	if(leash_master == user)
-		if(leash_master.is_holding(src) || leash_master.get_item_by_slot(ITEM_SLOT_BELT) == src || leash_master.get_item_by_slot(ITEM_SLOT_BELT) == src)
+		if(leash_master.is_holding(src) || leash_master.get_item_by_slot(ITEM_SLOT_BELT) == src)
 			return  //Dom still has the leash as it turns out. Cancel the proc.
 	if(!leash_pet)
 		return

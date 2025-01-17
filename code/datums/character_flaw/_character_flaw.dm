@@ -2,6 +2,13 @@
 GLOBAL_LIST_INIT(character_flaws, list(
 	"Alcoholic"=/datum/charflaw/addiction/alcoholic,
 	"Smoker"=/datum/charflaw/addiction/smoker,
+	"Nymphomaniac"=/datum/charflaw/addiction/lovefiend,
+	"Sadist"=/datum/charflaw/addiction/sadist,
+	"Isolationist"=/datum/charflaw/isolationist,
+	"Colorblind"=/datum/charflaw/colorblind,
+	"Bad Sight"=/datum/charflaw/badsight,
+	"Clingy"=/datum/charflaw/clingy,
+	"Fire Servant"=/datum/charflaw/addiction/pyromaniac,
 	"Junkie"=/datum/charflaw/addiction/junkie,
 	"Greedy"=/datum/charflaw/greedy,
 	"Narcoleptic"=/datum/charflaw/narcoleptic,
@@ -431,3 +438,102 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	for(var/atom/movable/content in movable.contents)
 		mammons += get_mammons_in_atom(content)
 	return mammons
+
+/datum/charflaw/isolationist
+	name = "Isolationist"
+	desc = "I don't like being near people. They might be trying to do something to me..."
+	var/last_check = 0
+
+/datum/charflaw/isolationist/flaw_on_life(mob/user)
+	. = ..()
+	if(world.time < last_check + 10 SECONDS)
+		return
+	if(!user)
+		return
+	last_check = world.time
+	var/cnt = 0
+	for(var/mob/living/carbon/human/L in hearers(7, user))
+		if(L == src)
+			continue
+		if(L.stat)
+			continue
+		if(L.dna.species)
+			cnt++
+		if(cnt > 2)
+			break
+	var/mob/living/carbon/P = user
+	if(cnt > 2)
+		P.add_stress(/datum/stressevent/crowd)
+
+/datum/charflaw/badsight
+	name = "Bad Eyesight"
+	desc = "I need spectacles to see normally from my years spent reading books."
+
+/datum/charflaw/badsight/on_mob_creation(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+
+/datum/charflaw/badsight/flaw_on_life(mob/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/H = user
+	if(H.wear_mask)
+		if(isclothing(H.wear_mask))
+			if(istype(H.wear_mask, /obj/item/clothing/mask/rogue/spectacles))
+				var/obj/item/I = H.wear_mask
+				if(!I.obj_broken)
+					return
+	H.blur_eyes(2)
+	H.apply_status_effect(/datum/status_effect/debuff/badvision)
+
+/datum/status_effect/debuff/badvision
+	id = "badvision"
+	alert_type = null
+	effectedstats = list("perception" = -20, "speed" = -5,"fortune" = -20)
+	duration = 100
+
+/datum/charflaw/badsight/on_mob_creation(mob/user)
+	..()
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/H = user
+	if(!H.wear_mask)
+		H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/spectacles(H), SLOT_WEAR_MASK)
+	else
+		new /obj/item/clothing/mask/rogue/spectacles(get_turf(H))
+
+/datum/charflaw/clingy
+	name = "Clingy"
+	desc = "I like being around people, it's just so lively..."
+	var/last_check = 0
+
+/datum/charflaw/clingy/flaw_on_life(mob/user)
+	. = ..()
+	if(world.time < last_check + 10 SECONDS)
+		return
+	if(!user)
+		return
+	last_check = world.time
+	var/cnt = 0
+	for(var/mob/living/carbon/human/L in hearers(7, user))
+		if(L == src)
+			continue
+		if(L.stat)
+			continue
+		if(L.dna.species)
+			cnt++
+		if(cnt > 2)
+			break
+	var/mob/living/carbon/P = user
+	if(cnt < 2)
+		P.add_stress(/datum/stressevent/nopeople)
+
+/datum/charflaw/colorblind
+	name = "Colorblind"
+	desc = "I was cursed with flawed eyesight from birth, and can't discern things others can."
+
+/datum/charflaw/colorblind/on_mob_creation(mob/user)
+	..()
+	user.add_client_colour(/datum/client_colour/monochrome)

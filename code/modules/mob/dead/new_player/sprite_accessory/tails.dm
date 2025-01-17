@@ -339,6 +339,12 @@
 	color_key_defaults = list(KEY_SKIN_COLOR)
 	can_wag = TRUE
 
+/datum/sprite_accessory/tail/lynx
+	name = "Lynx"
+	icon_state = "lynx"
+	color_keys = 2
+	color_key_names = list("Tail", "Tip")
+
 /datum/sprite_accessory/tail/dragongirl/dragontailm
 	name = "Dragon Tail(m)"
 	icon = 'icons/mob/sprite_accessory/tails/dragongirl.dmi'
