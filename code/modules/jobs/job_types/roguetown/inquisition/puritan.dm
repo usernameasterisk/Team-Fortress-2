@@ -11,9 +11,11 @@
 	allowed_patrons = list(
 		/datum/patron/psydon
 	)
-	tutorial = "Created with the re-emergence of the cult of Psydon, \
-	The Inquisition has sent you to Rockhill on a quest to root out the blasphemous and the accursed of these lands. \
-	Guided by religious fervor and paranoia, you hope that your uneasy alliance with the Church will hold."
+
+	tutorial = "Созданная в связи с возрождением культа Псайдона,\
+    Инквизиция отправила вас в Рокхилл с целью искоренить богохульников и проклятых в этих землях. \
+    Руководствуясь религиозным рвением и паранойей, вы надеетесь, что ваш непростой союз с Церковью Десяти устоит."
+
 	whitelist_req = TRUE
 
 	outfit = /datum/outfit/job/roguetown/puritan
@@ -35,14 +37,14 @@
 	shoes = /obj/item/clothing/shoes/roguetown/armor/inqboots
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	cloak = /obj/item/clothing/cloak/cape/puritan
-	beltr = /obj/item/gun/ballistic/revolver/grenadelauncher/runelock
-	beltl = /obj/item/storage/belt/rogue/pouch/ammo
+	beltr = /obj/item/gun/ballistic/arquebus_pistol
+	beltl = /obj/item/ammo_holder/bullet/lead
 	head = /obj/item/clothing/head/roguetown/inqhat
 	gloves = /obj/item/clothing/gloves/roguetown/inqgloves
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat
 	backr = /obj/item/rogueweapon/sword/rapier
 	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/storage/keyring/puritan = 1, /obj/item/rogueweapon/huntingknife/idagger/silver, /obj/item/lockpick = 1)
+	backpack_contents = list(/obj/item/storage/keyring/puritan = 1, /obj/item/rogueweapon/huntingknife/idagger/silver, /obj/item/lockpick = 1, /obj/item/powderflask = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
