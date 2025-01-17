@@ -2,7 +2,7 @@
 
 /datum/statpack/wildcard/wretched
 	name = "Обездоленный"
-	desc = "Остров Энигма есть настоящим скоплением разнообразных отбросов общества и вы - не исключение. Может быть, хотя бы на этот раз вам повезёт?"
+	desc = "Остров Энигма есть настоящим скоплением разнообразных отбросов общества и ты - не исключение. Может быть, хотя бы на этот раз тебе повезёт?"
 	stat_array = list(STAT_STRENGTH = -2, STAT_PERCEPTION = -2, STAT_INTELLIGENCE = -2, STAT_CONSTITUTION = -2, STAT_ENDURANCE = -2, STAT_SPEED = -2, STAT_FORTUNE = 3)
 
 /datum/statpack/wildcard/fated
