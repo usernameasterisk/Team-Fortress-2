@@ -37,7 +37,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/armor/inqboots
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	cloak = /obj/item/clothing/cloak/cape/puritan
-	beltr = /obj/item/gun/ballistic/arquebus_pistol
+	beltr = /obj/item/gun/ballistic/firearm/arquebus_pistol
 	beltl = /obj/item/ammo_holder/bullet/lead
 	head = /obj/item/clothing/head/roguetown/inqhat
 	gloves = /obj/item/clothing/gloves/roguetown/inqgloves

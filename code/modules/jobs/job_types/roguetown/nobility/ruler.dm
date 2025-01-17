@@ -127,7 +127,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		l_hand = /obj/item/rogueweapon/lordscepter
 		r_hand = /obj/item/clothing/head/roguetown/duchess_hood
 		belt = /obj/item/storage/belt/rogue/leather
-		beltr = /obj/item/gun/ballistic/arquebus_pistol
+		beltr = /obj/item/gun/ballistic/firearm/arquebus_pistol
 		beltl = /obj/item/ammo_holder/bullet/lead
 		neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 		backr = /obj/item/storage/backpack/rogue/satchel/black
