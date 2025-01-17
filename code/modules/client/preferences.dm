@@ -1416,11 +1416,13 @@ Slots: [job.spawn_positions]</span>
 						// LETHALSTONE EDIT: let players know what this shit does stats-wise
 						switch (age)
 							if (AGE_ADULT)
-								to_chat(user, "You preside in your 'prime', whatever this may be, and gain no bonus nor endure any penalty for your time spent alive.")
+								to_chat(user, "Ты самом расцвете сил и не получаешь никаких бонусов и штрафов!")
 							if (AGE_MIDDLEAGED)
-								to_chat(user, "Muscles ache and joints begin to slow as Aeon's grasp begins to settle upon your shoulders. (-1 SPD, +1 END)")
+								to_chat(user, "Твои мышцы постепенно стареют и продряхают, но жизнь уже научила тебя выносить её без лишних капризов.")
+								to_chat(user, "(-1 SPD, +1 END)")
 							if (AGE_OLD)
-								to_chat(user, "In a place as lethal as Engima, the elderly are all but marvels... or beneficiaries of the habitually privileged. (-1 STR, -2 SPE, -1 PER, -2 CON, +3 INT, +1 FOR)")
+								to_chat(user, "В подобных Энигме местах старики - настоящее чудо!.. Если они, конечно, не доживающие свой век на золотых горах дворяне."
+								to_chat(user, "(-1 STR, -2 SPE, -1 PER, -2 CON, +3 INT, +1 FOR)")
 						// LETHALSTONE EDIT END
 						ResetJobs()
 						to_chat(user, "<font color='red'>Classes reset.</font>")
@@ -1434,7 +1436,7 @@ Slots: [job.spawn_positions]</span>
 							continue
 						statpacks_available[statpack.name] = statpack
 
-					var/statpack_input = input(user, "Choose your character's statpack", "Statpack") as null|anything in statpacks_available
+					var/statpack_input = input(user, "Выбери раскачку для своего персонажа:", "Раскачка") as null|anything in statpacks_available
 					if (statpack_input)
 						var/datum/statpack/statpack_chosen = statpacks_available[statpack_input]
 						statpack = statpack_chosen
