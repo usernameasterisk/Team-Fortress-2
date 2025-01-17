@@ -1,7 +1,7 @@
 // Mental-based archetypes
 /datum/statpack/mental/scholarly
 	name = "Знающий"
-	desc = "Сотни прочитаных книг. Один вывод: знания - сила. Но хватит ли у тебя мудрости использовать силу правильно?"
+	desc = "Сотни прочитанных книг. Один вывод: знания - сила. Но хватит ли у тебя мудрости использовать силу правильно?"
 	stat_array =  list(STAT_STRENGTH = -1, STAT_PERCEPTION = 1, STAT_INTELLIGENCE = 2, STAT_ENDURANCE = -1)
 
 /datum/statpack/mental/faithdriven
