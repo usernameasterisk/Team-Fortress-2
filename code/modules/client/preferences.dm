@@ -67,6 +67,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	var/slot_randomized					//keeps track of round-to-round randomization of the character slot, prevents overwriting
 	var/real_name						//our character's name
 	var/gender = MALE					//gender of character (well duh)
+	var/datum/statpack/statpack	= new /datum/statpack/wildcard/fated // LETHALSTONE EDIT: the statpack we're giving our char instead of racial bonuses
 	var/age = AGE_ADULT						//age of character
 	var/origin = "Default"
 	var/underwear = "Nude"				//underwear type
