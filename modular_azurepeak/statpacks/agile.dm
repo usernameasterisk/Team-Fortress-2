@@ -1,7 +1,7 @@
 // Ranger/rogue archetypes
 /datum/statpack/agile/swift
 	name = "Скользкий"
-	desc = "Ты - эталон выражения "скользкий тип". Вёрткий язык выручит тебя, а быстрые ноги спасут, когда кто-то решит использовать его не по назначению."
+	desc = "Ты - эталон выражения «скользкий тип». Вёрткий язык выручит тебя, а быстрые ноги спасут, когда кто-то решит использовать его не по назначению."
 	stat_array = list(STAT_STRENGTH = -1, STAT_CONSTITUTION = -1, STAT_ENDURANCE = 1, STAT_SPEED = 2)
 
 /datum/statpack/agile/hardy
