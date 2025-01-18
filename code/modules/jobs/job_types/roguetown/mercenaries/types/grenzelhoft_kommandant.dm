@@ -5,21 +5,10 @@
 	expensive and noble Grenzelhoft mercenaries of the emperiate guild of the Grenzel empire. \
 	The mercenaries of Gren rightfully fear and respect their Kommandant, walking to certain death on his one word."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = list(
-		/datum/species/axian,
-		/datum/species/vulpkanin,
-		/datum/species/lupian,
-		/datum/species/dracon,
-		/datum/species/moth, //grenzelmoft?
-		/datum/species/dwarf/mountain,
-		/datum/species/human/northern,
-		/datum/species/demihuman,
-		/datum/species/anthromorph,
-		/datum/species/tabaxi
-	)
+	allowed_races = RACES_TOLERATED_UP
 	outfit = /datum/outfit/job/roguetown/mercenary/grenzelhoft_kommandant
 	maximum_possible_slots = 1
-	min_pq = 18
+	min_pq = 25
 	torch = FALSE
 	cmode_music = 'sound/music/combat_grenzelhoft.ogg'
 	category_tags = list(CTAG_MERCENARY)
@@ -65,11 +54,6 @@
 		else
 			r_hand = /obj/item/rogueweapon/halberd
 
-	//Humie grenzelhofts are always set to be, well, grenzelhoft
-	if(ishumannorthern(H))
-		var/list/skin_slop = H.dna.species.get_skin_list()
-		H.skin_tone = skin_slop["Grenzelhoft"]
-		H.update_body()
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
