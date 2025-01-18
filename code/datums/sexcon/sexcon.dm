@@ -217,9 +217,9 @@
 	after_ejaculation()
 
 /datum/sex_controller/proc/after_ejaculation()
-	user.add_stress(/datum/stressevent/cumok)
 	set_arousal(40)
-	adjust_charge(-CHARGE_FOR_CLIMAX)
+	if(user.has_flaw(/datum/charflaw/addiction/lovefiend))
+		user.sate_addiction()
 	user.emote("sexmoanhvy", forced = TRUE)
 	user.playsound_local(user, 'sound/misc/mat/end.ogg', 100)
 	last_ejaculation_time = world.time
@@ -227,7 +227,6 @@
 		user.apply_status_effect(/datum/status_effect/debuff/cumbrained)
 	SSticker.cums++
 	cuckold_check()
-
 
 /datum/sex_controller/proc/after_milking()
 	set_arousal(80)
