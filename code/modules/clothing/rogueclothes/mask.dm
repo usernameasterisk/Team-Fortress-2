@@ -169,3 +169,15 @@
 	max_integrity = 150
 	sellprice = 100
 	smeltresult = /obj/item/ingot/gold
+
+/obj/item/clothing/mask/rogue/eoran_mask
+	name = "эоранская маска"
+	desc = "Серебряная оперная маска, которую носят верующие Эоры, как правило, во время своих ритуалов."
+	icon = 'icons/roguetown/clothing/head.dmi'
+	icon_state = "eoramask"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	dynamic_hair_suffix = ""
+	flags_inv = HIDEFACE | HIDEFACIALHAIR
+	resistance_flags = FIRE_PROOF
