@@ -7,7 +7,6 @@
 	spawn_positions = 1
 	allowed_races = RACES_TOLERATED_UP
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	display_order = JDO_SHERIFF
 	tutorial = "Преступность всегда была постоянной составляющей вашей жизни, и вы всегда выбирали сторону справедливости. \
 	Вы поднялись в ряды стражников, и теперь руководите ими - следите за тем, чтобы они соблюдали законы этой земли. \

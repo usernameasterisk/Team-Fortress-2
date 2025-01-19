@@ -8,7 +8,6 @@
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TOLERATED_UP
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	tutorial = "Будь вы продажным политиком или настоящим благодетелем, горожане теперь обращаются к вам за советом по мелким вопросам. \
 				Герцог может и носить официальный титул, но с шерифом под вашим началом, подчинитесь ли вы грузу традиций или измените саму идею власти?"
 	whitelist_req = TRUE
