@@ -8,7 +8,7 @@
 /datum/status_effect/buff/wooden_skin
 	id = "wooden_skin"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/wooden_skin
-	effectedstats = list("endurance" = 1)
+	effectedstats = list("constitution" = 1)
 	duration = 30 SECONDS
 
 // Чудо
