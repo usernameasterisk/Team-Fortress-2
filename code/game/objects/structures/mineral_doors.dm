@@ -185,6 +185,7 @@
 	if(lockhash)
 		GLOB.lockhashes += lockhash
 	else if(keylock)
+		AddElement(/datum/element/lockpickable, list(/obj/item/lockpick), list(/obj/item/lockpick), 1)
 		if(lockid)
 			if(GLOB.lockids[lockid])
 				lockhash = GLOB.lockids[lockid]
@@ -370,28 +371,18 @@
 	animate(pixel_x = oldx-1, time = 0.5)
 	animate(pixel_x = oldx, time = 0.5)
 
-/obj/structure/mineral_door/attackby(obj/item/I, mob/user, autobump = FALSE)
+/obj/structure/mineral_door/attackby(obj/item/I, mob/user)
 	user.changeNext_move(CLICK_CD_FAST)
 	if(istype(I, /obj/item/key) || istype(I, /obj/item/storage/keyring))
 		if(!locked)
 			to_chat(user, span_warning("It won't turn this way. Try turning to the right."))
 			rattle()
 			return
-		if(autobump == TRUE) //Attackby passes UI coordinate onclick stuff, so forcing check to TRUE
-			trykeylock(I, user, autobump)
-			return
-		else
-			trykeylock(I, user)
-			return
-//	else if(user.used_intent.type != INTENT_HARM)
-//		return attack_hand(user)
-	if(istype(I, /obj/item/lockpick))
-		trypicklock(I, user)
+		trykeylock(I, user)
+	if(repairable && (user.mind.get_skill_level(repair_skill) > 0) && ((istype(I, repair_cost_first)) || (istype(I, repair_cost_second)))) // At least 1 skill level needed
+		repairdoor(I,user)
 	else
-		if(repairable && (user.mind.get_skill_level(repair_skill) > 0) && ((istype(I, repair_cost_first)) || (istype(I, repair_cost_second)))) // At least 1 skill level needed
-			repairdoor(I,user)
-		else
-			return ..()
+		return ..()
 
 /obj/structure/mineral_door/proc/repairdoor(obj/item/I, mob/user)
 	if(brokenstate)				

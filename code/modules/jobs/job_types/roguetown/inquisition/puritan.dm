@@ -24,6 +24,16 @@
 	min_pq = 8
 	max_pq = null
 
+/datum/job/roguetown/puritan/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+	..()
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		var/prev_real_name = H.real_name
+		var/prev_name = H.name
+		var/title = "Magister"
+		H.real_name = "[title] [prev_real_name]"
+		H.name = "[title] [prev_name]"
+
 /datum/outfit/job/roguetown/puritan
 	name = "Inquisitor"
 	jobtype = /datum/job/roguetown/puritan
