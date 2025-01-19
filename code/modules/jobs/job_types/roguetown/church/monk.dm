@@ -80,7 +80,7 @@
 			shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/black
 			cloak = /obj/item/clothing/cloak/apron/blacksmith
 		if(/datum/patron/divine/eora)
-			head = /obj/item/clothing/head/roguetown/eoramask
+			mask = /obj/item/clothing/mask/rogue/eoran_mask
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/eora

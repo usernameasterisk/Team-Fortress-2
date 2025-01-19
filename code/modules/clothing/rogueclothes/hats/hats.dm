@@ -131,17 +131,6 @@
 		else if(adjustable == CADJUSTED)
 			ResetAdjust(user)
 
-/obj/item/clothing/head/roguetown/eoramask
-	name = "эоранская маска"
-	desc = "Серебряная оперная маска, которую носят верующие Эоры, как правило, во время своих ритуалов."
-	icon_state = "eoramask"
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
-	worn_x_dimension = 64
-	worn_y_dimension = 64
-	dynamic_hair_suffix = ""
-	flags_inv = HIDEFACE|HIDEFACIALHAIR
-	resistance_flags = FIRE_PROOF // Made of metal
-
 /obj/item/clothing/head/roguetown/roguehood/astrata
 	name = "капюшон солнца"
 	desc = "Капюшон тех, кто предпочитает Астрату. Хвала перворожденному солнцу!"
