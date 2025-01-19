@@ -371,14 +371,19 @@
 	animate(pixel_x = oldx-1, time = 0.5)
 	animate(pixel_x = oldx, time = 0.5)
 
-/obj/structure/mineral_door/attackby(obj/item/I, mob/user)
+/obj/structure/mineral_door/attackby(obj/item/I, mob/user, autobump = FALSE)
 	user.changeNext_move(CLICK_CD_FAST)
 	if(istype(I, /obj/item/key) || istype(I, /obj/item/storage/keyring))
 		if(!locked)
 			to_chat(user, span_warning("It won't turn this way. Try turning to the right."))
 			rattle()
 			return
-		trykeylock(I, user)
+		if(autobump == TRUE) //Attackby passes UI coordinate onclick stuff, so forcing check to TRUE
+			trykeylock(I, user, autobump)
+			return
+		else
+			trykeylock(I, user)
+			return
 	if(repairable && (user.mind.get_skill_level(repair_skill) > 0) && ((istype(I, repair_cost_first)) || (istype(I, repair_cost_second)))) // At least 1 skill level needed
 		repairdoor(I,user)
 	else
