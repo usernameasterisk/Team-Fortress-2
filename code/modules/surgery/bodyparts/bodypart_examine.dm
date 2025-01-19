@@ -113,7 +113,7 @@
 		bodypart_status += "<B>Инородные объекты:</B>"
 		for(var/obj/item/embedded as anything in embedded_objects)
 			bodypart_status += "<a href='?src=[owner_ref];embedded_object=[REF(embedded)];embedded_limb=[REF(src)]'>[embedded.name]</a>"
-	
+		
 	return bodypart_status
 
 /obj/item/bodypart/proc/check_for_injuries(mob/user, advanced = FALSE)
