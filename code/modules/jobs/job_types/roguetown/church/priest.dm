@@ -26,6 +26,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 	give_bank_account = 115
 	min_pq = 8
 	max_pq = null
+	required = TRUE
 
 	cmode_music = 'sound/music/combat_clergy.ogg'
 
