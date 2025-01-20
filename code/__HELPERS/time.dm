@@ -40,7 +40,7 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 	if(GLOB.todoverride)
 		GLOB.tod = GLOB.todoverride
 	if((GLOB.tod != oldtod) && !GLOB.todoverride && (GLOB.dayspassed>1)) //weather check on tod changes
-			if(!GLOB.forecast)
+		if(!GLOB.forecast)
 			switch(GLOB.tod)
 				if("dawn")
 					if(prob(25))
