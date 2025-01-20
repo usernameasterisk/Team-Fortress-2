@@ -40,7 +40,7 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 	if(GLOB.todoverride)
 		GLOB.tod = GLOB.todoverride
 	if((GLOB.tod != oldtod) && !GLOB.todoverride && (GLOB.dayspassed>1)) //weather check on tod changes
-		if(!GLOB.forecast)
+			if(!GLOB.forecast)
 			switch(GLOB.tod)
 				if("dawn")
 					if(prob(25))
@@ -129,7 +129,7 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 		T.maptext = {"<span style='vertical-align:top; text-align:center;
 					color: #7c5b10; font-size: 150%;
 					text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
-					font-family: "Nosfer", "Pterra";'>[text_to_show]</span>"}
+					font-family: "Nosfer", "Mookmania";'>[text_to_show]</span>"}
 		T.maptext_width = 205
 		T.maptext_height = 209
 		T.maptext_x = 12
