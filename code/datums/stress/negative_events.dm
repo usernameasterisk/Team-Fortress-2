@@ -336,3 +336,13 @@
 	stressadd = 6
 	desc = "I slept on the floor! What am I?! An animal?!"
 	timer = 3 MINUTES
+
+/datum/stressevent/crowd
+	timer = 2 MINUTES
+	stressadd = 2
+	desc = "<span class='red'>Why is everyone here...? Are they trying to kill me?!</span>"
+
+/datum/stressevent/nopeople
+	timer = 2 MINUTES
+	stressadd = 2
+	desc = "<span class='red'>Where did everyone go? Did something happen?!</span>"

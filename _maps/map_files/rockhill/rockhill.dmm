@@ -14412,7 +14412,7 @@
 	},
 /obj/item/clothing/suit/roguetown/shirt/robe/eora/alt,
 /obj/item/clothing/suit/roguetown/shirt/robe/eora,
-/obj/item/clothing/head/roguetown/eoramask,
+/obj/item/clothing/mask/rogue/eoran_mask,
 /obj/item/clothing/head/peaceflower,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/town/church)
