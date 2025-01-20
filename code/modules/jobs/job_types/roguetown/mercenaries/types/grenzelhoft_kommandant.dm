@@ -29,30 +29,25 @@
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backl = /obj/item/rogueweapon/sword/long/rider/messer
 
-	// Okay, if you love to duplicate things...
-	var/list/weapon_options = list(
-		"billhook",
-		"halberd",
-		"zweihander",
-		"estoc",
-	)
+	var/weapons = list("billhook", "halberd", "zweihander", "estoc")
+	var/weaponschoice = input("Choose your weapon", "Available weapons") as anything in weapons
 
-	var/chosen_weapon = input(
-		"Pick a weapon",
-		"Available weapons",
-	) as anything in weapon_options
-
-	switch(chosen_weapon)
+	switch(weaponschoice)
 		if("billhook")
 			r_hand = /obj/item/rogueweapon/spear/billhook
+			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 		if("halberd")
 			r_hand = /obj/item/rogueweapon/halberd
+			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 		if("zweihander")
 			r_hand = /obj/item/rogueweapon/greatsword/zwei
+			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		if("estoc")
 			r_hand = /obj/item/rogueweapon/estoc
+			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		else
 			r_hand = /obj/item/rogueweapon/halberd
+			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
