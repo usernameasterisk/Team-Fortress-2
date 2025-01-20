@@ -1978,4 +1978,9 @@
 #include "modular\ze_genesis_call\genesis_call.dm"
 #include "modular_twilight\code\modules\druid_overhaul\main.dm"
 #include "modular_twilight\code\modules\living\overhead_effects.dm"
+#include "modular_twilight\code\game\objects\items\rogueitems\inquisitionrelics.dm"
+#include "modular_twilight\datums\status_effects\rogue\roguebuff.dm"
+#include "modular_twilight\datums\stress\negative_events.dm"
+#include "modular_twilight\code\game\objects\items\rogueweapons\melee\flail.dm"
+#include "modular_twilight\code\game\objects\objects\effects\temporary_visuals\music.dm"
 // END_INCLUDE

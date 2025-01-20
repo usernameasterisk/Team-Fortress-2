@@ -1194,11 +1194,13 @@
 	. = ..()
 	if(slot == SLOT_HEAD)
 		ADD_TRAIT(user, TRAIT_PACIFISM, "peaceflower_[REF(src)]")
+		ADD_TRAIT(user, TRAIT_SPELLCOCKBLOCK, "peaceflower_[REF(src)]")
 		user.add_stress(/datum/stressevent/eora)
 
 /obj/item/clothing/head/peaceflower/dropped(mob/living/carbon/human/user)
 	..()
 	REMOVE_TRAIT(user, TRAIT_PACIFISM, "peaceflower_[REF(src)]")
+	REMOVE_TRAIT(user, TRAIT_SPELLCOCKBLOCK, "peaceflower_[REF(src)]")
 	user.remove_stress(/datum/stressevent/eora)
 
 /obj/item/clothing/head/peaceflower/proc/peace_check(mob/living/user)
