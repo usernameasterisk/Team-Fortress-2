@@ -1,4 +1,4 @@
-//by vide noir
+//by vide nosmsosatir
 
 /mob/living/proc/play_overhead_indicator(icon_path, overlay_name, clear_time, overlay_layer)
 	if(!ishuman(src))
