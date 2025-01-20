@@ -116,7 +116,7 @@
 	var/pq_warning = pick(list("Если я продолжу идти по скользкой дорожке, то моя душа попадет в...", "Я ощущаю... чье-то зловещее внимание...", "Тьма окутывает мою душу, наполняя тяжестью"))
 	to_chat(user, span_userdanger(pq_warning))
 	var/alert = alert(user, "Я, правда, хочу этого?", "Violate", "Да", "Нет")
-	if(alert != "Да")
+	if(alert != "Да!")
 		return
 	user.visible_message(span_boldwarning("[user] собирается изнасиловать [victim]!"))
 	if(!do_after(user, 5 SECONDS, target = victim))
@@ -187,13 +187,13 @@
 	show_ui()
 
 /datum/sex_controller/proc/cum_onto()
-	log_combat(user, target, "Кончает на тело!") // или снаружи? 
+	log_combat(user, target, "Кончает на партнера")
 	playsound(target, 'sound/misc/mat/endout.ogg', 50, TRUE, ignore_walls = FALSE)
 	add_cum_floor(get_turf(target))
 	after_ejaculation()
 
 /datum/sex_controller/proc/cum_into(oral = FALSE)
-	log_combat(user, target, "Кончает внутрь!")
+	log_combat(user, target, "Кончает в партнера")
 	if(oral)
 		playsound(target, pick(list('sound/misc/mat/mouthend (1).ogg','sound/misc/mat/mouthend (2).ogg')), 100, FALSE, ignore_walls = FALSE)
 	else
@@ -210,8 +210,8 @@
 	after_ejaculation()
 
 /datum/sex_controller/proc/ejaculate_container(obj/item/reagent_containers/glass/C)
-	log_combat(user, user, "Наполняет любовными соками емкость!")
-	user.visible_message(span_lovebold("[user] наполняет [C]!"))
+	log_combat(user, user, "Кончает в емкость")
+	user.visible_message(span_lovebold("[user] наполняет любовными соками [C]!"))
 	playsound(user, 'sound/misc/mat/endout.ogg', 50, TRUE, ignore_walls = FALSE)
 	C.reagents.add_reagent(/datum/reagent/erpjuice/cum, 3)
 	after_ejaculation()
