@@ -47,13 +47,14 @@
 	shoes = /obj/item/clothing/shoes/roguetown/armor/inqboots
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	cloak = /obj/item/clothing/cloak/cape/puritan
-	beltr = /obj/item/gun/ballistic/firearm/arquebus_pistol
-	beltl = /obj/item/ammo_holder/bullet/lead
+	beltr = /obj/item/storage/belt/rogue/pouch/ammo
+	beltl = /obj/item/storage/belt/rogue/pouch/ammo
 	head = /obj/item/clothing/head/roguetown/inqhat
 	gloves = /obj/item/clothing/gloves/roguetown/inqgloves
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat
 	backr = /obj/item/rogueweapon/sword/rapier
 	backl = /obj/item/storage/backpack/rogue/satchel
+	l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/runelock
 	r_hand = /obj/item/roguekey/psydonkey
 	backpack_contents = list(/obj/item/storage/keyring/puritan = 1, /obj/item/rogueweapon/huntingknife/idagger/silver, /obj/item/lockpick = 1, /obj/item/powderflask = 1)
 	if(H.mind)

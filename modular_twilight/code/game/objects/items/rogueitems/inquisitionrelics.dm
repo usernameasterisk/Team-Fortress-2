@@ -42,16 +42,17 @@
 	desc = ""
 	icon_state = "psydonmusicbox"
 	icon = 'modular_twilight/icons/roguetown/items/misc.dmi'
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	experimental_onback = TRUE
 	var/cranking = FALSE
 	force = 15
-	max_integrity = 100
 	attacked_sound = 'sound/combat/hits/onwood/education2.ogg'
 	gripped_intents = list(/datum/intent/hit)
 	possible_item_intents = list(/datum/intent/hit)
-	obj_flags = CAN_BE_HIT
-	twohands_required = TRUE
+	twohands_required = FALSE
 	var/datum/looping_sound/psydonmusicboxsound/soundloop
+	sellprice = 400
 
 /obj/item/psydonmusicbox/examine(mob/user)
 	. = ..()
@@ -118,7 +119,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/buff/cranking_soulchurner
 	var/effect_color
 	var/pulse = 0
-	var/ticks_to_apply = 10
+	var/ticks_to_apply = 5
 	var/astratanlines =list("'HER LIGHT HAS LEFT ME! WHERE AM I?!'", "'SHATTER THIS CONTRAPTION, SO I MAY FEEL HER WARMTH ONE LAST TIME!'", "'I am royal.. Why did they do this to me...?'")
 	var/noclines =list("'Colder than moonlight...'", "'No wisdom can reach me here...'", "'Please help me, I miss the stars...'")
 	var/necralines =list("'They snatched me from her grasp, for eternal torment...'", "'Necra! Please! I am so tired! Release me!'", "'I am lost, lost in a sea of stolen ends.'")
@@ -163,22 +164,22 @@
 					if(/datum/patron/inhumen/matthios)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you..."))) //sm
 						to_chat(H, (span_cultsmall(pick(matthioslines))))
-						H.add_stress(/datum/stressevent/soulchurner)
+						H.add_stress(/datum/stressevent/soulchurnerheretic)
 						H.apply_status_effect(/datum/status_effect/debuff/nekoldun)
 					if(/datum/patron/zizo)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
 						to_chat(H, (span_cultsmall(pick(zizolines))))
-						H.add_stress(/datum/stressevent/soulchurner)
+						H.add_stress(/datum/stressevent/soulchurnerheretic)
 						H.apply_status_effect(/datum/status_effect/debuff/nekoldun)
 					if(/datum/patron/inhumen/graggar)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
 						to_chat(H, (span_cultsmall(pick(graggarlines))))
-						H.add_stress(/datum/stressevent/soulchurner)
+						H.add_stress(/datum/stressevent/soulchurnerheretic)
 						H.apply_status_effect(/datum/status_effect/debuff/nekoldun)
 					if(/datum/patron/inhumen/baotha)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
 						to_chat(H, (span_cultsmall(pick(baothalines))))
-						H.add_stress(/datum/stressevent/soulchurner)
+						H.add_stress(/datum/stressevent/soulchurnerheretic)
 						H.apply_status_effect(/datum/status_effect/debuff/nekoldun)
 					if(/datum/patron/divine/astrata)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
