@@ -45,7 +45,7 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 				if("dawn")
 					if(prob(25))
 						GLOB.forecast = "rain"
-				//					if(prob(1))						SNOW COMMENTED OUT UNTIL ITS UPDATED TO FIX BUGS. ROGTODO
+//					if(prob(1))						SNOW COMMENTED OUT UNTIL ITS UPDATED TO FIX BUGS. ROGTODO
 //						GLOB.forecast = "snow"
 				if("day")
 					if(prob(5))

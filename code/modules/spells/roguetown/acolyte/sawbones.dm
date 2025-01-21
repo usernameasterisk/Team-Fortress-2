@@ -125,6 +125,56 @@
 	revert_cast()
 	return FALSE
 
+	if(!isliving(targets[1]))
+		revert_cast()
+		return FALSE
+
+	var/mob/living/target = targets[1]
+	if(target == user)
+		revert_cast()
+		return FALSE
+	if(target.stat < DEAD)
+		to_chat(user, span_warning("Nothing happens."))
+		revert_cast()
+		return FALSE
+	if(HAS_TRAIT(target, TRAIT_RITUALIZED))
+		to_chat(user, span_warning("The life essence was sucked out of this body."))
+		revert_cast()
+		return FALSE
+	if(world.time > target.mob_timers["lastdied"] + 10 MINUTES)
+		to_chat(user, span_warning("It's too late."))
+		revert_cast()
+		return FALSE
+	if(target.mob_biotypes & MOB_UNDEAD)
+		to_chat(user, span_warning("It's undead, I can't."))
+		revert_cast()
+		return FALSE
+	if(!target.revive(full_heal = FALSE))
+		to_chat(user, span_warning("They need to be mended more."))
+		revert_cast()
+		return FALSE
+	
+	var/mob/living/carbon/spirit/underworld_spirit = target.get_spirit()
+	//GET OVER HERE!
+	if(underworld_spirit)
+		var/mob/dead/observer/ghost = underworld_spirit.ghostize()
+		qdel(underworld_spirit)
+		ghost.mind.transfer_to(target, TRUE)
+	target.grab_ghost(force = TRUE)
+	target.emote("breathgasp")
+	target.Jitter(100)
+	if(isseelie(target))
+		var/mob/living/carbon/human/fairy_target = target
+		fairy_target.set_heartattack(FALSE)
+		var/obj/item/organ/wings/Wing = fairy_target.getorganslot(ORGAN_SLOT_WINGS)
+		if(Wing == null)
+			var/wing_type = fairy_target.dna.species.organs[ORGAN_SLOT_WINGS]
+			var/obj/item/organ/wings/seelie/new_wings = new wing_type()
+			new_wings.Insert(fairy_target)
+	target.update_body()
+	target.visible_message(span_notice("[target] is revived by holy light!"), span_green("I awake from the void."))
+	target.mind?.remove_antag_datum(/datum/antagonist/zombie)
+	return TRUE
 
 /obj/effect/proc_holder/spell/targeted/cpr/cast_check(skipcharge = 0,mob/user = usr)
 	if(!..())
@@ -919,11 +969,10 @@ end recipe count: 8 ash, 8 minced meat, 4 swampweed, 2 poisonberry to make 1 bot
 /obj/item/storage/fancy/pilltin/wake
 	name = "pill tin (wake)"
 
-	populate_contents = list(
-		/obj/item/reagent_containers/pill/caffpill,
-		/obj/item/reagent_containers/pill/caffpill,
-		/obj/item/reagent_containers/pill/caffpill
-	)
+/obj/item/storage/fancy/pilltin/wake/PopulateContents()
+	new /obj/item/reagent_containers/pill/caffpill(src)
+	new /obj/item/reagent_containers/pill/caffpill(src)
+	new /obj/item/reagent_containers/pill/caffpill(src)
 
 /obj/item/storage/fancy/skit
 	name = "surgery kit"
@@ -993,19 +1042,16 @@ end recipe count: 8 ash, 8 minced meat, 4 swampweed, 2 poisonberry to make 1 bot
 		/obj/item/needle/pestra
 	))
 
-/obj/item/storage/fancy/skit
-	populate_contents = list(
-		/obj/item/rogueweapon/surgery/scalpel,
-		/obj/item/rogueweapon/surgery/saw,
-		/obj/item/rogueweapon/surgery/hemostat,
-		/obj/item/rogueweapon/surgery/hemostat,
-		/obj/item/rogueweapon/surgery/retractor,
-		/obj/item/rogueweapon/surgery/bonesetter,
-		/obj/item/rogueweapon/surgery/cautery,
-		/obj/item/natural/worms/leech/cheele,
-		/obj/item/needle/pestra
-	)
-
+/obj/item/storage/fancy/skit/PopulateContents()
+	new /obj/item/rogueweapon/surgery/scalpel(src)
+	new /obj/item/rogueweapon/surgery/saw(src)
+	new /obj/item/rogueweapon/surgery/hemostat(src)
+	new /obj/item/rogueweapon/surgery/hemostat(src)
+	new /obj/item/rogueweapon/surgery/retractor(src)
+	new /obj/item/rogueweapon/surgery/bonesetter(src)
+	new /obj/item/rogueweapon/surgery/cautery(src)
+	new /obj/item/natural/worms/leech/cheele(src)
+	new /obj/item/needle/pestra(src)
 
 /obj/item/storage/fancy/ifak
 	name = "personal patch kit"
@@ -1016,15 +1062,10 @@ end recipe count: 8 ash, 8 minced meat, 4 swampweed, 2 poisonberry to make 1 bot
 	throwforce = 1
 	slot_flags = null
 
-	populate_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/sealbottle/reju,
-		/obj/item/natural/bundle/cloth/bandage/full,
-		/obj/item/reagent_containers/hypospray/medipen/sty/detox,
-		/obj/item/reagent_containers/pill/pnkpill,
-		/obj/item/candle/yellow,
-		/obj/item/needle,
-		/obj/item/book/rogue/medical_notebook
-	)
+/obj/item/storage/fancy/ifak/PopulateContents()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	for(var/i = 1 to STR.max_items)
+		new spawn_type(src)
 
 /obj/item/storage/fancy/ifak/update_icon()
 	if(fancy_open)
@@ -1083,8 +1124,16 @@ end recipe count: 8 ash, 8 minced meat, 4 swampweed, 2 poisonberry to make 1 bot
 		/obj/item/needle,
 		/obj/item/needle/thorn,
 		/obj/item/needle/pestra,
-		/obj/item/book/rogue/medical_notebook
 	))
+
+/obj/item/storage/fancy/ifak/PopulateContents()
+	new /obj/item/reagent_containers/hypospray/medipen/sealbottle/reju(src)
+	new /obj/item/natural/bundle/cloth/bandage/full(src)
+	new /obj/item/reagent_containers/hypospray/medipen/sty/detox(src)
+	new /obj/item/reagent_containers/pill/pnkpill(src)
+	new /obj/item/candle/yellow(src)
+	new /obj/item/needle(src)
+	new /obj/item/book/rogue/medical_notebook(src)
 
 /obj/item/reagent_containers/hypospray/medipen/sealbottle
 	name = "sealed bottle item"

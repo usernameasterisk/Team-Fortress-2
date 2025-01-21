@@ -72,10 +72,10 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		head = /obj/item/clothing/head/roguetown/crown/serpcrown
 		l_hand = /obj/item/rogueweapon/lordscepter
 		belt = /obj/item/storage/belt/rogue/leather
-		beltr = /obj/item/gun/ballistic/arquebus_pistol
+		beltr = /obj/item/gun/ballistic/firearm/arquebus_pistol
 		beltl = /obj/item/ammo_holder/bullet/lead
 		neck = /obj/item/storage/belt/rogue/pouch/coins/rich
-		backr = /obj/item/storage/backpack/rogue/satchel/black
+		backr = /obj/item/storage/backpack/rogue/satchel
 		backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/powderflask = 1)
 		id = /obj/item/clothing/ring/active/nomag	
 		pants = /obj/item/clothing/under/roguetown/tights/black
@@ -127,7 +127,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		l_hand = /obj/item/rogueweapon/lordscepter
 		r_hand = /obj/item/clothing/head/roguetown/duchess_hood
 		belt = /obj/item/storage/belt/rogue/leather
-		beltr = /obj/item/gun/ballistic/arquebus_pistol
+		beltr = /obj/item/gun/ballistic/firearm/arquebus_pistol
 		beltl = /obj/item/ammo_holder/bullet/lead
 		neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 		backr = /obj/item/storage/backpack/rogue/satchel/black

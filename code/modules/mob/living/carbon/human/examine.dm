@@ -162,6 +162,9 @@
 
 		if(real_name in GLOB.outlawed_players)
 			. += "<span class='userdanger'>ПРЕСТУПНИК!</span>"
+		var/inquisition_text =get_inquisition_text(user)
+		if(inquisition_text)
+			. +=span_notice(inquisition_text)
 		if(mind && mind.special_role)
 		else
 			if(mind && mind.special_role == "Vampire Lord")
@@ -630,3 +633,10 @@
 			dat += "[new_text]\n" //dat.Join("\n") doesn't work here, for some reason
 	if(dat.len)
 		return dat.Join()
+
+// Used for Inquisition tags
+/mob/living/proc/get_inquisition_text(mob/examiner)
+	var/inquisition_text
+	if(HAS_TRAIT(src, TRAIT_INQUISITION) && HAS_TRAIT(examiner, TRAIT_INQUISITION))
+		inquisition_text += "Fellow Member of the Inquisition"
+	return inquisition_text
