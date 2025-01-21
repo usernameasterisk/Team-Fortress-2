@@ -52,7 +52,7 @@
 	possible_item_intents = list(/datum/intent/hit)
 	twohands_required = FALSE
 	var/datum/looping_sound/psydonmusicboxsound/soundloop
-	sellprice = 1500
+	sellprice = 400
 
 /obj/item/psydonmusicbox/examine(mob/user)
 	. = ..()
