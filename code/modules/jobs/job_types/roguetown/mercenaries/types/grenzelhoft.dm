@@ -1,6 +1,9 @@
 /datum/subclass/grenzelhoft
 	name = "Grenzelhoft Mercenary"
-	tutorial = "Experts, Professionals, Expensive. Those are the first words that come to mind when the emperiate Grenzelhoft Free Corps is mentioned. While you may work for coin like any common sellsword, maintaining the honor of the Company will be of the utmost priority."
+	tutorial = "Эксперты, профессионалы, дорогие. \
+	Это первые слова, которые приходят на ум при упоминании имперской гильдии наемников Грензельхофт. \
+	Хотя вы можете работать за монету, как любой обычный наёмник, поддержание престижа гильдии будет иметь первостепенное значение. \
+	Наемники Грензельхофта по праву боятся и уважают своего коменданта, идя на верную смерть по одному его слову."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TOLERATED_UP
 	outfit = /datum/outfit/job/roguetown/mercenary/grenzelhoft

@@ -28,6 +28,13 @@
 
 #endif
 
+
+/datum/sprite_accessory/tail/akulashark
+	name = "Akulashark"
+	icon_state = "tail_akula"
+	color_keys = 2
+	color_key_names = list("Tails", "Fins", "Neons")
+
 /datum/sprite_accessory/tail/cat
 	name = "Cat"
 	icon_state = "cat"
@@ -92,6 +99,11 @@
 	icon_state = "eevee"
 	color_keys = 2
 	color_key_names = list("Tail", "Tip")
+	can_wag = TRUE
+
+/datum/sprite_accessory/tail/fshark
+	name = "Fancyshark"
+	icon_state = "tail_shark"
 	can_wag = TRUE
 
 /datum/sprite_accessory/tail/fennec
@@ -344,3 +356,13 @@
 	icon_state = "lynx"
 	color_keys = 2
 	color_key_names = list("Tail", "Tip")
+
+/datum/sprite_accessory/tail/dragongirl/dragontailm
+	name = "Dragon Tail(m)"
+	icon = 'icons/mob/sprite_accessory/tails/dragongirl.dmi'
+	icon_state = "dragontailm"
+
+/datum/sprite_accessory/tail/dragongirl/dragontailf
+	name = "Dragon Tail(f)"
+	icon = 'icons/mob/sprite_accessory/tails/dragongirl.dmi'
+	icon_state = "dragontailf"

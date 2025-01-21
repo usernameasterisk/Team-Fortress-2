@@ -8,7 +8,6 @@
 	allowed_patrons = ALL_NON_INHUMEN_PATRONS
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_VERY_SHUNNED_UP
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	tutorial = "Опытному солдату из свиты герцога поручено наблюдать за недавно построенным Бастионом. \
 				Вы подчиняетесь маршалу и их советникам,\
 				и ваша задача - держать авангард в строю и следить за тем, чтобы пути в город оставались безопасными.\

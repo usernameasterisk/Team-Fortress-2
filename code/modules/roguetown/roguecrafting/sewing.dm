@@ -894,7 +894,7 @@
 
 /datum/crafting_recipe/roguetown/sewing/eoramask
 	name = "эоранская маска - (3 шелк, серебрянный слиток; EXPERT)"
-	result = list(/obj/item/clothing/head/roguetown/eoramask)
+	result = list(/obj/item/clothing/mask/rogue/eoran_mask)
 	reqs = list(/obj/item/ingot/silver = 1,
 				/obj/item/natural/silk = 3)
 	skill_level = 3

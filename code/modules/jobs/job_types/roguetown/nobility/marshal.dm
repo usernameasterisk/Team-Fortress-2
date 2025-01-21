@@ -7,7 +7,6 @@
 	spawn_positions = 1
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TOLERATED_UP
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	display_order = JDO_MARSHAL
 	tutorial = "Вы - командующий армией герцога, судья, и ваши советники - присяжные, и только по решению Его Величества можно отменить ваши законы, предписания и решения. \
 				Планируйте вместе с советниками все вопросы, законы, решения и строительство, которые необходимы для адаптации к новому миру. \

@@ -1,9 +1,9 @@
 /datum/subclass/grenzelhoft_kommandant
 	name = "Grenzelhoft Kommandant"
-	tutorial = "Unbreakable. Resolute. Master of the field. Fearless. \
-	These are the first words that come to mind when one mentions the Kommandant, the leader of the well reputed, \
-	expensive and noble Grenzelhoft mercenaries of the Free Corps of the Grenzel empire. \
-	The mercenaries of Grenzel rightfully fear and respect their Kommandant, walking to certain death on his one word."
+	tutorial = "Непоколебимый. Решительный. Мастер поля боя. Бесстрашный. \
+	Это первые слова, которые приходят на ум при упоминании о коменданте, непревзойденном лидере известной, \
+	дорогих и благородных наемников Грензельхофта, гильдии наёмников империи Грензельхофт. \
+	Наемники Грензельхофта по праву боятся и уважают своего коменданта, идя на верную смерть по одному его слову."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TOLERATED_UP
 	outfit = /datum/outfit/job/roguetown/mercenary/grenzelhoft_kommandant

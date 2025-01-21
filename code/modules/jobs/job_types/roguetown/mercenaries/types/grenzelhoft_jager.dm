@@ -77,6 +77,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/treatment, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/labor/lumberjacking, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/hunting, 3, TRUE)
