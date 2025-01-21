@@ -1139,6 +1139,7 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		return
 	var/list/selections = GLOB.character_ckey_list.Copy()
 	if(!selections.len)
+		return
 	var/list/selection_w_title = list()
 	var/list/human_mobs = GLOB.human_list.Copy()
 	for(var/real_name in selections)
