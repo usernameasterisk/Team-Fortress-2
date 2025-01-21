@@ -1976,6 +1976,7 @@
 #include "modular\Neu_Food\code\raw\NeuFood_veggies.dm"
 #include "modular\Smoker\code\Smoker.dm"
 #include "modular\ze_genesis_call\genesis_call.dm"
+#include "modular_twilight\code\modules\hairstyles\module.dm"
 #include "modular_twilight\code\game\objects\items\rogueitems\inquisitionrelics.dm"
 #include "modular_twilight\code\game\objects\items\rogueweapons\melee\flail.dm"
 #include "modular_twilight\code\game\objects\objects\effects\temporary_visuals\music.dm"
