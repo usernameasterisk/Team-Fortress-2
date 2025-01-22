@@ -128,7 +128,7 @@
 	key_third_person = "bows"
 	message = "bows."
 	message_param = "bows to %t."
-	restraint_check = TRUE
+	restraint_check = TRUEf
 	emote_type = EMOTE_VISIBLE
 
 /mob/living/carbon/human/verb/emote_bow()
@@ -333,7 +333,7 @@
 	. = ..()
 	if(. && iscarbon(user))
 		var/mob/living/carbon/L = user
-		if(L.get_complex_pain() > (L.STAEND * 9))
+		if(L.get_complex_pain() > (round((L.STAEND + L.STAINT) / 2) * 9))
 			L.setDir(2)
 			L.SetUnconscious(200)
 		else
