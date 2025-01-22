@@ -1140,26 +1140,17 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	var/list/selections = GLOB.character_ckey_list.Copy()
 	if(!selections.len)
 		return
-	var/list/selection_w_title = list()
-	var/list/human_mobs = GLOB.human_list.Copy()
-	for(var/real_name in selections)
-		var/ckey =  GLOB.character_ckey_list[real_name]
-		var/mob/living/carbon/human/H
-		for(var/mob/mob in human_mobs)
-			if(mob?.real_name == real_name)
-				H = mob
-				break
-		if(QDELETED(H) || !istype(H))
-			selection_w_title[real_name] = ckey
-		else
-			selection_w_title["[real_name], [H.get_role_title()]"] = ckey
-	var/selection = input(src,"Which Character?") as null|anything in sortList(selection_w_title)
+	var/selection
+	if(SSticker.current_state == GAME_STATE_FINISHED)
+		selection = input(src,"Which Character?") as null|anything in sortList(selections)
+	else
+		selection = input(src, "Which Character?") as null|text
 	if(!selection)
 		return
 	if(!selections[selection])
 		to_chat(src, span_warning("Not found anyone with that name"))
 		return
-	var/theykey = selection_w_title[selection]
+	var/theykey = selections[selection]
 	if(theykey == ckey)
 		to_chat(src,"You can't commend yourself.")
 		return
