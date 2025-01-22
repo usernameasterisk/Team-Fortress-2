@@ -128,7 +128,7 @@
 	key_third_person = "bows"
 	message = "bows."
 	message_param = "bows to %t."
-	restraint_check = TRUEf
+	restraint_check = TRUE
 	emote_type = EMOTE_VISIBLE
 
 /mob/living/carbon/human/verb/emote_bow()
