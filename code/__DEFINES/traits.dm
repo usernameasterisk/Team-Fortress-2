@@ -45,6 +45,7 @@
 #define TRAIT_INQUISITION "Member of the Inquisition"
 
 // ROGUEspecialTRAITS (description when rmb skills button)
+#define TRAIT_DARKLING "Darkling"
 #define TRAIT_CIVILIZEDBARBARIAN "Tavern Brawler"
 #define TRAIT_COMICSANS "Annoying Face"
 #define TRAIT_WATERBREATHING "Water Breathing"
@@ -166,6 +167,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_NUDE_SLEEPER = span_warning("I can't fall asleep unless I'm nude and in bed."),
 	TRAIT_TINY = span_info("I am tiny in size and quite fragile!"),
 	TRAIT_STUDENT = span_info("The scholar has taught me new skills!"),
+	TRAIT_DARKLING = span_info("I am a creature of the dark and am sensitive to the light. The hateful sun is especially harsh on my eyes, and I prefer to sleep during the dae.")
 	TRAIT_INQUISITION = span_info("I am a member of the Inquisition. I can easily identify others of my cadre at a glance."),
 ))
 
