@@ -53,6 +53,9 @@
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/handjacket
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/white
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
+		backr = /obj/item/storage/backpack/rogue/satchel
+		belt = /obj/item/storage/belt/rogue/leather
+		beltr = /obj/item/storage/keyring/steward
 		if(H.mind)
 			H.mind.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
