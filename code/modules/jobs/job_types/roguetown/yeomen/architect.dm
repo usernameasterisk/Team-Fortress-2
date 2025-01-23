@@ -20,8 +20,8 @@
 	head = /obj/item/clothing/head/roguetown/helmet/kettle
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
 	neck = /obj/item/powderflask
-	armor = /obj/item/clothing/suit/roguetown/armor/workervest
-	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
+	armor = /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
 	wrists = /obj/item/storage/keyring/architect
 	backr = /obj/item/gun/ballistic/firearm/blunderbuss
 	backl = /obj/item/rogueweapon/pick/drill

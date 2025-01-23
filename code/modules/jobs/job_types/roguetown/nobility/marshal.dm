@@ -30,15 +30,15 @@
 /datum/outfit/job/roguetown/marshal/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/handjacket
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/fancy
 	pants = /obj/item/clothing/under/roguetown/tights/black
-	shoes = /obj/item/clothing/shoes/roguetown/armor/nobleboot
+	shoes = /obj/item/clothing/shoes/roguetown/nobleboot/thighboots
 	backl = /obj/item/storage/backpack/rogue/satchel
 	belt = /obj/item/storage/belt/rogue/leather/plaquegold
 	beltl = /obj/item/storage/keyring/marshal
 	beltr = /obj/item/rogueweapon/mace
-	cloak = /obj/item/clothing/cloak/stabard/surcoat/marshal
+	cloak = /obj/item/clothing/cloak/captain
 	gloves = /obj/item/clothing/gloves/roguetown/leather/angle
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1)
