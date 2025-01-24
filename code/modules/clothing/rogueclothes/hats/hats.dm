@@ -377,7 +377,7 @@
 /obj/item/clothing/head/roguetown/crown //Holds vars for children
 	name = "корона Рокхилла"
 	desc = "Ваше Величество!"
-	icon_state = "serpcrown"
+	icon_state = "rockhillcrown"
 	dynamic_hair_suffix = null
 	sellprice = 200
 	resistance_flags = FIRE_PROOF | ACID_PROOF
