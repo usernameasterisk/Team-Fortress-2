@@ -22,7 +22,7 @@
 	spells = list(/obj/effect/proc_holder/spell/self/convertrole/guard)
 	outfit = /datum/outfit/job/roguetown/captain
 
-	give_bank_account = 26
+	give_bank_account = 100
 	min_pq = 8
 	max_pq = null
 
