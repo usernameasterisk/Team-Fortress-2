@@ -21,7 +21,7 @@
 	adjustable = CANT_CADJUST
 
 /obj/item/clothing/head/roguetown/helmet/heavy/templar/necra
-	name = "некротианский шлем"
+	name = "некранский шлем"
 	desc = "Шлем, который обычно носят тамплиеры на службе Некре. Пусть его скелетные черты напомнят вам о единственном, что гарантировано в жизни. Вы умрете."
 	icon_state = "necrahelm"
 	item_state = "necrahelm"

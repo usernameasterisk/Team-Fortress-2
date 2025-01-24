@@ -79,7 +79,7 @@
 //		say("FEED ME SPIDER MILK!")
 //		return
 	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-	var/infile = input(user, "ВЫБЕРИТЕ НОВУЮ ПЕСНЮ", src) as null|file
+	var/infile = input(user, "ВЫБЕРИТЕ НОВУЮ КОМПОЗИЦИЮ", src) as null|file
 
 	if(!infile)
 		return
@@ -92,7 +92,7 @@
 	var/file_size = length(infile)
 
 	if(file_ext != ".ogg")
-		to_chat(user, span_warning("ПЕСНЯ ДОЛЖНА БЫТЬ В ФОРМАТЕ .OGG."))
+		to_chat(user, span_warning("МУЗЫКА ДОЛЖНА БЫТЬ В ФОРМАТЕ .OGG."))
 		return
 	if(file_size > 6485760)
 		to_chat(user, span_warning("СЛИШКОМ БОЛЬШАЯ. НЕ БОЛЕЕ 6 Мб."))

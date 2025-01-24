@@ -175,7 +175,7 @@
 	
 /obj/item/clothing/suit/roguetown/shirt/robe/eora
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "ряса Эоры"
+	name = "эоранская ряса"
 	desc = "Священное одеяние, предназначенное для использования последователями Эоры."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "eorarobes"
@@ -190,7 +190,7 @@
 	var/fanatic_wear = FALSE
 
 /obj/item/clothing/suit/roguetown/shirt/robe/eora/alt
-	name = "приподнятая ряса Эоры"
+	name = "приподнятая эоранская ряса"
 	desc = "Приподнятая ряса, открывающая ноги и делающая передвижение по местности более комфортным."
 	body_parts_covered = null
 	icon_state = "eorastraps"
@@ -199,7 +199,7 @@
 /obj/item/clothing/suit/roguetown/shirt/robe/eora/attack_right(mob/user)
 	switch(fanatic_wear)
 		if(FALSE)
-			name = "приподнятая ряса Эоры"
+			name = "приподнятая эоранская ряса"
 			desc = "Приподнятая ряса, открывающая ноги и делающая передвижение по местности более комфортным."
 			body_parts_covered = CHEST|GROIN|ARMS|VITALS
 			icon_state = "eorastraps"
@@ -207,7 +207,7 @@
 			flags_inv = HIDEBOOB|HIDECROTCH
 			to_chat(usr, span_warning("Now wearing differently."))
 		if(TRUE)
-			name = "ряса Эоры"
+			name = "эоранская ряса"
 			desc = "Священное одеяние, предназначенное для использования последователями Эоры."
 			body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 			icon_state = "eorarobes"

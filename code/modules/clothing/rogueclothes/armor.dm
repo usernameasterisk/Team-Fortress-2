@@ -40,8 +40,8 @@
 	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron
-	icon_state = "кольчужный жилет"
-	name = "кольчуга"
+	icon_state = "ichainmail"
+	name = "кольчужный жилет"
 	desc = "Железный кольчужный жилет, состоящий из переплетенных металлических колец. Хорошо защищает от попаданий стрел, закрывая лишь туловище. Довольно удобен для сна."
 	body_parts_covered = CHEST|GROIN|VITALS
 	anvilrepair = /datum/skill/craft/blacksmithing
@@ -64,7 +64,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/chainkini
-	name = "кольчужное белье"
+	name = "кольчужное бикини"
 	desc = "Вряд ли коже будет приятно такое носить."
 	icon_state = "chainkini"
 	item_state = "chainkini"
@@ -163,8 +163,8 @@
 
 /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "доспех лорда Хартфелта"
-	desc = "Величественная защита господ из Хартфелта. Всем доспехам доспех."
+	name = "боевой доспех"
+	desc = "Величественная защита для господ."
 	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
 	icon_state = "heartfelt"
 	item_state = "heartfelt"
@@ -182,8 +182,8 @@
 
 /obj/item/clothing/suit/roguetown/armor/heartfelt/hand
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "доспех десницы Хартфелта"
-	desc = "Величественная защита господ из Хартфелта. Всем доспехам доспех."
+	name = "боевой доспех"
+	desc = "Величественная защита для знати."
 	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
 	icon_state = "heartfelt_hand"
 	item_state = "heartfelt_hand"

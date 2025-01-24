@@ -134,7 +134,7 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/under/roguetown/brayette
-	name = "брайет"
+	name = "кольчужный гульфик"
 	desc = "Кольчужное белье для особой защиты фамильных ценностей."
 	gender = PLURAL
 	icon_state = "chain_bootyshorts"

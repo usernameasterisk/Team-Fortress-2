@@ -45,7 +45,7 @@
 	desc = "Его янтарные переливающиеся оттенки напоминают о закате."
 
 /obj/item/roguegem/violet
-	name = "саффир"
+	name = "саффира"
 	icon_state = "sapphire_cut"
 	sellprice = 56
 	desc = "Этим драгоценным камнем восхищаются многие волшебники."

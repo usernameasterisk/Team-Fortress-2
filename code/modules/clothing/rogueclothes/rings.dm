@@ -159,7 +159,7 @@
 	sellprice = 245
 
 /obj/item/clothing/ring/sapphire
-	name = "кольцо с саффиром"
+	name = "кольцо с саффирой"
 	icon_state = "g_ring_sapphire"
 	sellprice = 200
 
@@ -190,7 +190,7 @@
 	sellprice = 205
 
 /obj/item/clothing/ring/sapphires
-	name = "кольцо с саффиром"
+	name = "кольцо с саффирой"
 	icon_state = "s_ring_sapphire"
 	sellprice = 160
 
@@ -222,7 +222,7 @@
 	sellprice = 150
 
 /obj/item/clothing/ring/sapphirec
-	name = "кольцо с саффиром"
+	name = "кольцо с саффирой"
 	icon_state = "c_ring_sapphire"
 	sellprice = 115
 

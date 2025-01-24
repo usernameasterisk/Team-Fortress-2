@@ -144,7 +144,7 @@
 	"Merchant in the Mire" = 'sound/music/instruments/lute (7).ogg')
 
 /obj/item/rogue/instrument/accord
-	name = "aаккордеон"
+	name = "аккордеон"
 	desc = "Гармоничный сосуд ностальгии и праздника."
 	icon_state = "accordion"
 	song_list = list("Her Healing Tears" = 'sound/music/instruments/accord (1).ogg',

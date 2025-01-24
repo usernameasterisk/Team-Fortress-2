@@ -132,8 +132,8 @@
 	lockid = "prince"
 
 /obj/item/key/vault
-	name = "Ключ от хранилица"
-	desc = "Этот ключ открывает могучее хранилище."
+	name = "Ключ от казны"
+	desc = "Этот ключ открывает могучую королевскую казну."
 	icon_state = "cheesekey"
 	lockid = "vault"
 
@@ -328,7 +328,7 @@
 	lockid = "mage"
 
 /obj/item/key/graveyard
-	name = "Ключ от крипты"
+	name = "Ключ от кладбища"
 	desc = "Этот ржавый ключ принадлежит могильщику."
 	icon_state = "rustkey"
 	lockid = "graveyard"
@@ -364,7 +364,7 @@
 	lockid = "physician"
 
 /obj/item/key/puritan
-	name = "Ключ пуританина"
+	name = "Инквизиторский ключ"
 	desc = "Это ключ сложной формы." // i have no idea what is this key about
 	icon_state = "mazekey"
 	lockid = "puritan"
@@ -382,8 +382,8 @@
 	lockid = "hand"
 
 /obj/item/key/steward
-	name = "Ключ Управляющего"
-	desc = "Этот ключ принадлежит жадному управляющему дворца."
+	name = "Ключ Казначея"
+	desc = "Этот ключ принадлежит жадному королевскому казначею."
 	icon_state = "cheesekey"
 	lockid = "steward"
 
@@ -400,14 +400,14 @@
 	lockid = "manor"
 
 /obj/item/key/bog_gatehouse
-	name = "Ключ от сторожки"
-	desc = "Этот ключ открывает сторожку у городских стен."
+	name = "Ключ от Бастиона"
+	desc = "Этот ключ открывает двери Бастиона у городских стен."
 	icon_state = "spikekey"
 	lockid = "bog_gatehouse"
 
 /obj/item/key/bog_master
 	name = "Ключ смотрителя"
-	desc = "Этот ключ открывает кабинет смотрителя."
+	desc = "Этот ключ открывает кабинет смотрителя Бастиона."
 	icon_state = "spikekey"
 	lockid = "bog_master"
 
@@ -431,7 +431,7 @@
 
 /obj/item/key/sheriff_office
 	name = "Ключ от офиса шерифа"
-	desc = "Этот ключ открывает офис шерифа."
+	desc = "Этот ключ открывает офис шерифа городской стражи."
 	icon_state = "spikekey"
 	lockid = "sheriff_office"
 

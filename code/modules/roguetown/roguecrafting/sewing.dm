@@ -813,7 +813,7 @@
 	sellprice = 75
 
 /datum/crafting_recipe/roguetown/sewing/eorarobes
-	name = "ряса Эоры - (3 ткани, 1 шелк; EXPERT)"
+	name = "эоранская ряса - (3 ткани, 1 шелк; EXPERT)"
 	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/eora)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)

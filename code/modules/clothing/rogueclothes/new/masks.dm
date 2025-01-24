@@ -1,5 +1,5 @@
 /obj/item/clothing/mask/rogue/pestra
-	name = "маска целителя"
+	name = "пестранская маска"
 	desc = "Изготовленная особым образом маска оберегает носителя от гнили, насколько это возможно. Часть запаха все равно просачивается под ткань."
 	icon = 'icons/roguetown/clothing/newclothes/objmasks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/newclothes/onmob/masks.dmi'

@@ -732,8 +732,8 @@
 	..()
 
 /datum/reagent/medicine/berserkium
-	name = "Berserkium"
-	description = "Makes you REALLY mad"
+	name = "Берсеркий"
+	description = "Приводит вас в НАСТОЯЩЕЕ бешенство."
 	reagent_state = LIQUID
 	color = "#ff0000"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
@@ -746,8 +746,8 @@
 	duration = 1
 
 /atom/movable/screen/alert/status_effect/buff/berserkium_buff
-	name = "ABNORMAL RAGE"
-	desc = "I CAN'T DENY THE VOICES INSIDE MY BRAIN!"
+	name = "АНОМАЛЬНАЯ ЯРОСТЬ"
+	desc = "Я НЕ МОГУ ОТБРОСИТЬ ЭТИ ГОЛОСА В ГОЛОВЕ!"
 	icon_state = "acid"
 
 /datum/status_effect/buff/berserkium_crash
@@ -757,8 +757,8 @@
 	duration = 10 MINUTES
 
 /atom/movable/screen/alert/status_effect/debuff/berserkium_crash
-	name = "Abnormal Fatigue"
-	desc = "For all our righteous crimes we compensate."
+	name = "Аномальная усталость"
+	desc = "За все наши праведные преступления мы платим цену."
 	icon_state = "muscles"
 
 /datum/reagent/medicine/berserkium/on_mob_metabolize(mob/living/carbon/M)
@@ -816,7 +816,7 @@
 		M.remove_stress(/datum/stressevent/sleepytime)
 		M.mind.sleep_adv.advance_cycle()
 	if(prob(25))
-		M.say("RA-A-A-AH!!", forced = /datum/reagent/medicine/berserkium)
+		M.say("А-А-А-АРГХ!!!", forced = /datum/reagent/medicine/berserkium)
 		M.emote("rage")
 	..()
 
