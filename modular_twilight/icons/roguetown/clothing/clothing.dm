@@ -328,3 +328,7 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	anvilrepair = /datum/skill/craft/blacksmithing
 	sewrepair = FALSE
+
+/obj/item/clothing/head/roguetown/crown //Holds vars for children
+	icon = 'modular_twilight/icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/head.dmi'
