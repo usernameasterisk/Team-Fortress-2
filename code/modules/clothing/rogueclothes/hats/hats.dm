@@ -1139,7 +1139,7 @@
 	var/mob/living/carbon/human/wise = user
 	if(wise.get_item_by_slot(SLOT_HEAD) == src)
 		wise.change_stat("intelligence", -2, "wisehat")
-		to_chat(wise, span_red("Великая мудрость покидает мой разум.)
+		to_chat(wise, span_red("Великая мудрость покидает мой разум."))
 
 /obj/item/clothing/head/roguetown/physician
 	name = "шляпа целителя"
