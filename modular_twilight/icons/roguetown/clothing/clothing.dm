@@ -318,4 +318,13 @@
 
 /obj/item/clothing/under/roguetown/skirt/red
 	color = CLOTHING_RED
-		
+
+/obj/item/clothing/head/roguetown/crownheart //Holds vars for children
+	name = "crown of rockhill"
+	desc = ""
+	icon_state = "serpcrown"
+	dynamic_hair_suffix = null
+	sellprice = 200
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	anvilrepair = /datum/skill/craft/blacksmithing
+	sewrepair = FALSE

@@ -374,9 +374,11 @@
 /obj/item/clothing/head/roguetown/crown //Holds vars for children
 	name = "crown of rockhill"
 	desc = ""
-	icon_state = "serpcrown"
+	icon_state = "rockhillcrown"
 	dynamic_hair_suffix = null
 	sellprice = 200
+	icon = 'modular_twilight/icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/head.dmi'
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	anvilrepair = /datum/skill/craft/blacksmithing
 	sewrepair = FALSE
