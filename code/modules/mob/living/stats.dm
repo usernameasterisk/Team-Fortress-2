@@ -43,9 +43,6 @@
 	STAEND = 10
 	STASPD = 10
 	STALUC = 10
-	for(var/S in MOBSTATS)
-		var/how_much = pick(-1, 0, 1)
-		change_stat(S, how_much)
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 		if(H.dna.species)
