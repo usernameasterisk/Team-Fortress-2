@@ -397,7 +397,7 @@
 /obj/item/clothing/head/roguetown/crown/fakecrown
 	name = "fake crown"
 	desc = "You shouldn't be seeing this."
-	icon_state = "serpcrown"
+	icon_state = "rockhillcrown"
 
 /obj/item/clothing/head/roguetown/crown/surplus
 	name = "crown"
