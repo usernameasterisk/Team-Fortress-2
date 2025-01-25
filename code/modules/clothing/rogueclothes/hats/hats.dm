@@ -372,8 +372,8 @@
 	color = CLOTHING_RED
 
 /obj/item/clothing/head/roguetown/crown //Holds vars for children
-	name = "crown of rockhill"
-	desc = ""
+	name = "crown of Rockhill"
+	desc = "Heavy is the weight of the crown, and even heavier the responsability it infers to its wearer."
 	icon_state = "rockhillcrown"
 	dynamic_hair_suffix = null
 	sellprice = 200
