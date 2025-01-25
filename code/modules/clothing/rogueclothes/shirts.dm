@@ -152,8 +152,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/tunic
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "tunic"
-	desc = ""
+	name = "туника"
+	desc = "Длинная рубаха для мужчин и женщин."
 	body_parts_covered = CHEST|GROIN|VITALS
 	boobed = FALSE
 	icon_state = "tunic"
@@ -190,8 +190,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "dress"
-	desc = ""
+	name = "платье"
+	desc = "Женский наряд Средневековья – платье по щиколотку с длинными рукавами"
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon_state = "dress"
 	item_state = "dress"
@@ -202,8 +202,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/gen
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "dress"
-	desc = ""
+	name = "платье"
+	desc = "Женский наряд Средневековья – платье по щиколотку с длинными рукавами"
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon_state = "dressgen"
 	item_state = "dressgen"
@@ -247,8 +247,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/velvetdress
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "velvet dress"
-	desc = "A dress made with the finest velvet, befitting a person of high standing"
+	name = "бархатное платье"
+	desc = "Платье сшитое из тончайшего бархата, достойное особы высокого положения."
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon = 'icons/roguetown/clothing/nobledresses/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/nobledresses/onmob/shirts.dmi'
@@ -271,8 +271,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/nobledress
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
-	name = "noble dress"
-	desc = "a noble dress, fit for a person of high standing"
+	name = "дворянское платье"
+	desc = "Отличное платье, подходящее для человека высокого положения"
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon = 'icons/roguetown/clothing/nobledresses/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/nobledresses/onmob/shirts.dmi'
@@ -292,8 +292,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "dress"
-	desc = ""
+	name = "откровенное платье"
+	desc = "Очень откровенное платье из мягкой и дышащей ткани. Искусная и очень кропотливая работа опытной швеи. Стоп, а оно вообще хоть что-нибудь прикрывает?"
 	body_parts_covered = null
 	icon_state = "sexydress"
 	sleevetype = null
@@ -309,8 +309,8 @@
 	color = CLOTHING_BLACK
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/webs
-	name = "webbed shirt"
-	desc = "Exotic silk finely woven into.. this? Might as well be wearing a spiderweb"
+	name = "рубаха паутинка"
+	desc = "Экзотический шелк, тонко вплетенный в... это? С таким же успехом можно носить паутину. Должно быть она очень легкая и удобная?"
 	icon_state = "webs"
 	item_state = "webs"
 	r_sleeve_status = SLEEVE_NORMAL
@@ -337,8 +337,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "grenzelhoftian hip-shirt"
-	desc = "Through the sands, dirt or rivers of blood: Always in style."
+	name = "грензельхофтская рубашка"
+	desc = "Любимая рубашка жителей Грензельхофта. Сделана из тончайшего шелка. Очень приятная на ощупь, мягкая и прочная."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "grenzelshirt"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
