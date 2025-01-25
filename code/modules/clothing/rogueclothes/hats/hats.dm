@@ -400,7 +400,7 @@
 /obj/item/clothing/head/roguetown/crown/fakecrown
 	name = "ложная корона"
 	desc = "Этого не должно тут быть."
-	icon_state = "serpcrown"
+	icon_state = "rockhillcrown"
 
 /obj/item/clothing/head/roguetown/crown/surplus
 	name = "корона"
