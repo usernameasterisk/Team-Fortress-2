@@ -376,7 +376,7 @@
 
 /obj/item/clothing/head/roguetown/crown //Holds vars for children
 	name = "корона Рокхилла"
-	desc = "Ваше Величество!"
+	desc = "Тяжелый вес короны не передаст всю тяжесть ответственности, которую она возлагает на своего владельца."
 	icon_state = "rockhillcrown"
 	dynamic_hair_suffix = null
 	sellprice = 200
