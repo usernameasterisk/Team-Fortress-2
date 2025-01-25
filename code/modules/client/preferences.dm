@@ -160,7 +160,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 	var/list/custom_descriptors = list()
 	var/defiant = TRUE
 	var/virginity = FALSE
-	var/drift = FALSE
+	var/drift = TRUE
 	var/char_accent = "No accent"
 	var/datum/loadout_item/loadout
 	/// Tracker to whether the person has ever spawned into the round, for purposes of applying the respawn ban
