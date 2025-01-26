@@ -4010,9 +4010,9 @@
 "czb" = (
 /obj/structure/rack/rogue,
 /obj/machinery/light/rogue/torchholder/l,
-/obj/item/gun/ballistic/arquebus,
-/obj/item/gun/ballistic/arquebus,
-/obj/item/gun/ballistic/arquebus,
+/obj/item/gun/ballistic/firearm/arquebus,
+/obj/item/gun/ballistic/firearm/arquebus,
+/obj/item/gun/ballistic/firearm/arquebus,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement)
 "czd" = (
@@ -6249,6 +6249,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/rogue/indoors)
+"dPa" = (
+/obj/structure/reliquarybox,
+/turf/open/floor/rogue/cobble,
+/area/rogue/under/town/basement)
 "dPc" = (
 /obj/structure/roguemachine/scomm,
 /turf/open/floor/rogue/cobble,
@@ -14412,7 +14416,7 @@
 	},
 /obj/item/clothing/suit/roguetown/shirt/robe/eora/alt,
 /obj/item/clothing/suit/roguetown/shirt/robe/eora,
-/obj/item/clothing/head/roguetown/eoramask,
+/obj/item/clothing/mask/rogue/eoran_mask,
 /obj/item/clothing/head/peaceflower,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/town/church)
@@ -15793,7 +15797,7 @@
 /obj/item/key/bog_gatehouse,
 /obj/item/key/bog_gatehouse,
 /obj/item/key/bog_master,
-/obj/item/gun/ballistic/handgonne,
+/obj/item/gun/ballistic/firearm/handgonne,
 /obj/item/ammo_holder/bullet/lead,
 /obj/item/powderflask,
 /turf/open/floor/rogue/herringbone,
@@ -16934,7 +16938,7 @@
 /obj/item/reagent_containers/powder/spice,
 /obj/item/ammo_holder/bullet/lead,
 /obj/item/powderflask,
-/obj/item/gun/ballistic/arquebus_pistol,
+/obj/item/gun/ballistic/firearm/arquebus_pistol,
 /turf/open/floor/carpet/stellar,
 /area/rogue/indoors/town/shop)
 "jWu" = (
@@ -246043,7 +246047,7 @@ qpb
 myB
 txa
 sGZ
-iTw
+dPa
 iSR
 gSK
 cTA

@@ -9,7 +9,8 @@
 	allowed_races = RACES_SHUNNED_UP
 	allowed_sexes = list(MALE, FEMALE)
 
-	tutorial = "Hidden in the depths are ancient mechanical secrets, something your creed has taken it upon themselves to studying and understanding. To some, these mechanical wonders may seem like magic, but you know their inner workings as well as you do stone, down to the last cog."
+	tutorial = "В глубинах устройств скрыты древние механические секреты, которые ваш род взял на себя труд изучить и понять. \
+	Кому-то эти механические чудеса могут показаться волшебством, но вы знаете их внутреннее устройство так же хорошо, как и камень, до последней шестеренки."
 
 	outfit = /datum/outfit/job/roguetown/artificer
 	display_order = JDO_ARTIFICER
@@ -24,7 +25,7 @@
 		head = /obj/item/clothing/head/roguetown/hatblu
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
 	cloak = /obj/item/clothing/cloak/apron/waist/brown
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
 	belt = /obj/item/storage/belt/rogue/leather
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
 	beltl = /obj/item/key/artificer

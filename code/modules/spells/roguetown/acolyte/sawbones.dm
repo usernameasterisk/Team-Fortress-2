@@ -6,7 +6,7 @@
 	miracle = FALSE
 	devotion_cost = 0
 
-/obj/effect/proc_holder/spell/targeted/docheal  /////// miricle on 3x cooldown from normal
+/obj/effect/proc_holder/spell/targeted/docheal  //miracle but 1 tile range
 	action_icon = 'icons/mob/actions/roguespells.dmi'
 	name = "Rapid Treatment"
 	overlay_state = "doc"
@@ -15,11 +15,11 @@
 	sound = 'sound/gore/flesh_eat_03.ogg'
 	associated_skill = /datum/skill/misc/treatment
 	antimagic_allowed = TRUE
-	charge_max = 60 SECONDS
+	charge_max = 20 SECONDS
 	miracle = FALSE
 	devotion_cost = 0
 
-/obj/effect/proc_holder/spell/targeted/stable // sets ox lose to 0 knocks out some toxin, brings blood levels to safe. epi stabalizes ox lose, antihol purges booze, water and iron slowly restores blood.
+/obj/effect/proc_holder/spell/targeted/stable // gamerfuel intravenously
 	action_icon = 'icons/mob/actions/roguespells.dmi'
 	name = "Stabilising Syringe"
 	overlay_state = "stable"
@@ -28,11 +28,24 @@
 	associated_skill = /datum/skill/misc/treatment
 	antimagic_allowed = TRUE
 	include_user = TRUE
+	charge_max = 1 MINUTES
+	miracle = FALSE
+	devotion_cost = 0
+
+/obj/effect/proc_holder/spell/targeted/berserkium // doktor! turn off my pain inhibitors!
+	action_icon = 'icons/mob/actions/roguespells.dmi'
+	name = "Berserkium Injection"
+	overlay_state = "bcry"
+	range = 1
+	include_user = TRUE
+	sound = 'modular/Smoker/sound/inject.ogg'
+	associated_skill = /datum/skill/misc/treatment
+	antimagic_allowed = TRUE
 	charge_max = 5 MINUTES
 	miracle = FALSE
 	devotion_cost = 0
 
-/obj/effect/proc_holder/spell/targeted/purge // Purges all reagents and clears all toxin damage while lowering blood levels and hitting with brute
+/obj/effect/proc_holder/spell/targeted/purge // Purges all reagents and clears all toxin damage while lowering blood levels and hitting with brute (makes an artery wound)
 	action_icon = 'icons/mob/actions/roguespells.dmi'
 	name = "Purifying Blood Draw"
 	overlay_state = "snek"
@@ -41,11 +54,11 @@
 	sound = 'sound/combat/newstuck.ogg'
 	associated_skill = /datum/skill/misc/treatment
 	antimagic_allowed = TRUE
-	charge_max = 5 MINUTES
+	charge_max = 1 MINUTES
 	miracle = FALSE
 	devotion_cost = 0
 
-/obj/effect/proc_holder/spell/targeted/debride // Cure rot if has weak liver debuff
+/obj/effect/proc_holder/spell/targeted/debride // Cure rot if has weak liver debuff (achieved by surgery)
 	action_icon = 'icons/mob/actions/roguespells.dmi'
 	name = "Tissue Debridement"
 	overlay_state = "unrot"
@@ -60,7 +73,7 @@
 	/// Amount of PQ gained for curing zombos
 	var/unzombification_pq = PQ_GAIN_UNZOMBIFY
 
-/obj/effect/proc_holder/spell/targeted/cpr
+/obj/effect/proc_holder/spell/targeted/cpr // Revive if has weak heart debuff (achieved by surgery)
 	action_icon = 'icons/mob/actions/roguespells.dmi'
 	name = "Cardiac Massage"
 	overlay_state = "cpr"
@@ -77,6 +90,57 @@
 
 /obj/effect/proc_holder/spell/targeted/cpr/cast(list/targets, mob/living/user)
 	. = ..()
+	if(isliving(targets[1]) && targets[1].has_status_effect(/datum/status_effect/debuff/wheart))
+		testing("revived1")
+		var/mob/living/target = targets[1]
+		if(target == user)
+			revert_cast()
+			return FALSE
+		if(target.stat < DEAD)
+			to_chat(user, span_warning("Nothing happens."))
+			revert_cast()
+			return FALSE
+		if(target.mob_biotypes & MOB_UNDEAD)
+			to_chat(user, span_warning("It's undead, I can't."))
+			revert_cast()
+			return FALSE
+		if(!target.revive(full_heal = FALSE))
+			to_chat(user, span_warning("They need to be mended more."))
+			revert_cast()
+			return FALSE
+		if(target.mobility_flags & MOBILITY_STAND)
+			to_chat(user, span_warning("I need to lay them on the ground!"))
+			revert_cast()
+			return FALSE
+		testing("revived2")
+		var/mob/living/carbon/spirit/underworld_spirit = target.get_spirit()
+		//GET OVER HERE!
+		if(underworld_spirit)
+			var/mob/dead/observer/ghost = underworld_spirit.ghostize()
+			qdel(underworld_spirit)
+			ghost.mind.transfer_to(target, TRUE)
+		target.grab_ghost(force = TRUE)
+		target.emote("breathgasp")
+		target.Jitter(100)
+		if(isseelie(target))
+			var/mob/living/carbon/human/fairy_target = target
+			fairy_target.set_heartattack(FALSE)
+			var/obj/item/organ/wings/Wing = fairy_target.getorganslot(ORGAN_SLOT_WINGS)
+			if(Wing == null)
+				var/wing_type = fairy_target.dna.species.organs[ORGAN_SLOT_WINGS]
+				var/obj/item/organ/wings/seelie/new_wings = new wing_type()
+				new_wings.Insert(fairy_target)
+		target.update_body()
+		target.visible_message(span_notice("[target] starts to twitch violently!"), span_green("My ears are ringing with a sound!"))
+		if(target.mind)
+			if(revive_pq && !HAS_TRAIT(target, TRAIT_IWASREVIVED) && user?.ckey)
+				adjust_playerquality(revive_pq, user.ckey)
+				ADD_TRAIT(target, TRAIT_IWASREVIVED, "[type]")
+			target.mind.remove_antag_datum(/datum/antagonist/zombie)
+		return TRUE
+	to_chat(user, span_warning("I need to prime their heart first."))
+	revert_cast()
+	return FALSE
 
 	if(!isliving(targets[1]))
 		revert_cast()
@@ -133,13 +197,6 @@
 	if(!..())
 		revert_cast()
 		return FALSE
-	var/found = null
-	for(var/obj/structure/bed/rogue/S in oview(5, user))
-		found = S
-	if(!found)
-		to_chat(user, span_warning("I need them on a bed."))
-		revert_cast()
-		return FALSE
 	return TRUE
 
 /obj/effect/proc_holder/spell/targeted/debride/cast(list/targets, mob/living/user)
@@ -165,7 +222,14 @@
 		revert_cast()
 		return FALSE
 
+	if(target.mobility_flags & MOBILITY_STAND)
+		to_chat(user, span_warning("I need to lay them on the ground!"))
+		revert_cast()
+		return FALSE
+
 	var/datum/antagonist/zombie/was_zombie = target.mind?.has_antag_datum(/datum/antagonist/zombie)
+
+	testing("curerot2")
 
 	if(was_zombie)
 		target.mind.remove_antag_datum(/datum/antagonist/zombie)
@@ -203,7 +267,7 @@
 			ghost.mind.transfer_to(target, TRUE)
 			qdel(underworld_spirit)
 	target.grab_ghost(force = TRUE) // even suicides
-	
+
 	target.update_body()
 	target.visible_message(span_notice("The rot leaves [target]'s body!"), span_green("I feel the rot leave my body!"))
 
@@ -211,13 +275,6 @@
 
 /obj/effect/proc_holder/spell/targeted/debride/cast_check(skipcharge = 0,mob/user = usr)
 	if(!..())
-		revert_cast()
-		return FALSE
-	var/found = null
-	for(var/obj/structure/bed/rogue/S in oview(5, user))
-		found = S
-	if(!found)
-		to_chat(user, span_warning("I need to lay them on a bed"))
 		revert_cast()
 		return FALSE
 	return TRUE
@@ -232,16 +289,13 @@
 			var/mob/living/carbon/C = target
 			var/obj/item/bodypart/affecting = C.get_bodypart(check_zone(user.zone_selected))
 			if(affecting)
-				if(affecting.heal_damage(50, 50))
+				if(affecting.heal_damage(200, 200))
 					C.update_damage_overlays()
-				if(affecting.heal_wounds(50))
+				if(affecting.heal_wounds(200))
 					C.update_damage_overlays()
 		else
-			target.adjustBruteLoss(-50)
-			target.adjustFireLoss(-50)
-		target.adjustToxLoss(-50)
-		target.adjustOxyLoss(-50)
-		target.blood_volume += BLOOD_VOLUME_SURVIVE
+			target.adjustBruteLoss(-200)
+			target.adjustFireLoss(-200)
 		return TRUE
 	revert_cast()
 	return FALSE
@@ -253,11 +307,21 @@
 		var/ramount = 10
 		var/rid = /datum/reagent/medicine/stimu
 		target.reagents.add_reagent(rid, ramount)
-		target.visible_message(span_green("[user] stabs [target]'s chest with a syringe."), span_notice("My grip on life tightens!"))
-		target.setOxyLoss(-100)
-		target.adjustToxLoss(-50)
+		target.visible_message(span_green("[user] stabs [target]'s chest with a syringe."), span_notice("Feel the vibrations – my hearts starts to pound!"))
+		target.blood_volume = BLOOD_VOLUME_NORMAL
+		return TRUE
+	revert_cast()
+	return FALSE
+
+/obj/effect/proc_holder/spell/targeted/berserkium/cast(list/targets, mob/user)
+	. = ..()
+	if(iscarbon(targets[1]))
+		var/mob/living/carbon/target = targets[1]
+		var/ramount = 10
+		var/rid = /datum/reagent/medicine/berserkium
+		target.reagents.add_reagent(rid, ramount)
+		target.visible_message(span_green("[user] stabs [target]'s chest with a syringe."), span_danger("I CAN'T DENY THE VOICES INSIDE MY BRAIN!"))
 		target.emote("rage")
-		target.blood_volume += BLOOD_VOLUME_SURVIVE
 		return TRUE
 	revert_cast()
 	return FALSE
@@ -269,6 +333,10 @@
 		var/obj/item/bodypart/BPA = target.get_bodypart(user.zone_selected)
 		if(!BPA)
 			to_chat(user, span_warning("They're missing that part!"))
+			revert_cast()
+			return FALSE
+		if(target.mobility_flags & MOBILITY_STAND)
+			to_chat(user, span_warning("I need to lay them on the ground!"))
 			revert_cast()
 			return FALSE
 		BPA.add_wound(/datum/wound/artery/)
@@ -284,14 +352,29 @@
 	if(!..())
 		revert_cast()
 		return FALSE
-	var/found = null
-	for(var/obj/structure/bed/rogue/S in oview(2, user))
-		found = S
-	if(!found)
-		to_chat(user, span_warning("I need to lay them on a bed."))
-		revert_cast()
-		return FALSE
 	return TRUE
+
+/obj/item/organ/heart/weak
+	name = "weakened heart"
+	desc = "This seems hardly functional."
+
+/datum/status_effect/debuff/wheart
+	id = "wheart"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/wheart
+	effectedstats = list("strength" = -3, "constitution" = -3, "endurance" = -3, "speed" = -3)
+
+/atom/movable/screen/alert/status_effect/debuff/wheart
+	name = "Weak Heart"
+	desc = "I feel drained and sluggish. My heart beats painfully."
+
+/obj/item/organ/heart/weak/Insert(mob/living/carbon/M)
+	..()
+	M.apply_status_effect(/datum/status_effect/debuff/wheart)
+
+/obj/item/organ/heart/weak/Remove(mob/living/carbon/M, special = 0)
+	..()
+	if(M.has_status_effect(/datum/status_effect/debuff/wheart))
+		M.remove_status_effect(/datum/status_effect/debuff/wheart)
 
 /obj/item/organ/liver/weak
 	name = "weakened liver"
@@ -363,6 +446,55 @@
 		QDEL_NULL(liver)
 		liver = new /obj/item/organ/liver/weak
 		liver.Insert(target)
+		return TRUE
+
+/datum/surgery/bypass
+	name = "Coronary Artery Bypass Surgery"
+	target_mobtypes = list(/mob/living/carbon/human, /mob/living/carbon/monkey)
+	possible_locs = list(BODY_ZONE_CHEST)
+	steps = list(
+		/datum/surgery_step/incise,
+		/datum/surgery_step/clamp,
+		/datum/surgery_step/retract,
+		/datum/surgery_step/saw,
+		/datum/surgery_step/bypass,
+		/datum/surgery_step/cauterize,
+	)
+
+/datum/surgery_step/bypass
+	name = "Perform Heart Rejuvination"
+	time = 20 SECONDS
+	accept_hand = TRUE
+	implements = list(
+		TOOL_HEMOSTAT = 60,
+		TOOL_IMPROVHEMOSTAT = 30,
+		TOOL_HAND = 10,
+	)
+	target_mobtypes = list(/mob/living/carbon/human, /mob/living/carbon/monkey)
+	surgery_flags = SURGERY_BLOODY | SURGERY_INCISED | SURGERY_CLAMPED | SURGERY_RETRACTED | SURGERY_BROKEN
+	skill_min = SKILL_LEVEL_EXPERT
+	skill_median = SKILL_LEVEL_MASTER
+
+/datum/surgery_step/bypass/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/intent/intent)
+	if(target.has_status_effect(/datum/status_effect/debuff/wheart))
+		to_chat(user, "Their heart is too weak")
+		return FALSE
+	else
+		display_results(user, target, span_notice("I begin to bypass the arteries in [target]'s heart...."),
+			span_notice("[user] begins to bypass the arteries in [target]'s heart."),
+			span_notice("[user] begins to bypass the arteries in [target]'s heart."))
+		return TRUE
+
+/datum/surgery_step/bypass/success(mob/user, mob/living/target, target_zone, obj/item/tool, datum/intent/intent)
+	display_results(user, target, span_notice("I successfully bypass the arteries in [target]'s heart."),
+		span_notice("[user] successfully bypassess the arteries in [target]'s heart, restoring its function!"),
+		span_notice("[user] successfully bypassess the arteries in [target]'s heart, restoring its function!"))
+	var/obj/item/organ/heart/heart = target.getorganslot(ORGAN_SLOT_HEART)
+	if(heart)
+		heart.Remove(target)
+		QDEL_NULL(heart)
+		heart = new /obj/item/organ/heart/weak
+		heart.Insert(target)
 		return TRUE
 
 //------------------------------------------------reagents--------------------------------------------//
@@ -549,14 +681,6 @@
 	metabolization_rate = 20 * REAGENTS_METABOLISM
 	overdose_threshold = null
 
-/datum/reagent/medicine/stimu
-	name = "Stimu"
-	description = "crit stabalizer and blood restorer painkiller"
-	reagent_state = LIQUID
-	color = "#D2FFFA"
-	metabolization_rate = 0.25 * REAGENTS_METABOLISM
-	overdose_threshold = null
-
 /datum/reagent/alch/on_mob_metabolize(mob/living/carbon/M)
 	if(prob(50))
 		M.confused = max(M.confused+3,0)
@@ -591,35 +715,109 @@
 
 /datum/reagent/medicine/stimu
 	name = "Stimu"
-	description = "crit stabalizer and blood restorer painkiller"
+	description = "Blood refueler"
 	reagent_state = LIQUID
 	color = "#D2FFFA"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = null
 
-/datum/reagent/medicine/stimu/on_mob_metabolize(mob/living/carbon/M)
-	..()
-	ADD_TRAIT(M, TRAIT_NOCRITDAMAGE, TRAIT_GENERIC)
-	ADD_TRAIT(M, TRAIT_NOPAIN, TRAIT_GENERIC)
-
-/datum/reagent/medicine/stimu/on_mob_end_metabolize(mob/living/carbon/M)
-	REMOVE_TRAIT(M, TRAIT_NOCRITDAMAGE, TRAIT_GENERIC)
-	REMOVE_TRAIT(M, TRAIT_NOPAIN, TRAIT_GENERIC)
-	..()
-
 /datum/reagent/medicine/stimu/on_mob_life(mob/living/carbon/M)
 	if(M.blood_volume < BLOOD_VOLUME_NORMAL)
-		M.heal_wounds(2) //same as health pot only heal wounds while bleeding. technically.
-		M.blood_volume = min(M.blood_volume+15, BLOOD_VOLUME_NORMAL)
-	if(M.health <= M.crit_threshold)
-		M.adjustToxLoss(-0.5*REM, 0)
-		M.adjustBruteLoss(-0.5*REM, 0)
-		M.adjustFireLoss(-0.5*REM, 0)
-		M.adjustOxyLoss(-0.5*REM, 0)
+		M.heal_wounds(2) // ok for healing minor bleeding wounds
+		M.blood_volume = BLOOD_VOLUME_NORMAL
 	if(M.losebreath >= 4)
 		M.losebreath -= 2
 	if(M.losebreath < 0)
 		M.losebreath = 0
+	..()
+
+/datum/reagent/medicine/berserkium
+	name = "Berserkium"
+	description = "Makes you REALLY mad"
+	reagent_state = LIQUID
+	color = "#ff0000"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	overdose_threshold = null
+
+/datum/status_effect/buff/berserkium_buff
+	id = "berserkiumbuff"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/berserkium_buff
+	effectedstats = list("strength" = 5, "constitution" = 5, "speed" = -10, "perception" = -5, "intelligence" = -10)
+	duration = 1
+
+/atom/movable/screen/alert/status_effect/buff/berserkium_buff
+	name = "ABNORMAL RAGE"
+	desc = "I CAN'T DENY THE VOICES INSIDE MY BRAIN!"
+	icon_state = "acid"
+
+/datum/status_effect/buff/berserkium_crash
+	id = "berserkiumcrash"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/berserkium_crash
+	effectedstats = list("strength" = -4, "perception" = -4, "intelligence" = -4, "constitution" = -4, "endurance" = -4, "speed" = -4, "fortune" = -4)
+	duration = 10 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/berserkium_crash
+	name = "Abnormal Fatigue"
+	desc = "For all our righteous crimes we compensate."
+	icon_state = "muscles"
+
+/datum/reagent/medicine/berserkium/on_mob_metabolize(mob/living/carbon/M)
+	..()
+	ADD_TRAIT(M, TRAIT_NOSOFTCRIT, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOHARDCRIT, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NODEATH, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOCRITDAMAGE, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOPAIN, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOLIMBDISABLE, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_STUNIMMUNE, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_BASHDOORS, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOBREATH, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_BLOODLOSS_IMMUNE, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOSTAMINA, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOSLEEP, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_SCHIZO_AMBIENCE, TRAIT_GENERIC)
+	ADD_TRAIT(M, TRAIT_NOFLASH, TRAIT_GENERIC)
+	M.apply_status_effect(/datum/status_effect/buff/berserkium_buff)
+	M.overlay_fullscreen("rage", /atom/movable/screen/fullscreen/color_vision/red)
+
+/datum/reagent/medicine/berserkium/on_mob_end_metabolize(mob/living/carbon/M)
+	REMOVE_TRAIT(M, TRAIT_NOSOFTCRIT, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOHARDCRIT, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NODEATH, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOCRITDAMAGE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOPAIN, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOLIMBDISABLE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_STUNIMMUNE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_BASHDOORS, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOBREATH, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_BLOODLOSS_IMMUNE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOSTAMINA, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOSLEEP, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_SCHIZO_AMBIENCE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M, TRAIT_NOFLASH, TRAIT_GENERIC)
+	M.remove_status_effect(/datum/status_effect/buff/berserkium_buff)
+	M.energy_add(-1000)
+	M.stamina_add(1000)
+	M.adjustOxyLoss(100)
+	M.apply_status_effect(/datum/status_effect/buff/berserkium_crash)
+	M.updatehealth()
+	M.clear_fullscreen("rage")
+	..()
+
+/datum/reagent/medicine/berserkium/on_mob_life(mob/living/carbon/M)
+	M.Dizzy(10)
+	M.Jitter(10)
+	if(M.has_status_effect(/datum/status_effect/debuff/sleepytime))
+		M.remove_status_effect(/datum/status_effect/debuff/sleepytime)
+		M.remove_stress(/datum/stressevent/sleepytime)
+		M.mind.sleep_adv.advance_cycle()
+	if(prob(25))
+		M.say("RA-A-A-AH!!", forced = /datum/reagent/medicine/berserkium)
+		M.emote("rage")
 	..()
 
 /datum/reagent/medicine/purify
@@ -682,7 +880,7 @@
 /*documentation: 15 oz = 45 units
 2 lesser health makes 1 health bottle, 2 health makes 1 greater health
 you need 4 lesser bottles to make 2 health to make 1 half bottle of greater
-8 lesser bottles for 1 bottle of greater 
+8 lesser bottles for 1 bottle of greater
 end recipe count: 8 ash, 8 minced meat, 4 swampweed, 2 poisonberry to make 1 bottle of greater*/
 
 /datum/chemical_reaction/alch/mana
