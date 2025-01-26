@@ -1,8 +1,8 @@
 /////////////////// KEYRING ////////////////////
 
 /obj/item/storage/keyring
-	name = "keyring"
-	desc = "Will help you organize your keys."
+	name = "ключница"
+	desc = "Поможет распределить ваши ключи."
 	icon_state = "keyring0"
 	icon = 'icons/roguetown/items/keys.dmi'
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
@@ -51,9 +51,9 @@
 
 /obj/item/storage/keyring/proc/update_desc()
 	if(contents.len)
-		desc = span_info("Holds \Roman[contents.len] key\s, including:")
+		desc = span_info("На ней \Roman[contents.len] ключей, в их числе:")
 		for(var/obj/item/key/KE in contents)
-			desc += span_info("\n- [KE.name ? "A [KE.name]." : "	An unknown key."]")
+			desc += span_info("\n- [KE.name ? "[KE.name]." : "	Неизвестный ключ."]")
 	else
 		desc = ""
 
@@ -207,8 +207,8 @@
 
 
 /obj/item/lockpickring
-	name = "lockpickring"
-	desc = "A piece of bent wire to store lockpicking tools. Too bulky for fine work."
+	name = "кольцо для отмычек"
+	desc = "Кусок изогнутой проволоки для хранения инструментов для взлома. Слишком громоздкое для деликатной работы."
 	icon_state = "pickring0"
 	icon = 'icons/roguetown/items/keys.dmi'
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
@@ -279,7 +279,7 @@
 /obj/item/lockpickring/attackby(obj/item/I, mob/user)
 	if(istype(I,/obj/item/lockpick))
 		if(picks.len >= 3)
-			to_chat(user, "<span class='warning'>Too many lockpicks.</span>")
+			to_chat(user, "<span class='warning'>Слишком много отмычек.</span>")
 			return
 		user.dropItemToGround(I)
 		addtoring(I)
@@ -288,7 +288,7 @@
 
 /obj/item/lockpickring/attack_right(mob/user)
 	if(picks.len)
-		to_chat(user, "<span class='notice'>I steal a pick off the ring.</span>")
+		to_chat(user, "<span class='notice'>Я стащила отмычку со связки.</span>")
 		var/obj/item/lockpick/K = removefromring(user)
 		user.put_in_active_hand(K)
 
@@ -310,7 +310,7 @@
 
 /obj/item/lockpickring/proc/update_desc()
 	if(picks.len)
-		desc = "<span class='info'>\Roman [picks.len] lockpicks.</span>"
+		desc = "<span class='info'>\Roman [picks.len] отмычек.</span>"
 	else
 		desc = ""
 

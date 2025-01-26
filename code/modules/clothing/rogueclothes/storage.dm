@@ -28,8 +28,8 @@
 	..()
 
 /obj/item/storage/belt/rogue/leather
-	name = "belt"
-	desc = "A leather belt."
+	name = "пояс"
+	desc = "Кожаный пояс для подвязки инструментов и простых вещиц."
 	icon_state = "leather"
 	item_state = "leather"
 	equip_sound = 'sound/blank.ogg'
@@ -43,8 +43,8 @@
 			STR.remove_from_storage(I, get_turf(src))
 
 /obj/item/storage/belt/rogue/leather/plaquegold
-	name = "plaque belt"
-	desc = "A belt with a golden plate on its front."
+	name = "пояс с табличкой"
+	desc = "Пояс с пришитой посередине золотой пластинкой."
 	icon_state = "goldplaque"
 	sellprice = 50
 	sewrepair = FALSE
@@ -52,27 +52,27 @@
 	anvilrepair = /datum/skill/craft/blacksmithing
 
 /obj/item/storage/belt/rogue/leather/shalal
-	name = "shalal belt"
+	name = "заморский пояс"
 	icon_state = "shalal"
 	sellprice = 5
 
 	component_type = /datum/component/storage/concrete/roguetown/belt/cloth
 
 /obj/item/storage/belt/rogue/leather/shalalz
-	name = "zybantine shalal belt"
+	name = "зибантинский пояс"
 	icon_state = "shalal_z"
 	sellprice = 5
 	
 	component_type = /datum/component/storage/concrete/roguetown/belt/cloth
 
 /obj/item/storage/belt/rogue/leather/black
-	name = "black belt"
+	name = "черный пояс"
 	icon_state = "blackbelt"
 	sellprice = 10
 
 /obj/item/storage/belt/rogue/leather/plaquesilver
-	name = "plaque belt"
-	desc = "A belt with a silver plate on its front."
+	name = "пояс с табличкой"
+	desc = "Пояс с пришитой посередине серебрянной пластинкой."
 	icon_state = "silverplaque"
 	sellprice = 30
 	sewrepair = FALSE
@@ -80,8 +80,8 @@
 	anvilrepair = /datum/skill/craft/blacksmithing
 
 /obj/item/storage/belt/rogue/leather/steel
-	name = "steel belt"
-	desc = "A belt with a steel plate on its front."
+	name = "стальной пояс"
+	desc = "Пояс со стальными пластинами, пришитыми по всей его длине."
 	icon_state = "steelplaque"
 	sellprice = 30
 	sewrepair = FALSE
@@ -89,8 +89,8 @@
 	anvilrepair = /datum/skill/craft/blacksmithing
 
 /obj/item/storage/belt/rogue/leather/rope
-	name = "rope belt"
-	desc = "A simple belt made of rope."
+	name = "веревочный пояс"
+	desc = "Простой поясок из куска длинной веревки."
 	icon_state = "rope"
 	item_state = "rope"
 	color = "#b9a286"
@@ -99,8 +99,8 @@
 	component_type = /datum/component/storage/concrete/roguetown/belt/cloth
 
 /obj/item/storage/belt/rogue/leather/cloth
-	name = "cloth sash"
-	desc = "A simple cloth sash."
+	name = "тканевый пояс"
+	desc = "Простой поясок из полосы ткани."
 	icon_state = "cloth"
 	salvage_result = /obj/item/natural/cloth
 
@@ -113,8 +113,8 @@
 	color = "#ff0000"
 
 /obj/item/storage/belt/rogue/pouch
-	name = "pouch"
-	desc = "Usually used for holding coins."
+	name = "кошель"
+	desc = "Обычно в него кладут монеты."
 	icon = 'icons/roguetown/clothing/storage.dmi'
 	mob_overlay_icon = null
 	icon_state = "pouch"
@@ -180,8 +180,8 @@
 	)
 
 /obj/item/storage/belt/rogue/pouch/ammo
-	name = "sphere pouch"
-	desc = "Usually used for holding runelock sphreres."
+	name = "сферическая сумка"
+	desc = "Обычно в ней хранят сферы рунического замка."
 
 	populate_contents = list(
 		/obj/item/ammo_casing/caseless/runelock,
@@ -198,8 +198,8 @@
 	component_type = /datum/component/storage/concrete/roguetown/satchel
 
 /obj/item/storage/backpack/rogue/satchel
-	name = "satchel"
-	desc = "A bulky bag worn over the shoulder which can be used to hold many things."
+	name = "сумка"
+	desc = "Объемная сумка, которую носят через плечо. В неё можно положить множество вещей."
 	icon_state = "satchel"
 	item_state = "satchel"
 	icon = 'icons/roguetown/clothing/storage.dmi'
@@ -243,8 +243,8 @@
 		return TRUE
 
 /obj/item/storage/backpack/rogue/backpack
-	name = "backpack"
-	desc = "A bulky backpack worn on the back which can store many items."
+	name = "рюкзак"
+	desc = "Объемный рюкзак, в котором можно хранить множество вещей. Чтобы получить доступ к содержимому, придется его снять."
 	icon_state = "backpack"
 	item_state = "backpack"
 	icon = 'icons/roguetown/clothing/storage.dmi'

@@ -1,6 +1,6 @@
 
 /obj/item/storage/tray
-	name = "tray"
+	name = "поднос"
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "tray"
 	desc = ""
@@ -20,7 +20,7 @@
 		return TRUE
 
 /obj/item/storage/tray/psy
-	name = "tray"
+	name = "поднос"
 	icon = 'icons/obj/food/containers.dmi'
 	icon_state = "tray_psy"
 	desc = ""
