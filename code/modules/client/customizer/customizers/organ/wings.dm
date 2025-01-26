@@ -36,7 +36,6 @@
 		/datum/sprite_accessory/wings/feathery,
 		/datum/sprite_accessory/wings/wide/succubus,
 		/datum/sprite_accessory/wings/bee,
-		/datum/sprite_accessory/wings/large/angelalt,
 		/datum/sprite_accessory/wings/wide/dragon_alt1,
 		/datum/sprite_accessory/wings/wide/dragon_alt2,
 		/datum/sprite_accessory/wings/wide/harpywings,

@@ -50,3 +50,4 @@
 	icon_state = "fairywingsnormal"
 	accessory_type = /datum/sprite_accessory/wings/seelie
 	sellprice = 50
+	
