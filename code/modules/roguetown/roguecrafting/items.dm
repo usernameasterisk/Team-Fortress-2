@@ -236,7 +236,7 @@
 
 /datum/crafting_recipe/roguetown/woodtray
 	name = "деревянные подносы (x2) - (1 полено)"
-	result = list(/obj/item/storage/bag/tray,
+	result = list(/obj/item/storage/tray,
 				/obj/item/storage/tray)
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 
