@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/roguetown/shirt/robe
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "robe"
+	name = "ряса"
 	desc = ""
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "white_robe"
@@ -16,8 +16,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "sun robe"
-	desc = "Robes worn by those in service to Astrata."
+	name = "ряса солнца"
+	desc = "Одежда, которую носили те, кто служил Астрате."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "astratarobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -30,8 +30,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/noc
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "moon robe"
-	desc = "Robes worn by those in service to Noc."
+	name = "ряса луны"
+	desc = "Одежда, которую носят те, кто поклоняется богине ночи - Нок."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "nocrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -44,8 +44,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/necromancer
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "necromancer robes"
-	desc = ""
+	name = "одеяние некроманта"
+	desc = "Одежда, пропитанная темной магией и запахом мертвечины."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "necromrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -58,8 +58,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "briar robe"
-	desc = "Robes worn by Druid's in service to Dendor."
+	name = "одеяние из вереска"
+	desc = "Одежда, которую носили друиды, служившие Дендору."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "dendorrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -72,8 +72,8 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/necra
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "mourning robe"
-	desc = "Black robes which cover the body not unlike those in depictions of the Carriageman himself."
+	name = "траурное одеяние"
+	desc = "Черные одежды, покрывающие тело, напоминают те, что изображены на картинах самого Возчего."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "necrarobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -91,8 +91,8 @@
 	color = "#F9F9F9"
 
 /obj/item/clothing/suit/roguetown/shirt/robe/priest
-	name = "solar vestments"
-	desc = "Holy vestments sanctified by divine hands. Caution is advised if not a faithful."
+	name = "солнечные облачения"
+	desc = "Священные облачения, освященные божеством. Неверным стоит соблюдать осторожность."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "priestrobe"
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -102,7 +102,7 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/priest/pickup(mob/living/user)
 	if(!HAS_TRAIT(user, TRAIT_CHOSEN))
-		to_chat(user, "<font color='yellow'>UNWORTHY HANDS TOUCH THE VESTMENTS, CEASE OR BE PUNISHED</font>")
+		to_chat(user, "<font color='yellow'>НЕДОСТОЙНЫЙ! ОСТАВЬ ОДЕЯНИЕ СИЕ ИЛИ УЗРИ БОЖЕСТВЕННЫЙ ГНЕВ!</font>")
 		spawn(30)
 			if(loc == user)
 				user.adjust_fire_stacks(5)
@@ -132,8 +132,8 @@
 	color = "#c1b144"
 
 /obj/item/clothing/suit/roguetown/shirt/robe/merchant
-	name = "guilder jacket"
-	desc = "A fancy jacket common with merchants."
+	name = "гильдейские одеяния"
+	desc = "Изысканная одежда, популярная среди купцов."
 	icon_state = "merrobe"
 	sellprice = 30
 	color = null
@@ -145,8 +145,8 @@
 	allowed_sex = list(MALE, FEMALE)
 
 /obj/item/clothing/suit/roguetown/shirt/robe/wizard
-	name = "wizard's robe"
-	desc = "What wizard's ensemble would be complete without robes?"
+	name = "роба волшебника"
+	desc = "Какой же ансамбль волшебника будет полным без его мантии?"
 	icon_state = "wizardrobes"
 	icon = 'icons/roguetown/clothing/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
@@ -160,7 +160,7 @@
 	sellprice = 100
 
 /obj/item/clothing/suit/roguetown/shirt/robe/physician
-	name = "plague coat"
+	name = "чумной плащ"
 	desc = "Medicum morbo adhibere."
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
@@ -175,8 +175,8 @@
 	
 /obj/item/clothing/suit/roguetown/shirt/robe/eora
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "eoran robe"
-	desc = "Holy robes, intended for use by followers of Eora."
+	name = "эоранская ряса"
+	desc = "Священное одеяние, предназначенное для использования последователями Эоры."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "eorarobes"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -190,8 +190,8 @@
 	var/fanatic_wear = FALSE
 
 /obj/item/clothing/suit/roguetown/shirt/robe/eora/alt
-	name = "raised eoran robe"
-	desc = "A raised robe that exposes legs and makes getting around the terrain more comfortable."
+	name = "приподнятая эоранская ряса"
+	desc = "Приподнятая ряса, открывающая ноги и делающая передвижение по местности более комфортным."
 	body_parts_covered = null
 	icon_state = "eorastraps"
 	fanatic_wear = TRUE
@@ -199,16 +199,16 @@
 /obj/item/clothing/suit/roguetown/shirt/robe/eora/attack_right(mob/user)
 	switch(fanatic_wear)
 		if(FALSE)
-			name = "raised eoran robe"
-			desc = "A raised eoran robe that exposes legs and makes getting around the terrain more comfortable."
+			name = "приподнятая эоранская ряса"
+			desc = "Приподнятая ряса, открывающая ноги и делающая передвижение по местности более комфортным."
 			body_parts_covered = CHEST|GROIN|ARMS|VITALS
 			icon_state = "eorastraps"
 			fanatic_wear = TRUE
 			flags_inv = HIDEBOOB|HIDECROTCH
 			to_chat(usr, span_warning("Now wearing differently."))
 		if(TRUE)
-			name = "eoran robe"
-			desc = "Holy robes, intended for use by followers of Eora."
+			name = "эоранская ряса"
+			desc = "Священное одеяние, предназначенное для использования последователями Эоры."
 			body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 			icon_state = "eorarobes"
 			fanatic_wear = FALSE

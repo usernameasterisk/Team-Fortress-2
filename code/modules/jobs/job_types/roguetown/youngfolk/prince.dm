@@ -10,7 +10,10 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
 
-	tutorial = "You’ve never felt the gnawing of the winter, never known the bite of hunger and certainly have never known what the peasantry call a honest day's work. In your youth you were as free as any bird in the sky, but that is of the past. Your noble duties are fast approaching and you will soon have to choose: Continue to spend life leisurely, or stalwartly shoulder the duties you've been handed."
+	tutorial = "Вы никогда не ощущали зимней грызни, не знали, что такое голод, и уж тем более не знали, что крестьяне называют честным рабочим днем. \
+	В юности вы были свободны, как любая птица в небе, но это в прошлом. \
+	Ваши благородные обязанности быстро приближаются, и скоро вам придется выбирать: \
+	Продолжать вести праздный образ жизни или стойко выполнять возложенные на вас обязанности."
 
 	outfit = /datum/outfit/job/roguetown/prince
 	display_order = JDO_PRINCE
@@ -28,9 +31,11 @@
 /datum/outfit/job/roguetown/prince/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.gender == MALE)
+		head = /obj/item/clothing/head/roguetown/nyle
 		shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/heir
-		shoes = /obj/item/clothing/shoes/roguetown/armor/nobleboot
+		armor = /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince
+		pants = /obj/item/clothing/under/roguetown/tights/black
+		shoes = /obj/item/clothing/shoes/roguetown/nobleboot/thighboots
 		belt = /obj/item/storage/belt/rogue/leather
 		beltl = /obj/item/storage/keyring/royal
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
@@ -56,10 +61,12 @@
 			H.change_stat("intelligence", 2)
 
 	else
+		head = /obj/item/clothing/head/roguetown/nyle
 		beltl = /obj/item/storage/keyring/royal
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/heiress
+		shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
+		armor = /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess
 		shoes = /obj/item/clothing/shoes/roguetown/armor/nobleboot
 		if(H.mind)
 			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)

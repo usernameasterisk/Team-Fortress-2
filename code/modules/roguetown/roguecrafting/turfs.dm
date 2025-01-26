@@ -24,11 +24,12 @@
 	reqs = list(/obj/item/natural/wood/plank = 1)
 	skill_level = 2
 
-/datum/crafting_recipe/roguetown/turfs/wood/woodplatform
+/datum/crafting_recipe/roguetown/turfs/wood/platform
 	name = "platform (wood)"
 	result = /turf/open/floor/rogue/ruinedwood/platform
 	reqs = list(/obj/item/natural/wood/plank = 2)
 	skill_level = 3
+
 /datum/crafting_recipe/roguetown/turfs/wood/woodplatform/TurfCheck(mob/user, turf/T)
 	if(isclosedturf(T))
 		return
