@@ -370,5 +370,4 @@
 	icon = 'modular_twilight/icons/roguetown/clothing/belts.dmi'
 	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/belts.dmi'
 	icon_state = "exoticsilkbelt"
-	heldz_items = 3
 	sewrepair = TRUE
