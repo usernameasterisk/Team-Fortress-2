@@ -205,14 +205,14 @@
 
 /datum/sex_controller/proc/ejaculate()
 	log_combat(user, user, "Кончает!")
-	user.visible_message(span_lovebold("[user] пачкает все вокруг любовными соками!"))
+	user.visible_message(span_lovebold("[user] пачкает все вокруг своими выделениями!"))
 	playsound(user, 'sound/misc/mat/endout.ogg', 50, TRUE, ignore_walls = FALSE)
 	add_cum_floor(get_turf(user))
 	after_ejaculation()
 
 /datum/sex_controller/proc/ejaculate_container(obj/item/reagent_containers/glass/C)
 	log_combat(user, user, "Кончает в емкость")
-	user.visible_message(span_lovebold("[user] наполняет любовными соками [C]!"))
+	user.visible_message(span_lovebold("[user] наполняет семенем [C]!"))
 	playsound(user, 'sound/misc/mat/endout.ogg', 50, TRUE, ignore_walls = FALSE)
 	C.reagents.add_reagent(/datum/reagent/erpjuice/cum, 3)
 	after_ejaculation()
@@ -386,7 +386,7 @@
 		return
 	last_pain = world.time
 	if(pain_amt >= PAIN_HIGH_EFFECT)
-		var/pain_msg = pick(list("БОЛЬНО!!!", "НУЖНО ПРЕКРАТИТЬ!!!", "Я БОЛЬШЕ НЕ МОГУ!!!"))
+		var/pain_msg = pick(list("БОЛЬНО!!!", "Я ХОЧУ ПРЕКРАТИТЬ!!!", "Я БОЛЬШЕ НЕ МОГУ!!!"))
 		to_chat(user, span_boldwarning(pain_msg))
 		user.flash_fullscreen("redflash2")
 		if(prob(70) && user.stat == CONSCIOUS)
