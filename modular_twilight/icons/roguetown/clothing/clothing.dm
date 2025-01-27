@@ -332,3 +332,43 @@
 /obj/item/clothing/head/roguetown/crown //Holds vars for children
 	icon = 'modular_twilight/icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/head.dmi'
+
+/obj/item/clothing/shoes/roguetown/goldanklets
+	name = "gold anklets"
+	desc = "Delicate golden hoops worn around the ankle."
+	gender = PLURAL
+	icon = 'modular_twilight/icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/feet.dmi'
+	icon_state = "anklets"
+	item_state = "anklets"
+	sewrepair = TRUE
+
+/obj/item/clothing/mask/rogue/exoticsilkmask
+	name = "exotic silk mask"
+	icon = 'modular_twilight/icons/roguetown/clothing/masks.dmi'
+	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/masks.dmi'
+	icon_state = "exoticsilkmask"
+	flags_inv = HIDEFACE|HIDEFACIALHAIR
+	body_parts_covered = NECK|MOUTH
+	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
+	sewrepair = TRUE
+
+/obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
+	name = "exotic silks"
+	desc = "Fanciful gold laced silks barely able to conceal what little it covers."
+	icon = 'modular_twilight/icons/roguetown/clothing/shirts.dmi'
+	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/shirts.dmi'
+	icon_state = "exoticsilkbra"
+	item_state = "exoticsilkbra"
+	gender = PLURAL
+	body_parts_covered = CHEST|ARMS|VITALS
+	sewrepair = TRUE
+
+/obj/item/storage/belt/rogue/leather/exoticsilkbelt
+	name = "exotic silk belt"
+	desc = "A gold adorned belt with the softest of silks barely concealing one's bits."
+	icon = 'modular_twilight/icons/roguetown/clothing/belts.dmi'
+	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/belts.dmi'
+	icon_state = "exoticsilkbelt"
+	heldz_items = 3
+	sewrepair = TRUE
