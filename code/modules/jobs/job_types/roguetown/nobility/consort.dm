@@ -4,7 +4,7 @@
 	flag = CONSORT
 	department_flag = NOBLEMEN
 	faction = "Station"
-	total_positions = 0
+	total_positions = 1
 	spawn_positions = 1
 
 	allowed_sexes = list(MALE, FEMALE)
@@ -59,10 +59,11 @@
 		beltl = /obj/item/storage/keyring/royal
 		neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
-		head = /obj/item/clothing/head/roguetown/duchess_hood
-		backl = /obj/item/clothing/suit/roguetown/armor/leather/duchess
+		head = /obj/item/clothing/head/roguetown/crown/consortcrown
+		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal
+		cloak = /obj/item/clothing/cloak/lordcloak/ladycloak
+		wrists = /obj/item/clothing/wrists/roguetown/royalsleeves
 		gloves = /obj/item/clothing/gloves/roguetown/leather/black
-
 		id = /obj/item/clothing/ring/silver
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/white
@@ -89,12 +90,13 @@
 		
 	else
 		belt = /obj/item/storage/belt/rogue/leather
-		beltr = /obj/item/gun/ballistic/arquebus_pistol
+		beltr = /obj/item/gun/ballistic/firearm/arquebus_pistol
 		beltl = /obj/item/ammo_holder/bullet/lead
 		r_hand = /obj/item/storage/keyring/royal
+		head = /obj/item/clothing/head/roguetown/crown/consortcrown
 		neck = /obj/item/storage/belt/rogue/pouch/coins/rich
-		backr = /obj/item/storage/backpack/rogue/satchel/black
-		id = /obj/item/clothing/ring/active/nomag	
+		backr = /obj/item/storage/backpack/rogue/satchel
+		id = /obj/item/clothing/ring/active/nomag
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/duke

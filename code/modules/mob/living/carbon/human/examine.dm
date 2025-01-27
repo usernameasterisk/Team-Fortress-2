@@ -162,6 +162,9 @@
 
 		if(real_name in GLOB.outlawed_players)
 			. += "<span class='userdanger'>ПРЕСТУПНИК!</span>"
+		var/inquisition_text =get_inquisition_text(user)
+		if(inquisition_text)
+			. +=span_notice(inquisition_text)
 		if(mind && mind.special_role)
 		else
 			if(mind && mind.special_role == "Vampire Lord")
@@ -197,12 +200,13 @@
 			if(mind.special_role == "Bandit")
 				if(HAS_TRAIT(user, TRAIT_COMMIE))
 					commie_text = span_notice("Free man!")
-				else
-					commie_text = span_userdanger("BANDIT!")
+
 			if(mind.special_role == "Vampire Lord")
 				. += span_userdanger("A MONSTER!")
+
 			if(mind.assigned_role == "Lunatic")
 				. += span_userdanger("LUNATIC!")
+
 			if(HAS_TRAIT(src, TRAIT_PUNISHMENT_CURSE))
 				. += span_userdanger("CURSED!")
 
@@ -337,7 +341,7 @@
 			. += "<span class='warning'>[m1] tied up with \a [handcuffed]!</span>"
 		else
 			. += "<A href='?src=[REF(src)];item=[SLOT_HANDCUFFED]'><span class='warning'>[m1] tied up with \a [handcuffed]!</span></A>"
- 
+
 	if(legcuffed)
 		. += "<A href='?src=[REF(src)];item=[SLOT_LEGCUFFED]'><span class='warning'>[m3] \a [legcuffed] around [m2] legs!</span></A>"
 
@@ -581,7 +585,7 @@
 				var/W = LAZYACCESS(heart.maniacs2wonder_ids, M)
 				var/N = M.owner?.name
 				. += span_notice("Inscryption[N ? " by [N]'s " : ""][W ? "Wonder #[W]" : ""]: [K ? K : ""]")
-				
+
 
 	if(Adjacent(user) || aghost_privilege)
 		if(observer_privilege)
@@ -630,3 +634,10 @@
 			dat += "[new_text]\n" //dat.Join("\n") doesn't work here, for some reason
 	if(dat.len)
 		return dat.Join()
+
+// Used for Inquisition tags
+/mob/living/proc/get_inquisition_text(mob/examiner)
+	var/inquisition_text
+	if(HAS_TRAIT(src, TRAIT_INQUISITION) && HAS_TRAIT(examiner, TRAIT_INQUISITION))
+		inquisition_text += "Fellow Member of the Inquisition"
+	return inquisition_text

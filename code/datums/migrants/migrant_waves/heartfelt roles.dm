@@ -15,13 +15,14 @@
 	belt = /obj/item/storage/belt/rogue/leather/black
 	shoes = /obj/item/clothing/shoes/roguetown/armor/nobleboot
 	pants = /obj/item/clothing/under/roguetown/tights/black
-	cloak = /obj/item/clothing/cloak/heartfelt
+	cloak = /obj/item/clothing/cloak/lordcloak
 	armor = /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 	beltl = /obj/item/rogueweapon/sword/long/marlin
 	beltr = /obj/item/rogueweapon/huntingknife
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	backl = /obj/item/storage/backpack/rogue/satchel
+	head = /obj/item/clothing/head/roguetown/crownheart
 	id = /obj/item/scomstone
 	if(H.mind)
 		H.virginity = TRUE
@@ -231,7 +232,7 @@
 	..()
 	neck = /obj/item/clothing/neck/roguetown/talkstone
 	cloak = /obj/item/clothing/cloak/black_cloak
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/black
+	armor = /obj/item/clothing/suit/roguetown/shirt/robe/magered
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	belt = /obj/item/storage/belt/rogue/leather/plaquesilver

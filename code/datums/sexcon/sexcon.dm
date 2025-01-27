@@ -18,6 +18,7 @@
 	/// Our charge gauge
 	var/charge = SEX_MAX_CHARGE
 	/// Whether we want to screw until finished, or non stop
+	var/arousal_frozen = FALSE
 	var/do_until_finished = TRUE
 	var/last_arousal_increase_time = 0
 	var/last_ejaculation_time = 0
@@ -115,8 +116,8 @@
 		return
 	var/pq_warning = pick(list("Если я продолжу идти по скользкой дорожке, то моя душа попадет в...", "Я ощущаю... чье-то зловещее внимание...", "Тьма окутывает мою душу, наполняя тяжестью"))
 	to_chat(user, span_userdanger(pq_warning))
-	var/alert = alert(user, "Я, правда, хочу этого?", "Жестоко", "Да", "Нет")
-	if(alert != "Да!")
+	var/alert = alert(user, "Я, правда, хочу этого?", "Violate", "Да", "Нет")
+	if(alert != "Да")
 		return
 	user.visible_message(span_boldwarning("[user] собирается изнасиловать [victim]!"))
 	if(!do_after(user, 5 SECONDS, target = victim))
@@ -322,7 +323,8 @@
 		arousal_amt = 0
 		pain_amt = 0
 
-	adjust_arousal(arousal_amt)
+	if(!arousal_frozen) 
+		adjust_arousal(arousal_amt)
 
 	damage_from_pain(pain_amt)
 	try_do_moan(arousal_amt, pain_amt, applied_force, giving)
@@ -487,7 +489,8 @@
 		dat += "<center><a href='?src=[REF(src)];task=speed_down'>\<</a> [speed_name] <a href='?src=[REF(src)];task=speed_up'>\></a> ~|~ <a href='?src=[REF(src)];task=force_down'>\<</a> [force_name] <a href='?src=[REF(src)];task=force_up'>\></a></center>"
 	else
 		dat += "<center><a href='?src=[REF(src)];task=speed_down'>\<</a> [speed_name] <a href='?src=[REF(src)];task=speed_up'>\></a> ~|~ <a href='?src=[REF(src)];task=force_down'>\<</a> [force_name] <a href='?src=[REF(src)];task=force_up'>\></a> ~|~ <a href='?src=[REF(src)];task=manual_arousal_down'>\<</a> [manual_arousal_name] <a href='?src=[REF(src)];task=manual_arousal_up'>\></a></center>"
-	dat += "<center>| <a href='?src=[REF(src)];task=toggle_finished'>[do_until_finished ? "ПОКА НЕ КОНЧУ" : "ПОКА НЕ ОСТАНОВЛЮСЬ"]</a> |</center>"
+  dat += "<center>| <a href='?src=[REF(src)];task=toggle_finished'>[do_until_finished ? "ПОКА НЕ КОНЧУ" : "ПОКА НЕ ОСТАНОВЛЮСЬ"]</a> |</center>"
+  dat += "<center><a href='?src=[REF(src)];task=set_arousal'>SET AROUSAL</a> | <a href='?src=[REF(src)];task=freeze_arousal'>[arousal_frozen ? "UNFREEZE AROUSAL" : "FREEZE AROUSAL"]</a></center>"
 	if(target == user)
 		dat += "<center>Doing unto yourself</center>"
 	else
@@ -547,6 +550,11 @@
 			adjust_arousal_manual(-1)
 		if("toggle_finished")
 			do_until_finished = !do_until_finished
+		if("set_arousal")
+			var/amount = input(user, "Value above 120 will immediately cause orgasm!", "Set Arousal", arousal) as num
+			set_arousal(amount)
+		if("freeze_arousal")
+			arousal_frozen = !arousal_frozen
 	show_ui()
 
 /datum/sex_controller/proc/try_stop_current_action()

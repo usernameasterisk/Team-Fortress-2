@@ -31,7 +31,8 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	var/obj/structure/vampire/bloodpool/mypool
 	var/last_transform
 	var/cache_skin
-	var/cache_eyes
+	var/obj/item/organ/eyes/cache_eyes
+	var/cache_eye_color
 	var/cache_hair
 	var/obj/effect/proc_holder/spell/targeted/shapeshift/bat/batform //attached to the datum itself to avoid cloning memes, and other duplicates
 	var/obj/effect/proc_holder/spell/targeted/shapeshift/gaseousform/gas
@@ -40,7 +41,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	if(istype(examined_datum, /datum/antagonist/vampirelord/lesser))
 		return span_boldnotice("A vampire spawn.")
 	if(istype(examined_datum, /datum/antagonist/vampirelord))
-		return span_boldnotice("A Vampire Lord!.")
+		return span_boldnotice("A Vampire Lord!")
 	if(istype(examined_datum, /datum/antagonist/zombie))
 		return span_boldnotice("Another deadite.")
 	if(istype(examined_datum, /datum/antagonist/skeleton))
@@ -59,7 +60,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	C.vampires |= owner
 	. = ..()
 	owner.special_role = name
-	//ADD_TRAIT(owner.current, TRAIT_CRITICAL_WEAKNESS, "[type]") //half assed but necessary otherwise these guys be invincible
+	ADD_TRAIT(owner.current, TRAIT_CRITICAL_WEAKNESS, "[type]")
 	ADD_TRAIT(owner.current, TRAIT_STRONGBITE, "[type]")
 	ADD_TRAIT(owner.current, TRAIT_NOSTAMINA, "[type]")
 	ADD_TRAIT(owner.current, TRAIT_NOHUNGER, "[type]")
@@ -70,7 +71,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	ADD_TRAIT(owner.current, TRAIT_NOSLEEP, "[type]")
 	ADD_TRAIT(owner.current, TRAIT_LIMPDICK, "[type]")
 	ADD_TRAIT(owner.current, TRAIT_VAMPMANSION, "[type]")
-	ADD_TRAIT(owner.current, TRAIT_MEDIUMARMOR, "[type]")
 	ADD_TRAIT(owner.current, TRAIT_HEAVYARMOR, "[type]")
 	for(var/obj/structure/fluff/traveltile/vampire/tile in GLOB.traveltiles)
 		tile.show_travel_tile(owner.current)
@@ -80,17 +80,10 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	/datum/rmb_intent/strong,\
 	/datum/rmb_intent/riposte,\
 	/datum/rmb_intent/weak)
-	owner.current.cmode_music = 'sound/music/combat_vamp.ogg'
-	var/obj/item/organ/eyes/eyes = owner.current.getorganslot(ORGAN_SLOT_EYES)
-	if(eyes)
-		eyes.Remove(owner.current,1)
-		QDEL_NULL(eyes)
-	eyes = new /obj/item/organ/eyes/night_vision/zombie
-	eyes.Insert(owner.current)
+	vamp_look()
 	owner.current.AddSpell(new /obj/effect/proc_holder/spell/targeted/transfix)
 	owner.current.AddSpell(new /obj/effect/proc_holder/spell/targeted/vamp_rejuv)
 	owner.current.verbs |= /mob/living/carbon/human/proc/vampire_telepathy
-	vamp_look()
 	if(isspawn)
 		owner.current.verbs |= /mob/living/carbon/human/proc/disguise_button
 		add_objective(/datum/objective/vlordserve)
@@ -152,19 +145,23 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	owner.current.ambushable = FALSE
 
 /mob/living/carbon/human/proc/spawn_pick_class()
-	var/list/classoptions = list("Bard", "Fisher", "Hunter", "Miner", "Peasant", "Woodcutter", "Cheesemaker", "Blacksmith", "Carpenter", "Rogue", "Treasure Hunter", "Mage")
+	var/list/classoptions = list("Hunter", "Miner", "Healer", "Woodcutter", "Blacksmith", "Rogue", "Magos", "Vagabond", "Scavenger")
 	var/list/visoptions = list()
 
-	for(var/T in 1 to 5)
-		var/picked = pick(classoptions)
-		visoptions |= picked
+	for(var/T in 1 to 5) // leave as length(classoptions) for testing if you want all classes to show up.
+		if(length(classoptions))
+			visoptions += pick_n_take(classoptions)
 
 	var/selected = input(src, "Which class was I?", "VAMPIRE SPAWN") as anything in visoptions
 
 	for(var/datum/subclass/A in SSrole_class_handler.sorted_class_categories[CTAG_ALLCLASS])
 		if(A.name == selected)
-			equipOutfit(A.outfit)
-			return
+			if(equipOutfit(A.outfit))
+				return
+			else
+				to_chat(src, span_clown("Failed to equip chosen class, choose a new one."))
+				log_message("ERROR: Unable to pick [A.name] as a subclass for vampire spawn.", LOG_GAME)
+				spawn_pick_class()
 
 /datum/outfit/job/roguetown/vamplord/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -336,19 +333,28 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 /datum/antagonist/vampirelord/proc/vamp_look()
 	var/mob/living/carbon/human/V = owner.current
 	cache_skin = V.skin_tone
-	cache_eyes = V.eye_color
+	var/obj/item/organ/eyes/eyes = V.getorganslot(ORGAN_SLOT_EYES)
+	if(eyes)
+		cache_eyes = V.dna?.species.organs[ORGAN_SLOT_EYES]
+		cache_eye_color = eyes.eye_color
+		eyes.Remove(V)
+		QDEL_NULL(eyes)
+	eyes = new /obj/item/organ/eyes/night_vision/zombie
+	eyes.Insert(V)
+	set_eye_color(V, "#ff0000", "#ff0000")
+	eyes.update_accessory_colors()
 	cache_hair = V.hair_color
 	V.skin_tone = "c9d3de"
 	V.hair_color = "181a1d"
 	V.facial_hair_color = "181a1d"
-	V.eye_color = "ff0000"
 	V.update_body()
 	V.update_hair()
 	V.update_body_parts(redraw = TRUE)
 	V.mob_biotypes |= MOB_UNDEAD
 	V.faction = list("undead")
-	if(isspawn)
-		V.vampire_disguise()
+	// Cycles through disguises to properly get eye color and other factions set.
+	V.vampire_disguise()
+	V.vampire_undisguise()
 
 /datum/antagonist/vampirelord/on_life(mob/user)
 	if(!user)
@@ -358,8 +364,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		return
 	if(H.advsetup)
 		return
-	if(!isspawn)
-		vitae = mypool.current
+	vitae = mypool.current
 	if(ascended)
 		return
 	if(world.time % 5)
@@ -400,20 +405,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		handle_vitae(-1)
 
 /datum/antagonist/vampirelord/proc/handle_vitae(change, tribute)
-	var/sanitized = clamp(vitae, 0, VAMP_MAX_VITAE) 
-	var/tempcurrent = sanitized  //Stops Vitae from going below 0.
-	if(!isspawn)
-		mypool.update_pool(change)
-	if(isspawn)
-		if(change > 0)
-			tempcurrent += change
-			if(tempcurrent > vmax)
-				tempcurrent = vmax // to prevent overflow
-		if(change < 0)
-			tempcurrent += change
-			if(tempcurrent < 0)
-				tempcurrent = 0 // to prevent excessive negative.
-		vitae = tempcurrent
+	mypool.update_pool(change) // Spawn and Vlord now share a blood pool.
 	if(tribute)
 		mypool.update_pool(tribute)
 	if(vitae <= 20)
@@ -427,7 +419,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 			starved = FALSE
 			for(var/S in MOBSTATS)
 				owner.current.change_stat(S, 5)
-	vitae = sanitized //Should hopefully prevent any future vitae issues.
+	vitae = mypool.current
 
 /datum/antagonist/vampirelord/proc/move_to_spawnpoint()
 	owner.current.forceMove(pick(GLOB.vlord_starts))
@@ -480,7 +472,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 				if(thrall.special_role == "Vampire Spawn")
 					thrall.current.verbs |= /mob/living/carbon/human/proc/blood_strength
 					thrall.current.verbs |= /mob/living/carbon/human/proc/blood_celerity
-					thrall.current.AddSpell(new /obj/effect/proc_holder/spell/targeted/vamp_rejuv)
 					for(var/S in MOBSTATS)
 						thrall.current.change_stat(S, 3) //Overall stat nerf to VLord (not huge)
 	return
@@ -682,20 +673,18 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 
 /obj/structure/vampire/bloodpool/proc/update_pool(change)
 	var/datum/game_mode/chaosmode/C = SSticker.mode
-	var/tempmax = 8000
-	if(istype(C))
-		for(var/datum/mind/V in C.vampires)
-			if(V.special_role == "vampirespawn")
-				tempmax += 4000
-		if(maximum != tempmax)
-			maximum = tempmax
-			if(current > maximum)
-				current = maximum
+	var/new_max = 8000
+	for(var/datum/mind/V in C.vampires)
+		if(V.special_role == "Vampire Spawn")
+			new_max += 4000
+	if(maximum != new_max)
+		maximum = new_max
 	if(debug)
 		maximum = 999999
 		current = 999999
 	if(change)
 		current += change
+	current = clamp(current, 0, maximum)
 
 /obj/structure/vampire/bloodpool/proc/check_withdraw(change)
 	if(change < 0)
@@ -849,6 +838,16 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 /datum/antagonist/skeleton/knight
 	name = "Death Knight"
 	increase_votepwr = FALSE
+	antag_hud_type = ANTAG_HUD_VAMPIRE
+	antag_hud_name = "Vspawn"
+
+/datum/antagonist/skeleton/knight/apply_innate_effects(mob/living/mob_override)
+	var/mob/living/M = mob_override || owner.current
+	add_antag_hud(antag_hud_type, antag_hud_name, M)
+
+/datum/antagonist/skeleton/knight/remove_innate_effects(mob/living/mob_override)
+	var/mob/living/M = mob_override || owner.current
+	remove_antag_hud(antag_hud_type, M)
 
 /datum/antagonist/skeleton/knight/on_gain()
 	. = ..()
@@ -1498,7 +1497,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		vampire.heal_overall_damage(bloodroll, bloodroll)
 		vampire.adjustToxLoss(-bloodroll * 10) // Purges toxins.
 		vampire.adjustOxyLoss(-bloodroll)
-		vampire.adjustOrganLoss(-bloodroll)
 		vampire.heal_wounds(bloodroll * 20)
 		vampire.blood_volume += BLOOD_VOLUME_SURVIVE
 		vampire.update_damage_overlays()

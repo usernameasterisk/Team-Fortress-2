@@ -92,9 +92,6 @@
 	/// Visual features of the bodypart, such as hair and accessories
 	var/list/bodypart_features
 
-	grid_width = 32
-	grid_height = 64
-
 	resistance_flags = FLAMMABLE
 
 /obj/item/bodypart/proc/adjust_marking_overlays(var/list/appearance_list)
@@ -657,7 +654,6 @@
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	drop_organs()
 	return ..()
-
 /obj/item/bodypart/chest
 	name = "грудь"
 	desc = ""
@@ -675,9 +671,6 @@
 	offset = OFFSET_ARMOR
 	offset_f = OFFSET_ARMOR_F
 	dismemberable = FALSE
-
-	grid_width = 64
-	grid_height = 96
 
 /obj/item/bodypart/chest/set_disabled(new_disabled)
 	. = ..()

@@ -1,5 +1,3 @@
-
-
 /*
  * Book
  */
@@ -15,10 +13,6 @@
 	resistance_flags = FLAMMABLE
 	drop_sound = 'sound/blank.ogg'
 	pickup_sound =  'sound/blank.ogg'
-
-	grid_width = 32
-	grid_height = 64
-	
 	var/dat				//Actual page content
 	var/due_date = 0	//Game time in 1/10th seconds
 	var/author			//Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
@@ -32,7 +26,6 @@
 	var/textper = 100
 	var/our_font = "Rosemary Roman"
 	var/override_find_book = FALSE
-
 
 /obj/item/book/attack_self(mob/user)
 	if(!user.can_read(src))
@@ -94,7 +87,9 @@
 			curpage = 1
 //		var/curdat = pages[curpage]
 		var/dat = {"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
-					<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type=\"text/css\">
+					<html><head>
+					<meta charset=\"UTF-8\">
+					<style type=\"text/css\">
 					body { background-image:url('book.png');background-repeat: repeat; }</style></head><body scroll=yes>"}
 		for(var/A in pages)
 			dat += A

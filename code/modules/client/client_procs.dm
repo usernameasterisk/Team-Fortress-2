@@ -237,11 +237,7 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
-
-	spawn() // Goonchat does some non-instant checks in start()
-		chatOutput.start()
 	
-
 	GLOB.ahelp_tickets.ClientLogin(src)
 	var/connecting_admin = FALSE //because de-admined admins connecting should be treated like admins.
 	//Admin Authorisation
@@ -285,6 +281,10 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 	fps = prefs.clientfps
+
+	if(prefs.prefer_old_chat == FALSE)
+		spawn() // Goonchat does some non-instant checks in start()
+			chatOutput.start()
 
 	if(fexists(roundend_report_file()))
 		verbs += /client/proc/show_previous_roundend_report
@@ -515,6 +515,14 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 
 	if(!funeral_login())
 		log_game("[key_name(src)] on login: had an issue with funeral-checking logic.")
+
+	for(var/music in GLOB.ambience_files)
+		mob.playsound_local(mob, music, 0.1)
+		sleep(10)
+
+	for(var/music in GLOB.music_files)
+		mob.playsound_local(mob, music, 0.1)
+		sleep(10)
 
 	Master.UpdateTickRate()
 
@@ -884,6 +892,11 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		ip_intel = res.intel
 
 /client/Click(atom/object, atom/location, control, params)
+	if(click_intercept_time)
+		if(click_intercept_time >= world.time)
+			click_intercept_time = 0 //Reset and return. Next click should work, but not this one.
+			return
+		click_intercept_time = 0 //Just reset. Let's not keep re-gragarnbogchernihchecking forever.
 	var/ab = FALSE
 	var/list/L = params2list(params)
 

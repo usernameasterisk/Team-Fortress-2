@@ -27,11 +27,12 @@
 	..()
 	if(H.gender == FEMALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/nobledress/green
+		armor = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/white
 		head  = /obj/item/clothing/head/roguetown/roguehood/black
 	else
-		shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
+		armor = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		head = /obj/item/clothing/head/roguetown/nightman
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
@@ -59,6 +60,7 @@
 		H.grant_language(/datum/language/orcish)
 		H.grant_language(/datum/language/canilunzt)
 		H.grant_language(/datum/language/felid)
+		H.grant_language(/datum/language/draconic)
 		ADD_TRAIT(H, TRAIT_SEEPRICES_SHITTY, TRAIT_GENERIC)
 		H.change_stat("strength", -1)
 		H.change_stat("constitution", -1)
