@@ -214,8 +214,6 @@ SUBSYSTEM_DEF(ticker)
 						if(C.mob)
 							for(var/music in GLOB.ambience_files)
 								C.mob.playsound_local(C.mob, music, 0.1, channel = 1010)
-							for(var/music in GLOB.music_files)
-								C.mob.playsound_local(C.mob, music, 0.1, channel = 1010)
 								
 					if(start_immediately)
 						fire()

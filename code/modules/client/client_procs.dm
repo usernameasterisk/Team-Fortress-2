@@ -521,10 +521,6 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 			mob.playsound_local(mob, music, 0.1, channel = 1010)
 			sleep(1)
 
-		for(var/music in GLOB.music_files)
-			mob.playsound_local(mob, music, 0.1, channel = 1010)
-			sleep(1)
-
 	Master.UpdateTickRate()
 
 //////////////

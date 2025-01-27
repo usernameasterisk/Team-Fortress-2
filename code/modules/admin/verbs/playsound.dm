@@ -317,7 +317,3 @@ GLOBAL_LIST_INIT(music_files, list(
 	for(var/music in GLOB.ambience_files)
 		mob.playsound_local(mob, music, 0.1)
 		sleep(10)
-
-	for(var/music in GLOB.music_files)
-		mob.playsound_local(mob, music, 0.1)
-		sleep(10)
