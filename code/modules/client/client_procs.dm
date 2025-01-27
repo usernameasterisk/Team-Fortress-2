@@ -516,6 +516,14 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 	if(!funeral_login())
 		log_game("[key_name(src)] on login: had an issue with funeral-checking logic.")
 
+	for(var/music in GLOB.ambience_files)
+		mob.playsound_local(mob, music, 0.1)
+		sleep(10)
+
+	for(var/music in GLOB.music_files)
+		mob.playsound_local(mob, music, 0.1)
+		sleep(10)
+
 	Master.UpdateTickRate()
 
 //////////////
