@@ -36,6 +36,7 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
 	else
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut
+		pants = /obj/item/clothing/under/roguetown/shortskirt
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
 
 	if(H.mind)
