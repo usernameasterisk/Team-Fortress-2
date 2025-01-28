@@ -50,5 +50,16 @@
 			. += "[src] is made of fire-retardant materials."
 */
 
+	if(HAS_TRAIT(user, TRAIT_FEELING_OF_SMELTING))
+		var/message
+
+		if(isnull(smeltresult))
+			message = span_info("Это [span_red("нельзя переплавить")].")
+		else
+			var/obj/item/smelt_result = smeltresult
+			message = span_info("Это [span_green("можно переплавить")]. Получится: [span_blue(smelt_result.name)].")
+
+		. += message
+
 	for(var/datum/examine_effect/E in examine_effects)
 		E.trigger(user)
