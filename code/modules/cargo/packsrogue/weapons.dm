@@ -165,3 +165,19 @@
 					)
 */
 
+/datum/supply_pack/rogue/weapons/runelockammo
+	name = "Runelock ammo"
+	cost = 80
+	contains = list(
+					/obj/item/storage/belt/rogue/pouch/ammo,
+					/obj/item/storage/belt/rogue/pouch/ammo,
+				)
+
+/datum/supply_pack/rogue/weapons/ammo
+	name = "Ammo"
+	cost = 80
+	contains = list(
+					/obj/item/ammo_holder/bullet/lead,
+					/obj/item/ammo_holder/bullet/lead,
+					/obj/item/ammo_holder/bullet/lead,
+				)
