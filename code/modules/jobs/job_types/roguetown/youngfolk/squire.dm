@@ -14,7 +14,7 @@
 	Вместе с друзьями ты отрабатывал азы в поле, сражаясь на мечах с палками, гоняясь за кроликами и помогая по дому поднимать тяжелые мешки с зерном. \
 	Рыцарь заметил твой потенциал и взял тебя к себе в личные подопечные. Когда-нибудь ты станешь кем-то."
 
-outfit = /datum/outfit/job/roguetown/squire
+	outfit = /datum/outfit/job/roguetown/squire
 	display_order = JDO_SQUIRE
 	give_bank_account = TRUE
 	min_pq = -5 //squires aren't great but they can do some damage
