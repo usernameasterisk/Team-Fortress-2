@@ -41,7 +41,6 @@
 #define TRAIT_GOODRUNNER "Good Runner"
 #define TRAIT_TINY "Tiny"
 #define TRAIT_STUDENT "Student"
-#define TRAIT_FEELING_OF_SMELTING "Чувство плавки"
 
 #define TRAIT_INQUISITION "Member of the Inquisition"
 
@@ -170,7 +169,6 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_STUDENT = span_info("The scholar has taught me new skills!"),
 	TRAIT_DARKLING = span_info("I am a creature of the dark and am sensitive to the light. The hateful sun is especially harsh on my eyes, and I prefer to sleep during the dae."),
 	TRAIT_INQUISITION = span_info("I am a member of the Inquisition. I can easily identify others of my cadre at a glance."),
-	TRAIT_FEELING_OF_SMELTING = "Я знаю какой будет результат переплавки предмета.",
 ))
 
 // trait accessor defines

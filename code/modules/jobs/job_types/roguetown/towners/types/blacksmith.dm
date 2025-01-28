@@ -45,5 +45,3 @@
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 		if(H.age == AGE_OLD)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
-
-	ADD_TRAIT(H, TRAIT_FEELING_OF_SMELTING, TRAIT_GENERIC)

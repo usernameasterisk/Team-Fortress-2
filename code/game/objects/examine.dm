@@ -50,7 +50,7 @@
 			. += "[src] is made of fire-retardant materials."
 */
 
-	if(HAS_TRAIT(user, TRAIT_FEELING_OF_SMELTING))
+	if(HAS_TRAIT(user, TRAIT_FORGEBLESSED))
 		var/message
 
 		if(isnull(smeltresult))
