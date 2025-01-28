@@ -11,9 +11,8 @@
 	allowed_ages = list(AGE_ADULT)
 	subclass_cat_rolls = list(CTAG_CLERK = 20)
 
-	tutorial = "You have been granted the privilege of serving as a clerk in the Steward's office. \
-	You help the Steward with anything they need, and learn how coin keeps the town moving and prosperous. \
-	Perhaps, one dae the office will belong to nobody but you."
+	tutorial = "Вы получили привилегию служить клерком в офисе казначея. \
+	Вы помогаете казначею во всем, что ему нужно, и узнаете, как монеты обеспечивают движение и процветание города."
 
 	display_order = JDO_CLERK
 	give_bank_account = TRUE
@@ -74,7 +73,7 @@
 /datum/outfit/job/roguetown/clerk/assistant/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.gender == MALE)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/fancy
 		pants = /obj/item/clothing/under/roguetown/tights
 	if(H.gender == FEMALE)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/nobledress/green

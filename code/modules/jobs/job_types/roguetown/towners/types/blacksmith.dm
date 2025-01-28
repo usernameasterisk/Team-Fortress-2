@@ -1,7 +1,7 @@
 /datum/subclass/blacksmith
 	name = "Blacksmith"
-	tutorial = "A skilled blacksmith, able to forge capable weapons for warriors in the bog, \
-	only after building a forge for themselves ofourse."
+	tutorial = "Опытный кузнец, способный выковать оружие для воинов на болоте,\
+	только после того, как построит кузницу для себя, конечно, или присвоет в деревне или в городе."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/towner/blacksmith
@@ -23,7 +23,7 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 		shoes = /obj/item/clothing/shoes/roguetown/armor/leather
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
 
 	if(H.mind)
