@@ -739,8 +739,8 @@
 #include "code\game\atoms.dm"
 #include "code\game\atoms_movable.dm"
 #include "code\game\communications.dm"
-#include "code\game\movable_luminosity.dm"
 #include "code\game\reflections.dm"
+#include "code\game\movable_luminosity.dm"
 #include "code\game\say.dm"
 #include "code\game\sound.dm"
 #include "code\game\world.dm"
@@ -1999,4 +1999,5 @@
 #include "modular_twilight\icons\roguetown\clothing\armor.dm"
 #include "modular_twilight\icons\roguetown\clothing\clothing.dm"
 #include "modular_twilight\icons\roguetown\clothing\sewing.dm"
+#include "modular_twilight\datums\wardrobe\TF_wardrobe.dm"
 // END_INCLUDE

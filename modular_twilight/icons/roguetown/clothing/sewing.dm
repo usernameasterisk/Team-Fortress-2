@@ -6,9 +6,9 @@
 		/obj/item/natural/fibers = 1,)
 	skill_level = 1
 
-/datum/crafting_recipe/roguetown/sewing/skirt
-	name = "юбка - (2 ткань, 1 волокно; APPRENTICE)"
-	result = list(/obj/item/clothing/under/roguetown/skirt)
+/datum/crafting_recipe/roguetown/sewing/shortskirt
+	name = "обычная юбка - (2 ткань, 1 волокно; APPRENTICE)"
+	result = list(/obj/item/clothing/under/roguetown/shortskirt)
 	reqs = list(
 		/obj/item/natural/cloth = 2,
 		/obj/item/natural/fibers = 1,)

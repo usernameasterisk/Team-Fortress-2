@@ -283,7 +283,7 @@
 	flags_inv = HIDEBOOB
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut
-	name = "low cut tunic"
+	name = "топик"
 	desc = "A tunic exposing much of the shoulders and neck. Shoulders?! How scandalous..."
 	icon = 'modular_twilight/icons/roguetown/clothing/shirts.dmi'
 	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/shirts.dmi'
@@ -291,8 +291,8 @@
 	icon_state = "lowcut"
 	flags_inv = HIDEBOOB
 
-/obj/item/clothing/under/roguetown/skirt
-	name = "юбка"
+/obj/item/clothing/under/roguetown/shortskirt
+	name = "обычная юбка"
 	desc = "Long, flowing, and modest."
 	icon = 'modular_twilight/icons/roguetown/clothing/pants.dmi'
 	icon_state = "skirt"
@@ -300,23 +300,23 @@
 	mob_overlay_icon = 'modular_twilight/icons/roguetown/clothing/onmob/pants.dmi'
 	color = "#6b5445"
 
-/obj/item/clothing/under/roguetown/skirt/random
+/obj/item/clothing/under/roguetown/shortskirt/random
 	name = "skirt"
 
-/obj/item/clothing/under/roguetown/skirt/random/Initialize()
+/obj/item/clothing/under/roguetown/shortskirt/random/Initialize()
 	color = pick("#6b5445", "#435436", "#704542", "#79763f")
 	return ..()
 
-/obj/item/clothing/under/roguetown/skirt/black
+/obj/item/clothing/under/roguetown/shortskirt/black
 	color = CLOTHING_BLACK
 
-/obj/item/clothing/under/roguetown/skirt/green
+/obj/item/clothing/under/roguetown/shortskirt/green
 	color = CLOTHING_DARK_GREEN
 
-/obj/item/clothing/under/roguetown/skirt/blue
+/obj/item/clothing/under/roguetown/shortskirt/blue
 	color = CLOTHING_BLUE
 
-/obj/item/clothing/under/roguetown/skirt/red
+/obj/item/clothing/under/roguetown/shortskirt/red
 	color = CLOTHING_RED
 
 /obj/item/clothing/head/roguetown/crownheart //Holds vars for children
