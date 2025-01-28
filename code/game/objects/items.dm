@@ -981,6 +981,9 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 /obj/item/burn()
 	if(!QDELETED(src))
+		for(var/mob/living/carbon/human/H in view(2, src))
+			if(H.has_flaw(/datum/charflaw/addiction/pyromaniac))
+				H.sate_addiction()
 		var/turf/T = get_turf(src)
 		var/ash_type = /obj/item/ash
 		if(w_class == WEIGHT_CLASS_HUGE || w_class == WEIGHT_CLASS_GIGANTIC)

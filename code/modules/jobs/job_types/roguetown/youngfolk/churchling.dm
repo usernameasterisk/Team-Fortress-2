@@ -10,8 +10,8 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
 
-	tutorial = "It doesnt matter if you are an orphan, your family were zealots so they sent you here, or you just decided to follow the path of the Gods yourself. \
-	You ended up in the Rockhillian Church, given a shelter and food, submitting to the will of Their eminence. You have faith, and the rest is meaningless."
+	tutorial = "Твоя семья была фанатиками, они ругали тебя ремнем с шипами и молились как грешники каждый божий час, когда не трудились в поле. \
+	Ты сбежал от них, став прислужником, а гарантированное образование - это не так уж плохо."
 
 	outfit = /datum/outfit/job/roguetown/churchling
 	display_order = JDO_CHURCHLING

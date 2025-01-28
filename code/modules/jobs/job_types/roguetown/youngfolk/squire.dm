@@ -10,10 +10,11 @@
 	allowed_ages = list(AGE_ADULT)
 	subclass_cat_rolls = list(CTAG_SQUIRE = 20)
 
-	tutorial = "You are a little hero bound to your master. Often mistreated, you are still a warrior, yet a young and an inexperienced one. \
-	The dae when you will be proudly charging into the enemy wearing a plate armor will come eventually, but for now... NOT A STEP FROM YOUR MASTER!"
+	tutorial = "Мама и папа говорили, что ты станешь кем-то, у них были для тебя лучшие пожелания, чем жизнь крестьянина. \
+	Вместе с друзьями ты отрабатывал азы в поле, сражаясь на мечах с палками, гоняясь за кроликами и помогая по дому поднимать тяжелые мешки с зерном. \
+	Рыцарь заметил твой потенциал и взял тебя к себе в личные подопечные. Когда-нибудь ты станешь кем-то."
 
-	outfit = /datum/outfit/job/roguetown/squire
+outfit = /datum/outfit/job/roguetown/squire
 	display_order = JDO_SQUIRE
 	give_bank_account = TRUE
 	min_pq = -5 //squires aren't great but they can do some damage
