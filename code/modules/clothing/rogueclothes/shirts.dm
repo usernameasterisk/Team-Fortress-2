@@ -20,7 +20,7 @@
 	grid_height = 64
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt
-	name = "нижняя рубаха"
+	name = "рубаха"
 	desc = ""
 	icon_state = "undershirt"
 	item_state = "undershirt"
@@ -116,7 +116,7 @@
 	return ..()
 
 /obj/item/clothing/suit/roguetown/shirt/shortshirt
-	name = "рубаха"
+	name = "укороченная рубаха"
 	desc = "Простая рубаха."
 	icon_state = "shortshirt"
 	item_state = "shortshirt"

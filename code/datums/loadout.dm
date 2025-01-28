@@ -60,6 +60,10 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Полуплащ"
 	path = /obj/item/clothing/cloak/half
 
+//RINGS 
+/datum/loadout_item/copperring
+	name = "Медное кольцо"
+	path = /obj/item/clothing/ring/copper
 
 //SHOES
 /datum/loadout_item/darkboots

@@ -1150,7 +1150,7 @@
 	icon_state = "physhat"
 
 /obj/item/clothing/head/roguetown/nyle
-	name = "Жемчужина Нила"
+	name = "жемчужина Рокхилла"
 	icon_state = "nile"
 	body_parts_covered = null
 	slot_flags = ITEM_SLOT_HEAD

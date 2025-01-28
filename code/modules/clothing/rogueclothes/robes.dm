@@ -157,7 +157,7 @@
 	allowed_sex = list(MALE, FEMALE)
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	color = null
-	sellprice = 100
+	sellprice = 30
 
 /obj/item/clothing/suit/roguetown/shirt/robe/physician
 	name = "чумной плащ"

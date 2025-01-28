@@ -3357,7 +3357,7 @@
 /obj/structure/mineral_door/wood/fancywood{
 	locked = 1;
 	lockid = "royal";
-	name = "Bath Chamber"
+	name = "councillor"
 	},
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/indoors/town/manor)
