@@ -11,7 +11,8 @@
 	allowed_races = RACES_VERY_SHUNNED_UP
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
-	tutorial = "Selling your body like a piece of meat in a butcher's shop, stripped of dignity and treated as a commodity, you remain obedient to the nightmaster. Every day you fight to survive in a world that offers you nothing but contempt."
+	tutorial = "Продавая свое тело, как кусок мяса в мясной лавке, лишая себя достоинства и обращаясь как с товаром, вы остаетесь послушным своему сутенёру. \
+	Каждый день вы боретесь за выживание в мире, который не предлагает вам ничего, кроме презрения."
 
 	outfit = /datum/outfit/job/roguetown/nightmaiden
 	display_order = JDO_WENCH
@@ -30,10 +31,11 @@
 		pants =	/obj/item/clothing/under/roguetown/loincloth
 		belt =	/obj/item/storage/belt/rogue/leather/cloth
 	else
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy
+		mask = /obj/item/clothing/mask/rogue/exoticsilkmask
+		shirt = /obj/item/clothing/suit/roguetown/shirt/exoticsilkbra
 		pants =	/obj/item/clothing/under/roguetown/tights/stockings/fishnet/random
-		belt =	/obj/item/storage/belt/rogue/leather/cloth
+		belt =	/obj/item/storage/belt/rogue/leather/exoticsilkbelt
+		shoes = /obj/item/clothing/shoes/roguetown/goldanklets
 
 	beltr = /obj/item/storage/keyring/nightman
 	if(H.mind)

@@ -1,8 +1,8 @@
 /datum/subclass/ecclesiast
 	name = "Ecclesiast"
-	tutorial = "After having devoted the majority of your life to the Church of the Successors, \
-				you find yourself in a foreign land, fleeing from the encroaching rot, a catastrophe \
-				that is putting your unwavering faith to test."
+	tutorial = "Посвятив большую часть своей жизни Церкви Десяти,\
+				вы оказываетесь в чужой стране, спасаясь от надвигающейся войны, катастрофы,\\\
+				которая подвергает испытанию вашу непоколебимую веру."
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_VERY_SHUNNED_UP
@@ -92,6 +92,7 @@
 					H.verbs |= /mob/living/carbon/human/proc/torture_victim
 					H.verbs |= /mob/living/carbon/human/proc/faith_test
 					ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+					ADD_TRAIT(H, TRAIT_INQUISITION, TRAIT_GENERIC)
 				else
 					H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
 					H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

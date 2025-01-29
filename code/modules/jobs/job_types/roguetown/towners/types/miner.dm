@@ -1,7 +1,7 @@
 /datum/subclass/miner
 	name = "Miner"
-	tutorial = "You are a Miner, you mine for the local blacksmith, gathering rare ores. \
-	There are tales of ambitious dwarf miners building great forts in the lavalands, to harvest all of it's hardly touched ores."
+	tutorial = "Вы - шахтер, вы добываете редкие руды для местного кузнеца и не только. \
+	Есть истории о том, как амбициозные дворфы-шахтеры строили огромные крепости в лавовых кратерах, чтобы собрать всю едва тронутую руду."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/towner/miner
@@ -20,8 +20,8 @@
 	backl = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(/obj/item/flint = 1)
 	if(H.gender == FEMALE)
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/brown
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/lowcut
+		pants = /obj/item/clothing/under/roguetown/shortskirt
 	if(H.gender == MALE)
 		armor = /obj/item/clothing/suit/roguetown/armor/workervest
 		pants = /obj/item/clothing/under/roguetown/trou
