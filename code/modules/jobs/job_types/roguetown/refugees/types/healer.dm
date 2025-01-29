@@ -32,6 +32,7 @@
 			H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE )
 			H.mind.adjust_skillrank(/datum/skill/labor/lumberjacking, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
+			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/berserkium)
 			pants = /obj/item/clothing/under/roguetown/tights
 			shirt = /obj/item/clothing/suit/roguetown/shirt/tunic
 			armor = /obj/item/clothing/suit/roguetown/shirt/rags
@@ -58,7 +59,6 @@
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/docheal)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/stable)
-			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/berserkium)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/purge)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/debride)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/cpr)
