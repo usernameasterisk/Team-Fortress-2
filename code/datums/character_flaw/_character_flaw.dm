@@ -2,6 +2,13 @@
 GLOBAL_LIST_INIT(character_flaws, list(
 	"Alcoholic"=/datum/charflaw/addiction/alcoholic,
 	"Smoker"=/datum/charflaw/addiction/smoker,
+	"Nymphomaniac"=/datum/charflaw/addiction/lovefiend,
+	"Sadist"=/datum/charflaw/addiction/sadist,
+	"Isolationist"=/datum/charflaw/isolationist,
+	"Colorblind"=/datum/charflaw/colorblind,
+	"Bad Eyesight"=/datum/charflaw/badsight,
+	"Clingy"=/datum/charflaw/clingy,
+	"Fire Servant"=/datum/charflaw/addiction/pyromaniac,
 	"Junkie"=/datum/charflaw/addiction/junkie,
 	"Greedy"=/datum/charflaw/greedy,
 	"Narcoleptic"=/datum/charflaw/narcoleptic,
@@ -114,12 +121,6 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	name = "Bad Eyesight"
 	desc = "I need spectacles to see normally from my years spent reading books."
 
-/datum/charflaw/badsight/on_mob_creation(mob/user)
-	. = ..()
-	var/mob/living/carbon/human/H = user
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-
 /datum/charflaw/badsight/flaw_on_life(mob/user)
 	if(!ishuman(user))
 		return
@@ -137,15 +138,24 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	id = "badvision"
 	alert_type = null
 	effectedstats = list("perception" = -20, "speed" = -5)
-	duration = 100
+	duration = 10 SECONDS
 
-/datum/charflaw/badsight/apply_post_equipment(mob/user)
+/datum/charflaw/badsight/on_mob_creation(mob/user)
+	..()
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/H = user
-	var/obj/item/glasses = new /obj/item/clothing/mask/rogue/spectacles(get_turf(H))
-	H.put_in_hands(glasses, forced = TRUE)
-	H.equip_to_slot_if_possible(glasses, SLOT_WEAR_MASK, FALSE, TRUE, FALSE, TRUE, TRUE)
+	if(!H.wear_mask)
+		H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/spectacles(H), SLOT_WEAR_MASK)
+	else
+		new /obj/item/clothing/mask/rogue/spectacles(get_turf(H))
+	
+	// we don't seem to have a mind when on_mob_creation fires, so set up a timer to check when we probably will
+	addtimer(CALLBACK(src, PROC_REF(apply_reading_skill), H), 5 SECONDS)
+
+/datum/charflaw/badsight/proc/apply_reading_skill(mob/living/carbon/human/H)
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 
 /datum/charflaw/paranoid
 	name = "Paranoid"
@@ -431,3 +441,63 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	for(var/atom/movable/content in movable.contents)
 		mammons += get_mammons_in_atom(content)
 	return mammons
+
+/datum/charflaw/isolationist
+	name = "Isolationist"
+	desc = "I don't like being near people. They might be trying to do something to me..."
+	var/last_check = 0
+
+/datum/charflaw/isolationist/flaw_on_life(mob/user)
+	. = ..()
+	if(world.time < last_check + 10 SECONDS)
+		return
+	if(!user)
+		return
+	last_check = world.time
+	var/cnt = 0
+	for(var/mob/living/carbon/human/L in hearers(7, user))
+		if(L == src)
+			continue
+		if(L.stat)
+			continue
+		if(L.dna.species)
+			cnt++
+		if(cnt > 2)
+			break
+	var/mob/living/carbon/P = user
+	if(cnt > 2)
+		P.add_stress(/datum/stressevent/crowd)
+
+/datum/charflaw/clingy
+	name = "Clingy"
+	desc = "I like being around people, it's just so lively..."
+	var/last_check = 0
+
+/datum/charflaw/clingy/flaw_on_life(mob/user)
+	. = ..()
+	if(world.time < last_check + 10 SECONDS)
+		return
+	if(!user)
+		return
+	last_check = world.time
+	var/cnt = 0
+	for(var/mob/living/carbon/human/L in hearers(7, user))
+		if(L == src)
+			continue
+		if(L.stat)
+			continue
+		if(L.dna.species)
+			cnt++
+		if(cnt > 2)
+			break
+	var/mob/living/carbon/P = user
+	if(cnt < 2)
+		P.add_stress(/datum/stressevent/nopeople)
+
+/datum/charflaw/colorblind
+	name = "Colorblind"
+	desc = "I was cursed with flawed eyesight from birth, and can't discern things others can."
+
+/datum/charflaw/colorblind/on_mob_creation(mob/user)
+	..()
+	user.add_client_colour(/datum/client_colour/monochrome)
