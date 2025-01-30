@@ -41,6 +41,7 @@
 		H.change_stat("constitution", 1)
 		H.change_stat("speed", -1)
 		H.change_stat("fortune", 1)
+		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		if(H.age == AGE_MIDDLEAGED)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 		if(H.age == AGE_OLD)
