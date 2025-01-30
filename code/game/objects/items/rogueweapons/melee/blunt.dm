@@ -349,7 +349,7 @@
 
 /obj/item/rogueweapon/mace/goden/steel
 	name = "grand mace"
-	desc = "A massive mace that can crush any opposition with ease."
+	desc = "A steel massive mace that can crush any opposition with ease."
 	icon_state = "polemace"
 	force = 15
 	force_wielded = 35
