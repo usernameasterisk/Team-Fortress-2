@@ -195,8 +195,6 @@
 	salvage_amount = 1
 	salvage_result = /obj/item/natural/hide/cured
 
-	component_type = /datum/component/storage/concrete/roguetown/satchel
-
 /obj/item/storage/backpack/rogue/satchel
 	name = "сумка"
 	desc = "Объемная сумка, которую носят через плечо. В неё можно положить множество вещей."
@@ -212,6 +210,7 @@
 	equip_sound = 'sound/blank.ogg'
 	bloody_icon_state = "bodyblood"
 	alternate_worn_layer = UNDER_CLOAK_LAYER
+	component_type = /datum/component/storage/concrete/roguetown/satchel
 
 /obj/item/storage/backpack/rogue/satchel/heartfelt
 	populate_contents = list(

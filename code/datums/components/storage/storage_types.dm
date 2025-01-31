@@ -39,7 +39,7 @@
 
 /datum/component/storage/concrete/roguetown/keyring
 	screen_max_rows = 2
-	screen_max_columns = 4
+	screen_max_columns = 6
 	max_w_class = WEIGHT_CLASS_SMALL
 	allow_dump_out = TRUE
 	click_gather = TRUE
