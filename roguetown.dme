@@ -1828,6 +1828,7 @@
 #include "code\modules\roguetown\roguestock\bounties.dm"
 #include "code\modules\roguetown\roguestock\import.dm"
 #include "code\modules\roguetown\roguestock\stockpile.dm"
+#include "code\modules\spells\orison.dm"
 #include "code\modules\spells\spell.dm"
 #include "code\modules\spells\roguetown\_roguetown.dm"
 #include "code\modules\spells\roguetown\confessor.dm"
@@ -1846,6 +1847,7 @@
 #include "code\modules\spells\roguetown\acolyte\pestra.dm"
 #include "code\modules\spells\roguetown\acolyte\ravox.dm"
 #include "code\modules\spells\roguetown\acolyte\sawbones.dm"
+#include "code\modules\spells\roguetown\acolyte\xylix.dm"
 #include "code\modules\spells\spell_types\aimed.dm"
 #include "code\modules\spells\spell_types\area_teleport.dm"
 #include "code\modules\spells\spell_types\bloodcrawl.dm"
@@ -2010,6 +2012,6 @@
 #include "modular_twilight\datums\wardrobe\TF_wardrobe.dm"
 #include "modular_twilight\icons\roguetown\clothing\armor.dm"
 #include "modular_twilight\icons\roguetown\clothing\clothing.dm"
+#include "code\modules\language\roguetown\thievescant.dm"
 #include "modular_twilight\icons\roguetown\clothing\sewing.dm"
-#include "code\modules\spells\orison.dm"
 // END_INCLUDE

@@ -192,6 +192,7 @@
 	/datum/patron/divine/ravox,\
 	/datum/patron/divine/eora,\
 	/datum/patron/divine/abyssor,\
+	/datum/patron/divine/xylix,\
 )
 
 #define ALL_ACOLYTE_PATRONS list(\
@@ -202,6 +203,8 @@
 	/datum/patron/divine/malum,\
 	/datum/patron/divine/eora,\
 	/datum/patron/divine/abyssor,\
+	/datum/patron/divine/ravox,\
+	/datum/patron/divine/xylix,\
 )
 
 #define ALL_DIVINE_PATRONS list(\

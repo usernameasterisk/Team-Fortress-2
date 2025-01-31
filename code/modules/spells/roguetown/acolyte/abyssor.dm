@@ -5,6 +5,7 @@
 	releasedrain = 15
 	chargedrain = 0
 	chargetime = 2 SECONDS
+	req_items = list(/obj/item/clothing/neck/roguetown/psicross/abyssor)
 	range = 15
 	movement_interrupt = FALSE
 	chargedloop = null
@@ -37,6 +38,7 @@
 	releasedrain = 15
 	chargedrain = 0
 	chargetime = 1 SECONDS
+	req_items = list(/obj/item/clothing/neck/roguetown/psicross/abyssor)
 	range = 2
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
@@ -91,6 +93,7 @@
 	releasedrain = 20
 	chargedrain = 0
 	chargetime = 2 SECONDS
+	req_items = list(/obj/item/clothing/neck/roguetown/psicross/abyssor)
 	chargedloop = null
 	sound = 'sound/foley/bubb (1).ogg'
 	invocation = "From the abyss, rise!"
