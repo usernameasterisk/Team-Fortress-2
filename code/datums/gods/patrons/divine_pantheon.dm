@@ -9,8 +9,9 @@
 	desc = "Первенец Псайдона, близнец Нока, одарила разумным существам Солнцем как своим божественным даром."
 	worshippers = "Благородные, фанатичные крестоносцы и люд, и фермеры."
 	t1 = /obj/effect/proc_holder/spell/invoked/projectile/fireballAST
-	t2 = list(/obj/effect/proc_holder/spell/invoked/heal, /obj/effect/proc_holder/spell/invoked/sacred_flame_rogue)
-	t3 = /obj/effect/proc_holder/spell/invoked/revive
+	t2 = /obj/effect/proc_holder/spell/invoked/heal
+	t3 = /obj/effect/proc_holder/spell/invoked/sacred_flame_rogue
+	t4 = /obj/effect/proc_holder/spell/invoked/revive
 	confess_lines = list(
 		"АСТРАТА МОЙ СВЕТ!",
 		"АСТРАТА ПРИНОСИТ ПОРЯДОК!",
