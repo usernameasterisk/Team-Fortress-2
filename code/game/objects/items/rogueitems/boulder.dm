@@ -11,7 +11,7 @@
 	if(launched)
 		playsound(get_turf(src), pick(incoming), 100, FALSE)
 		spawn(travel_time * 6)
-			explosion(get_turf(src), 3, 6, 12, 24)
+			explosion(get_turf(src), 3, 6, 12, 0)
 			do_shrapnel_effect(get_turf(src))
 			qdel(src)
 
@@ -19,7 +19,7 @@
 	if(launched)
 		playsound(get_turf(src), pick(incoming), 100, FALSE)
 		spawn(travel_time * 6)
-			explosion(get_turf(src), 3, 6, 12, 24)
+			explosion(get_turf(src), 3, 6, 12, 0)
 			do_shrapnel_effect(get_turf(src))
 
 			qdel(src)
@@ -29,7 +29,7 @@
 		if(!istype(hit_atom, /turf/open/transparent/openspace))
 			playsound(get_turf(src), pick(incoming), 100, FALSE)
 			spawn(travel_time * 6)
-				explosion(get_turf(src), 3, 6, 12, 24)
+				explosion(get_turf(src), 3, 6, 12, 0)
 				do_shrapnel_effect(get_turf(src))
 				qdel(src)
 
@@ -43,12 +43,12 @@
 	'sound/catapult/explosion_distant2.ogg','sound/catapult/explosion_distant3.ogg', 'sound/catapult/explosion_distant4.ogg'))
 	shrapnel_effect.projectile_type = /obj/projectile/rock_shard // Define the type of shrapnel
 	shrapnel_effect.radius = 3 // Define the explosion radius
-	shrapnel_effect.override_projectile_range = 5 // Optional: specify the max range of each projectile
+	shrapnel_effect.override_projectile_range = 24 // Optional: specify the max range of each projectile
 	shrapnel_effect.do_shrapnel(src, target) // Activate shrapnel
-	for(var/mob/M in urange(20, src))
+	for(var/mob/M in urange(24, src))
 		if(!M.stat)
 			shake_camera(M, 3, 1)
-	for(var/mob/living/L in range(6, src))
+	for(var/mob/living/L in range(12, src))
 		if(!L.stat)
 			L.Knockdown(1)
 			L.Jitter(30)
@@ -58,14 +58,14 @@
 			continue
 		if(isbrain(player))
 			continue
-		if(distance > 20)
+		if(distance > 24)
 			player.playsound_local(get_turf(player), far_explosion_sound, 100, FALSE, pressure_affected = FALSE, channel = boomchannel)
 
 /obj/projectile/rock_shard
 	name = "rock shard"
 	icon_state = "bullet"
-	damage = 15
-	range = 8
+	damage = 75
+	range = 24
 	pass_flags = PASSTABLE | PASSGRILLE
 	armor_penetration = 15
 	damage_type = BRUTE
