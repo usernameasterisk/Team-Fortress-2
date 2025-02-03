@@ -11,7 +11,7 @@
 	if(launched)
 		playsound(get_turf(src), pick(incoming), 100, FALSE)
 		spawn(travel_time * 6)
-			explosion(get_turf(src), 1, -1, 2, 0)
+			explosion(get_turf(src), 3, 6, 12, 24)
 			do_shrapnel_effect(get_turf(src))
 			qdel(src)
 
@@ -19,7 +19,7 @@
 	if(launched)
 		playsound(get_turf(src), pick(incoming), 100, FALSE)
 		spawn(travel_time * 6)
-			explosion(get_turf(src), 1, -1, 2, 0)
+			explosion(get_turf(src), 3, 6, 12, 24)
 			do_shrapnel_effect(get_turf(src))
 
 			qdel(src)
@@ -29,7 +29,7 @@
 		if(!istype(hit_atom, /turf/open/transparent/openspace))
 			playsound(get_turf(src), pick(incoming), 100, FALSE)
 			spawn(travel_time * 6)
-				explosion(get_turf(src), 1, -1, 2, 0)
+				explosion(get_turf(src), 3, 6, 12, 24)
 				do_shrapnel_effect(get_turf(src))
 				qdel(src)
 
