@@ -7,6 +7,8 @@
 	anchored = TRUE // Can't be moved unless packed
 	density = TRUE
 	drag_slowdown = 10
+	throw_speed = 1
+	throw_range = 1
 
 	/// Minimum tile target distance the projectile will always travel.
 	var/min_target_distance = 20
